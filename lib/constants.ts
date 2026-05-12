@@ -1,382 +1,234 @@
 import type {
-  NavItem, TrustPillar, Solution, ProcessStep,
-  TeamMember, CareerRole, TrainingModule, FAQItem,
+  NavItem, TrustPillar, FAQItem,
 } from "@/types";
 
 // ─── Navigation ───────────────────────────────────────────────────────────────
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: "About",    href: "/about" },
-  { label: "Solutions", href: "/solutions" },
-  {
-    label: "Compliance",
-    href: "/compliance",
-    children: [
-      { label: "Compliance Overview",       href: "/compliance" },
-      { label: "Documentation Support",     href: "/compliance#documentation" },
-      { label: "Chain-of-Custody Approach", href: "/compliance#chain-of-custody" },
-    ],
-  },
-  { label: "Provider Onboarding", href: "/provider-onboarding" },
-  { label: "Training",  href: "/training" },
-  { label: "Careers",   href: "/careers" },
-  { label: "Contact",   href: "/contact" },
+  { label: "Services", href: "/services" },
+  { label: "Contact",  href: "/contact" },
+  { label: "FAQ",      href: "/faq" },
 ];
 
 export const COMPANY = {
-  name:    "Ridge Biologics",
-  tagline: "The Compliance-First Infrastructure Behind Modern Regenerative Medicine",
-  sub:     "Ridge Biologics supports providers with regenerative biologics distribution, compliance-conscious education, documentation support, and operational guidance.",
-  email:   "info@ridgebiologics.com",
-  phone:   "Contact us for information",
-  cta_primary:   "Schedule a Provider Consultation",
-  cta_secondary: "Explore Our Solutions",
+  name:          "Ridge Biologics",
+  tagline:       "Your Trusted Biologics Partner",
+  sub:           "The Compliant Way to Offer Regenerative Therapies.",
+  description:   "Ridge Biologics is a Utah-licensed Class C Virtual Wholesale Distributor of regenerative medicine products — supplying licensed healthcare providers with MSCs, PRP kits, and collagen-based biologics through an ethical, fully compliant drop-ship model.",
+  email:         "info@ridgebiologics.com",
+  states:        "Utah and Florida",
+  cta_primary:   "Request Products",
+  cta_secondary: "Learn More",
 };
 
 // ─── Trust Pillars ────────────────────────────────────────────────────────────
 
 export const TRUST_PILLARS: TrustPillar[] = [
-  { label: "Compliance-Conscious",      icon: "shield" },
-  { label: "Provider Support",          icon: "users" },
-  { label: "Documentation-Focused",     icon: "file" },
-  { label: "Operational Guidance",      icon: "chart" },
-  { label: "Chain-of-Custody Mindset",  icon: "link" },
+  { label: "Utah DOPL Class C Licensed",      icon: "shield" },
+  { label: "FDA-Registered Manufacturers",    icon: "file" },
+  { label: "Verified Cold-Chain Logistics",   icon: "link" },
+  { label: "GMP-Certified Products",          icon: "chart" },
+  { label: "Full Chain-of-Custody",           icon: "users" },
 ];
 
-// ─── Why Clinics Choose Ridge ────────────────────────────────────────────────
+// ─── Products ─────────────────────────────────────────────────────────────────
 
-export const WHY_RIDGE = [
+export const PRODUCTS = [
   {
-    title: "Built Around the Provider",
+    id: "msc",
+    title: "Mesenchymal Stem Cells (MSC)",
     description:
-      "We recognize that clinical teams are focused on patient outcomes. Our role is to handle the operational and documentation complexity so practitioners can stay focused on care delivery.",
-    icon: "👨‍⚕️",
+      "Human-derived MSCs from a GMP-certified, FDA-registered manufacturer. Cryogenically stored and shipped with full chain-of-custody documentation. For licensed providers only.",
+    classification: "Section 351 Biologic",
+    storage: "Cryogenic −196°C",
+    storageIcon: "🧊",
+    icon: "🔬",
   },
   {
-    title: "Compliance-Conscious by Design",
+    id: "collagen",
+    title: "Collagen Products",
     description:
-      "Every process we've built — from onboarding to distribution — is structured with regulatory awareness, documentation integrity, and chain-of-custody discipline in mind.",
-    icon: "🛡️",
+      "Human-derived collagen in multiple forms including injectable vials, sheets, and pads. Section 361 HCT/P classified, ethically sourced, and manufactured under GMP conditions.",
+    classification: "Section 361 HCT/P",
+    storage: "Refrigerated 2–8°C",
+    storageIcon: "❄️",
+    icon: "💉",
   },
   {
-    title: "Education-Driven Relationships",
+    id: "prp",
+    title: "PRP Kits",
     description:
-      "We invest in training and education resources that help providers make informed, defensible decisions about the biologics they incorporate into their practice.",
-    icon: "📚",
-  },
-  {
-    title: "Operational Infrastructure That Scales",
-    description:
-      "Whether you're a single-location clinic or a multi-site practice, Ridge provides a consistent, standards-oriented support infrastructure that grows with you.",
-    icon: "🏗️",
+      "Point-of-care platelet-rich plasma kits for in-office use. FDA-cleared devices enabling providers to prepare autologous PRP quickly and consistently for a range of applications.",
+    classification: "Point-of-Care Device Kit",
+    storage: "Refrigerated 2–8°C",
+    storageIcon: "❄️",
+    icon: "🩸",
   },
 ];
 
-// ─── Solutions ────────────────────────────────────────────────────────────────
+// ─── The Ridge Difference ─────────────────────────────────────────────────────
 
-export const SOLUTIONS: Solution[] = [
+export const RIDGE_DIFFERENCE = [
+  {
+    title: "Regulatory Compliance",
+    description:
+      "Utah DOPL Class C licensed distributor. Every product and process is aligned with 21 CFR Part 1271, FDA guidance, and state distribution requirements.",
+    icon: "shield",
+  },
+  {
+    title: "Verified Cold Chain",
+    description:
+      "Temperature-controlled shipping from manufacturer to your door. MSCs shipped cryogenically; collagen and PRP kits shipped refrigerated with monitoring throughout transit.",
+    icon: "snowflake",
+  },
+  {
+    title: "GMP-Manufactured Products",
+    description:
+      "We source exclusively from FDA-registered, GMP-certified manufacturers. Every lot comes with full traceability documentation — donor screening, CoA, and chain of custody.",
+    icon: "badge",
+  },
+  {
+    title: "Provider Training & Support",
+    description:
+      "Onboarding, storage guidance, product protocols, and ongoing support from your dedicated account rep. We're a partner in your practice — not just a supplier.",
+    icon: "users",
+  },
+];
+
+// ─── Services Overview ─────────────────────────────────────────────────────────
+
+export const SERVICES = [
   {
     id: "distribution",
-    title: "Biologics Distribution",
-    description:
-      "Ridge operates a structured distribution model connecting provider practices with established regenerative biologics manufacturers. Our distribution process emphasizes documentation integrity, temperature-monitored logistics, and traceable chain-of-custody records.",
-    bullets: [
-      "Temperature-monitored cold-chain logistics",
-      "Chain-of-custody documentation support",
-      "Manufacturer verification and alignment",
-      "Inventory coordination for practice needs",
-    ],
     icon: "📦",
+    title: "Regenerative Biologic Products",
+    description:
+      "We distribute a curated portfolio of biologics for wound care, orthopedics, pain management, and aesthetic practices — including MSCs, EVs, PRP kits, and collagen-based products. Each product line is selected based on manufacturer compliance, product pedigree, and suitability for licensed provider use.",
   },
   {
-    id: "compliance",
-    title: "Compliance Infrastructure",
+    id: "partnership",
+    icon: "🤝",
+    title: "Clinic Partnership & Support",
     description:
-      "Navigating the regulatory environment around regenerative biologics requires ongoing attention. Ridge provides documentation frameworks, compliance-conscious processes, and education resources designed to help practices operate with confidence.",
-    bullets: [
-      "Documentation framework development",
-      "Regulatory-aligned internal processes",
-      "Compliance review support materials",
-      "Practice-level guidance resources",
-    ],
-    icon: "🛡️",
-  },
-  {
-    id: "onboarding",
-    title: "Provider Onboarding",
-    description:
-      "Introducing regenerative biologics into a clinical practice requires preparation. Ridge's structured onboarding process prepares practices operationally and educationally before any product is introduced.",
-    bullets: [
-      "Step-by-step onboarding workflow",
-      "Documentation checklist support",
-      "Initial compliance orientation",
-      "Ongoing relationship support post-launch",
-    ],
-    icon: "🚀",
+      "We become an extension of your team — providing dedicated account support, practice-specific program planning, and ongoing guidance as your biologics offering grows. Our goal is a long-term partnership, not a one-time transaction.",
   },
   {
     id: "education",
-    title: "Clinical Education & Training",
+    icon: "📚",
+    title: "Provider Education & Training",
     description:
-      "Our education programs are designed to help provider teams understand the regenerative biologics landscape — including product sourcing, handling standards, patient communication, and documentation practices.",
-    bullets: [
-      "Provider and staff training programs",
-      "Biologics sourcing and handling education",
-      "Patient communication guidelines",
-      "Continuing education resources",
-    ],
-    icon: "🎓",
+      "Our education resources serve both practices new to biologics and those expanding existing programs. We cover state-specific compliance for Utah and Florida, proper patient communication protocols, and step-by-step product handling procedures.",
   },
   {
-    id: "rep-support",
-    title: "Representative Field Support",
+    id: "compliance",
+    icon: "🛡️",
+    title: "Compliance & Regulatory Guidance",
     description:
-      "Ridge's field representatives serve as operational and educational liaisons to provider practices. Each rep is trained to support documentation, compliance awareness, and practice-level operational needs.",
-    bullets: [
-      "Dedicated field representative assignment",
-      "On-site operational support visits",
-      "Documentation and process review",
-      "Ongoing education reinforcement",
-    ],
-    icon: "🤝",
+      "We help your practice understand and maintain compliance with DOPL requirements, FDA 21 CFR Part 1271, and state-specific regulations in Utah and Florida — including proper product labeling, pedigree documentation, and audit-ready recordkeeping.",
   },
   {
-    id: "manufacturer",
-    title: "Manufacturer Alignment",
+    id: "coldchain",
+    icon: "🧊",
+    title: "Cold-Chain Storage & Handling",
     description:
-      "Ridge maintains relationships with established biologics manufacturers. Our partner alignment process evaluates manufacturing standards, regulatory positioning, and documentation practices before any product enters our distribution network.",
-    bullets: [
-      "Manufacturer vetting and alignment process",
-      "Standards documentation review",
-      "Ongoing manufacturer relationship management",
-      "Product information and education support",
-    ],
-    icon: "🏭",
+      "Proper temperature control is critical to product viability. We advise on the right storage equipment for your product mix — whether standard refrigeration, ultra-low −80°C, or cryogenic systems — and provide verified handling protocols from manufacturer to point of care.",
+  },
+  {
+    id: "service",
+    icon: "⭐",
+    title: "White-Glove Client Service",
+    description:
+      "Dedicated, personalized support for ordering, inventory, clinical questions, and ongoing program development.",
   },
 ];
 
-// ─── Provider Onboarding Steps ────────────────────────────────────────────────
+// ─── Onboarding Steps ─────────────────────────────────────────────────────────
 
-export const ONBOARDING_STEPS: ProcessStep[] = [
+export const ONBOARDING_STEPS = [
   {
     step: 1,
-    title: "Initial Consultation",
+    title: "Register Online",
     description:
-      "A Ridge representative conducts a discovery call to understand your practice model, current biologics experience, and operational readiness.",
+      "Visit our provider portal and create an account using your practice information. Account access is available to licensed healthcare providers only.",
   },
   {
     step: 2,
-    title: "Compliance Orientation",
+    title: "Verify Your Credentials",
     description:
-      "Providers receive a structured compliance orientation covering regulatory environment awareness, documentation expectations, and operational standards.",
+      "Submit necessary documentation to verify your medical practice and eligibility for our products.",
   },
   {
     step: 3,
-    title: "Documentation Framework",
+    title: "Browse Our Catalog",
     description:
-      "Ridge provides a documentation support framework tailored to your practice. This includes intake records, consent considerations, and chain-of-custody templates.",
+      "Browse our catalog of FDA-regulated regenerative products including MSC biologics, PRP kits, and collagen-based products.",
   },
   {
     step: 4,
-    title: "Team Training",
+    title: "Place Your Order",
     description:
-      "Your clinical and administrative team completes Ridge's foundational training program covering biologics handling, documentation, and patient communication.",
-  },
-  {
-    step: 5,
-    title: "Distribution Setup",
-    description:
-      "Logistics and distribution parameters are established, including storage standards, ordering protocols, and chain-of-custody record maintenance.",
-  },
-  {
-    step: 6,
-    title: "Ongoing Support",
-    description:
-      "A dedicated Ridge representative provides continued field support, compliance check-ins, and access to updated education resources.",
+      "Select the products you need and submit your order. Products ship directly to your clinic via our licensed fulfillment partner with full cold-chain documentation.",
   },
 ];
 
-// ─── Training Modules ─────────────────────────────────────────────────────────
+// ─── FAQ ──────────────────────────────────────────────────────────────────────
 
-export const TRAINING_MODULES: TrainingModule[] = [
+export const FAQS: FAQItem[] = [
   {
-    id: "tm-001",
-    title: "Regenerative Biologics Fundamentals",
-    description:
-      "An orientation to the regenerative biologics landscape, including product categories, sourcing considerations, and the regulatory environment.",
-    duration: "2–3 hours",
-    audience: "All provider staff",
-  },
-  {
-    id: "tm-002",
-    title: "Compliance & Documentation Standards",
-    description:
-      "A focused review of documentation practices, chain-of-custody concepts, and the compliance frameworks relevant to biologics integration.",
-    duration: "3–4 hours",
-    audience: "Clinical leads & administrators",
-  },
-  {
-    id: "tm-003",
-    title: "Patient Communication & Informed Consent",
-    description:
-      "Guidance on communicating with patients about regenerative biologics — including what providers can and should say, and how to support informed decision-making.",
-    duration: "1–2 hours",
-    audience: "Provider-facing staff",
-  },
-  {
-    id: "tm-004",
-    title: "Handling, Storage & Chain-of-Custody",
-    description:
-      "Operational training on biologics receipt, storage, temperature monitoring, and the documentation practices that support defensible chain-of-custody records.",
-    duration: "2 hours",
-    audience: "Clinical & logistics staff",
-  },
-  {
-    id: "tm-005",
-    title: "Practice Integration & Operational Workflow",
-    description:
-      "Step-by-step guidance on integrating biologics distribution into existing practice workflows — including scheduling, intake, documentation, and billing coordination.",
-    duration: "2–3 hours",
-    audience: "Practice managers & administrators",
-  },
-];
-
-// ─── Leadership ────────────────────────────────────────────────────────────────
-
-export const LEADERSHIP_TEAM: TeamMember[] = [
-  {
-    id: "l-001",
-    name: "Executive Leadership",
-    title: "Chief Executive Officer",
-    bio: "Providing strategic direction across Ridge's national distribution platform, compliance infrastructure, and provider relationships.",
-  },
-  {
-    id: "l-002",
-    name: "Compliance & Operations",
-    title: "Director of Compliance & Operations",
-    bio: "Overseeing Ridge's documentation standards, chain-of-custody protocols, and operational compliance frameworks across all provider partnerships.",
-  },
-  {
-    id: "l-003",
-    name: "Provider Relations",
-    title: "Director of Provider Relations",
-    bio: "Managing Ridge's provider onboarding experience, field representative network, and ongoing clinical education programs.",
-  },
-  {
-    id: "l-004",
-    name: "Manufacturer Partnerships",
-    title: "Director of Manufacturer Alignment",
-    bio: "Leading Ridge's manufacturer vetting processes, distribution relationships, and product standards oversight.",
-  },
-];
-
-// ─── Career Roles ─────────────────────────────────────────────────────────────
-
-export const CAREER_ROLES: CareerRole[] = [
-  {
-    id: "c-001",
-    title: "Regional Field Representative",
-    department: "Provider Relations",
-    location: "Multiple Regions",
-    type: "Full-Time",
-  },
-  {
-    id: "c-002",
-    title: "Compliance Documentation Specialist",
-    department: "Compliance & Operations",
-    location: "Remote / Hybrid",
-    type: "Full-Time",
-  },
-  {
-    id: "c-003",
-    title: "Provider Onboarding Coordinator",
-    department: "Provider Relations",
-    location: "Remote",
-    type: "Full-Time",
-  },
-  {
-    id: "c-004",
-    title: "Clinical Education Specialist",
-    department: "Training & Education",
-    location: "Remote / Field",
-    type: "Full-Time",
-  },
-  {
-    id: "c-005",
-    title: "Distribution Operations Associate",
-    department: "Operations & Logistics",
-    location: "Varies by Region",
-    type: "Full-Time",
-  },
-];
-
-// ─── Compliance FAQs ──────────────────────────────────────────────────────────
-
-export const COMPLIANCE_FAQS: FAQItem[] = [
-  {
-    question: "What is Ridge Biologics' approach to compliance?",
+    question: "What is our mission?",
     answer:
-      "Ridge operates with a compliance-conscious framework embedded into every layer of our model — from manufacturer vetting to provider onboarding to ongoing field support. We prioritize documentation integrity, regulatory awareness, and education at every touchpoint.",
+      "Ridge Biologics is a Utah-based Class C Virtual Wholesale Distributor of regenerative medicine products. Our mission is to expand licensed healthcare provider access to high-quality biological therapies — including Mesenchymal Stem Cells (MSC), PRP kits, and collagen-based products — through an ethical, fully compliant virtual drop-ship distribution model operating in Utah and Florida.",
   },
   {
-    question: "How does Ridge support documentation at the practice level?",
+    question: "How can clinics benefit from our services?",
     answer:
-      "We provide documentation frameworks that help practices maintain consistent, organized records related to biologics receipt, storage, patient intake, and chain-of-custody. These frameworks are designed to help practices operate in a defensible, standards-aligned manner.",
+      "We provide turnkey onboarding that includes regulatory training, compliance-ready documentation, and tools to simplify patient intake, billing, and marketing. Our model helps clinics expand services quickly, ethically, and with minimal administrative burden.",
   },
   {
-    question: "Does Ridge make claims about clinical outcomes?",
+    question: "How long is the shelf life of your products?",
     answer:
-      "No. Ridge does not make efficacy claims about biologics products. Our role is distribution, education, and operational support. We provide information resources, but clinical decisions remain the responsibility of licensed providers.",
+      "Most of our allografts maintain viability for up to five years when stored at recommended temperatures. Detailed storage guidelines are provided with each shipment.",
   },
   {
-    question: "How does Ridge evaluate its manufacturer partners?",
+    question: "What products do you offer?",
     answer:
-      "Ridge conducts a structured vetting process that includes review of manufacturing standards documentation, regulatory positioning, and compliance posture before any manufacturer enters our distribution network.",
+      "We provide both 361 HCT/P allografts and 351 advanced biologic products, each designed to support tissue repair, reduce inflammation, and enhance recovery outcomes. Every product is FDA-regulated, U.S.-sourced, and backed by the compliance, documentation, and training your clinic needs to implement regenerative therapy confidently.",
   },
   {
-    question: "What is chain-of-custody and why does Ridge emphasize it?",
+    question: "How do you ensure product quality?",
     answer:
-      "Chain-of-custody refers to the documented chronological record of product handling from manufacturer to point of use. Ridge treats this as a core operational discipline — not an afterthought — and builds documentation processes to support it at every stage.",
+      "Each product is accompanied by a full chain-of-custody record and donor eligibility documentation. We partner only with manufacturers who meet or exceed AATB, FDA, and cGMP standards, and all shipments are monitored to maintain verified cold-chain integrity from lab to clinic.",
+  },
+  {
+    question: "Are your products covered by insurance?",
+    answer:
+      "Coverage varies depending on the product, patient diagnosis, and insurance carrier. We assist clinics in navigating the current LCD landscape and provide documentation templates to streamline prior authorization and claims processes.",
+  },
+  {
+    question: "Do you provide training or support?",
+    answer:
+      "Yes. We offer virtual training as well as on-site training through our sales representatives. Your staff will receive guidance on product handling, proper storage requirements, documentation, and compliance from day one.",
+  },
+  {
+    question: "What types of clinics do you work with?",
+    answer:
+      "We partner with wound care, orthopedic, podiatry, pain management, and functional medicine clinics, as well as mobile healthcare practices. Our team tailors each onboarding plan to fit your specific workflow and patient base.",
+  },
+  {
+    question: "How do I get started?",
+    answer:
+      "You can submit a request through our Services page or contact us directly. Once verified as a licensed healthcare provider, you will receive access to our provider portal where you can browse products and place orders.",
   },
 ];
 
-// ─── Value Props (homepage card section) ─────────────────────────────────────
+// ─── External Resources ───────────────────────────────────────────────────────
 
-export const VALUE_PROPS = [
-  {
-    title: "Compliance Infrastructure",
-    description:
-      "Documentation frameworks, chain-of-custody protocols, and regulatory-aligned processes built into every layer of our model.",
-    href: "/compliance",
-  },
-  {
-    title: "Biologics Distribution",
-    description:
-      "Structured distribution with temperature-monitored logistics, manufacturer verification, and traceable documentation support.",
-    href: "/solutions#distribution",
-  },
-  {
-    title: "Provider Onboarding",
-    description:
-      "A step-by-step onboarding process that prepares practices operationally and educationally before any product introduction.",
-    href: "/provider-onboarding",
-  },
-  {
-    title: "Training & Education",
-    description:
-      "Education programs covering biologics fundamentals, compliance standards, handling protocols, and patient communication.",
-    href: "/training",
-  },
-  {
-    title: "Field Representative Support",
-    description:
-      "Dedicated field representatives serving as operational and compliance liaisons to your practice on an ongoing basis.",
-    href: "/solutions#rep-support",
-  },
-  {
-    title: "Manufacturer Alignment",
-    description:
-      "Rigorous manufacturer vetting ensures every product in our network meets Ridge's documentation and standards criteria.",
-    href: "/solutions#manufacturer",
-  },
+export const EXTERNAL_RESOURCES = [
+  { label: "FDA HCT/P Overview",                    href: "https://www.fda.gov/vaccines-blood-biologics/tissue-tissue-products" },
+  { label: "FDA 21 CFR Part 1271",                  href: "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-L/part-1271" },
+  { label: "AATB — American Association of Tissue Banks", href: "https://www.aatb.org" },
+  { label: "FDA Cell & Gene Therapy Guidances",     href: "https://www.fda.gov/vaccines-blood-biologics/biologics-guidances/cellular-gene-therapy-guidances" },
 ];
+
+export const COMPLIANCE_DISCLAIMER =
+  "Ridge Biologics provides FDA-registered human cellular and tissue-based products (HCT/Ps), including Section 361 minimally manipulated, homologous-use allografts regulated under 21 CFR Part 1271, as well as Section 351 advanced biologic products manufactured in FDA-licensed facilities under current Good Manufacturing Practice (cGMP) standards. We do not make claims for the treatment, cure, or prevention of any disease. All products are intended for use by qualified healthcare professionals in accordance with applicable regulations and labeling.";

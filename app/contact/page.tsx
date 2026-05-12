@@ -1,16 +1,16 @@
 "use client";
 
 import Image from "next/image";
-import { COMPANY } from "@/lib/constants";
+import { COMPANY, EXTERNAL_RESOURCES } from "@/lib/constants";
 import FadeIn from "@/components/animations/FadeIn";
 import SlideIn from "@/components/animations/SlideIn";
 import SectionLabel from "@/components/ui/SectionLabel";
 import Button from "@/components/ui/Button";
 
 const CONTACT_OPTIONS = [
-  { icon: "👨‍⚕️", title: "Provider Inquiry", body: "Interested in becoming a Ridge provider partner? Schedule an initial consultation.", href: "#form" },
-  { icon: "🤝", title: "Representative Inquiry", body: "Exploring a field representative role or territory opportunity with Ridge.", href: "#form" },
-  { icon: "🏭", title: "Manufacturer Inquiry", body: "A biologics manufacturer interested in Ridge's distribution network.", href: "#form" },
+  { icon: "👨‍⚕️", title: "Provider Inquiry", body: "Licensed healthcare provider interested in our biologics products in Utah or Florida." },
+  { icon: "🤝", title: "Representative Opportunity", body: "Qualified 1099 sales rep interested in representing Ridge Biologics in Utah or Florida." },
+  { icon: "🏭", title: "General Inquiry", body: "Any other question about Ridge Biologics, our products, or compliance." },
 ];
 
 export default function ContactPage() {
@@ -26,8 +26,8 @@ export default function ContactPage() {
                 Let's Start the<br />Conversation
               </h1>
               <p className="text-white/60 text-xl leading-relaxed">
-                Whether you're a provider, a prospective representative, or a manufacturer —
-                Ridge welcomes the inquiry.
+                Whether you're a provider, a prospective representative, or have a general question
+                — Ridge welcomes the inquiry.
               </p>
             </SlideIn>
             <FadeIn delay={0.2}>
@@ -56,7 +56,7 @@ export default function ContactPage() {
                 Reach Out to Ridge
               </h2>
               <p className="text-rb-text-body mb-8">
-                A member of our team will respond within two business days.
+                A member of our team will respond within one business day.
               </p>
 
               <form className="space-y-5">
@@ -69,30 +69,26 @@ export default function ContactPage() {
                     </div>
                   ))}
                 </div>
-                <div>
-                  <label className="block text-xs font-semibold text-rb-text-body uppercase tracking-widest mb-2">Email</label>
-                  <input type="email" placeholder="you@practice.com"
-                    className="w-full bg-white border border-rb-slate-mid rounded-xl px-4 py-3 text-rb-navy placeholder-rb-text-muted focus:outline-none focus:border-rb-teal transition-colors text-sm" />
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-xs font-semibold text-rb-text-body uppercase tracking-widest mb-2">Email</label>
+                    <input type="email" placeholder="you@practice.com"
+                      className="w-full bg-white border border-rb-slate-mid rounded-xl px-4 py-3 text-rb-navy placeholder-rb-text-muted focus:outline-none focus:border-rb-teal transition-colors text-sm" />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-semibold text-rb-text-body uppercase tracking-widest mb-2">Phone</label>
+                    <input type="tel" placeholder="(801) 555-0000"
+                      className="w-full bg-white border border-rb-slate-mid rounded-xl px-4 py-3 text-rb-navy placeholder-rb-text-muted focus:outline-none focus:border-rb-teal transition-colors text-sm" />
+                  </div>
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-rb-text-body uppercase tracking-widest mb-2">Practice / Organization</label>
-                  <input type="text" placeholder="Practice name"
+                  <label className="block text-xs font-semibold text-rb-text-body uppercase tracking-widest mb-2">Name / Organization</label>
+                  <input type="text" placeholder="Your name or practice name"
                     className="w-full bg-white border border-rb-slate-mid rounded-xl px-4 py-3 text-rb-navy placeholder-rb-text-muted focus:outline-none focus:border-rb-teal transition-colors text-sm" />
-                </div>
-                <div>
-                  <label className="block text-xs font-semibold text-rb-text-body uppercase tracking-widest mb-2">Inquiry Type</label>
-                  <select className="w-full bg-white border border-rb-slate-mid rounded-xl px-4 py-3 text-rb-text-body focus:outline-none focus:border-rb-teal transition-colors text-sm">
-                    <option value="">Select inquiry type</option>
-                    <option>Provider Partnership</option>
-                    <option>Representative Opportunity</option>
-                    <option>Manufacturer Inquiry</option>
-                    <option>Compliance Question</option>
-                    <option>General Inquiry</option>
-                  </select>
                 </div>
                 <div>
                   <label className="block text-xs font-semibold text-rb-text-body uppercase tracking-widest mb-2">Message</label>
-                  <textarea rows={5} placeholder="Tell us about your practice and what you're looking for..."
+                  <textarea rows={5} placeholder="Tell us how we can help..."
                     className="w-full bg-white border border-rb-slate-mid rounded-xl px-4 py-3 text-rb-navy placeholder-rb-text-muted focus:outline-none focus:border-rb-teal transition-colors text-sm resize-none" />
                 </div>
                 <Button variant="primary" size="lg" type="submit" fullWidth>
@@ -106,19 +102,36 @@ export default function ContactPage() {
             </SlideIn>
 
             <FadeIn delay={0.2}>
-              <div className="lg:pt-16">
-                <div className="bg-white rounded-3xl border border-rb-slate-mid p-8 lg:p-10 mb-6">
+              <div className="lg:pt-16 space-y-6">
+                <div className="bg-white rounded-3xl border border-rb-slate-mid p-8 lg:p-10">
                   <div className="flex justify-start mb-6">
                     <Image src="/images/logo.png" alt="Ridge Biologics" width={160} height={50} className="h-9 w-auto" />
                   </div>
                   <p className="text-rb-text-body text-sm leading-relaxed mb-5">
-                    Ridge Biologics is a compliance-first regenerative biologics distribution and
-                    provider-support company. We do not make clinical efficacy claims and all
-                    information provided is for educational and operational purposes only.
+                    Ridge Biologics is a Utah-licensed Class C Virtual Wholesale Distributor of
+                    regenerative medicine products. We supply licensed healthcare providers in Utah
+                    and Florida with compliant biologics through an ethical, fully documented drop-ship model.
                   </p>
                   <a href={`mailto:${COMPANY.email}`} className="text-rb-teal hover:text-rb-teal-dark transition-colors text-sm font-medium">
                     {COMPANY.email}
                   </a>
+                </div>
+
+                <div className="bg-white rounded-3xl border border-rb-slate-mid p-8">
+                  <h3 className="font-semibold text-rb-navy mb-4">External Resources</h3>
+                  <ul className="space-y-3">
+                    {EXTERNAL_RESOURCES.map((r) => (
+                      <li key={r.href}>
+                        <a href={r.href} target="_blank" rel="noopener noreferrer"
+                          className="flex items-center gap-2 text-rb-teal hover:text-rb-teal-dark transition-colors text-sm">
+                          <svg className="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                          {r.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
                 <div className="bg-rb-teal-pale rounded-3xl border border-rb-teal/20 p-8">
@@ -126,9 +139,9 @@ export default function ContactPage() {
                   <ul className="space-y-3">
                     {[
                       "Ridge works with licensed healthcare providers only.",
+                      "We currently serve providers in Utah and Florida.",
                       "All providers complete a compliance orientation before onboarding.",
                       "Ridge does not guarantee clinical outcomes or product efficacy.",
-                      "Partnership decisions are made at Ridge's discretion.",
                     ].map((item) => (
                       <li key={item} className="flex items-start gap-2.5 text-rb-text-body text-sm leading-relaxed">
                         <svg className="w-4 h-4 text-rb-teal flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

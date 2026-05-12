@@ -1,8 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "framer-motion";
-import { VALUE_PROPS } from "@/lib/constants";
+import { PRODUCTS } from "@/lib/constants";
 import FadeIn from "@/components/animations/FadeIn";
 import StaggerChildren, { itemVariants } from "@/components/animations/StaggerChildren";
 import SectionLabel from "@/components/ui/SectionLabel";
@@ -14,37 +13,50 @@ export default function SolutionsGrid() {
       <div className="container-xl">
         <FadeIn className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
           <div>
-            <SectionLabel>Product & Support Ecosystem</SectionLabel>
+            <SectionLabel>Our Product Lines</SectionLabel>
             <h2 className="text-display-lg font-bold text-rb-navy">
-              Everything a Practice Needs
+              FDA-Regulated Biologics
+              <br />for Licensed Providers
             </h2>
           </div>
-          <Button variant="outline" href="/solutions">
-            View All Solutions
+          <Button variant="outline" href="/services">
+            View All Products
           </Button>
         </FadeIn>
 
-        <StaggerChildren staggerDelay={0.08} className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {VALUE_PROPS.map((vp) => (
-            <motion.div key={vp.title} variants={itemVariants}>
-              <Link href={vp.href} className="group block h-full bg-white rounded-2xl border border-rb-slate-mid p-7 hover:border-rb-teal/40 hover:shadow-card-hover transition-all duration-300">
-                <div className="w-8 h-0.5 bg-rb-teal rounded-full mb-5 group-hover:w-12 transition-all duration-300" />
-                <h3 className="font-semibold text-rb-navy text-[1.05rem] mb-3 group-hover:text-rb-teal transition-colors">
-                  {vp.title}
-                </h3>
-                <p className="text-rb-text-body text-sm leading-relaxed">
-                  {vp.description}
-                </p>
-                <div className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-rb-teal opacity-0 group-hover:opacity-100 transition-opacity">
-                  Learn more
-                  <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
+        <StaggerChildren staggerDelay={0.1} className="grid md:grid-cols-3 gap-6">
+          {PRODUCTS.map((product) => (
+            <motion.div key={product.id} variants={itemVariants}>
+              <div className="group h-full bg-white rounded-2xl border border-rb-slate-mid p-7 hover:border-rb-teal/40 hover:shadow-card-hover transition-all duration-300 flex flex-col">
+                <div className="flex items-start justify-between mb-5">
+                  <div className="w-12 h-12 rounded-xl bg-rb-teal-pale flex items-center justify-center text-2xl">
+                    {product.icon}
+                  </div>
+                  <div className="text-right">
+                    <p className="text-xs text-rb-teal font-semibold">{product.storageIcon} {product.storage}</p>
+                  </div>
                 </div>
-              </Link>
+                <h3 className="font-semibold text-rb-navy text-[1.05rem] mb-2 group-hover:text-rb-teal transition-colors leading-snug">
+                  {product.title}
+                </h3>
+                <p className="text-rb-text-body text-sm leading-relaxed mb-4 flex-1">
+                  {product.description}
+                </p>
+                <div className="pt-4 border-t border-rb-slate">
+                  <span className="text-xs font-semibold text-rb-teal bg-rb-teal-pale px-3 py-1 rounded-full">
+                    {product.classification}
+                  </span>
+                </div>
+              </div>
             </motion.div>
           ))}
         </StaggerChildren>
+
+        <FadeIn delay={0.3} className="mt-8 text-center">
+          <p className="text-rb-text-muted text-sm">
+            Ridge Biologics serves licensed healthcare providers in Utah and Florida only.
+          </p>
+        </FadeIn>
       </div>
     </section>
   );

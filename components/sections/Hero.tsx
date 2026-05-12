@@ -64,7 +64,7 @@ export default function Hero() {
             >
               <span className="block w-5 h-[2px] bg-rb-teal-light rounded-full" />
               <span className="text-xs font-semibold tracking-[0.2em] uppercase text-rb-teal-light">
-                Regenerative Biologics Distribution
+                Utah-Licensed Class C Virtual Wholesale Distributor
               </span>
             </motion.div>
 
@@ -72,16 +72,20 @@ export default function Hero() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.25, duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
-              className="text-white font-bold leading-[1.06] tracking-[-0.025em] mb-6"
+              className="text-white font-bold leading-[1.06] tracking-[-0.025em] mb-4"
               style={{ fontSize: "clamp(2.6rem, 4.5vw, 4rem)" }}
             >
-              The Compliance-First
-              <br />
-              Infrastructure Behind
-              <br />
-              <span className="text-rb-teal-light">Modern Regenerative
-              <br />Medicine</span>
+              {COMPANY.tagline}
             </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.35, duration: 0.5 }}
+              className="text-rb-teal-light text-xl font-medium mb-6"
+            >
+              {COMPANY.sub}
+            </motion.p>
 
             <motion.p
               initial={{ opacity: 0, y: 16 }}
@@ -89,7 +93,7 @@ export default function Hero() {
               transition={{ delay: 0.4, duration: 0.55 }}
               className="text-white/60 text-lg leading-relaxed mb-10 max-w-lg"
             >
-              {COMPANY.sub}
+              {COMPANY.description}
             </motion.p>
 
             <motion.div
@@ -98,10 +102,10 @@ export default function Hero() {
               transition={{ delay: 0.55, duration: 0.45 }}
               className="flex flex-wrap gap-4"
             >
-              <Button variant="primary" size="lg" href="/contact">
+              <Button variant="primary" size="lg" href="/services">
                 {COMPANY.cta_primary}
               </Button>
-              <Button variant="ghost" size="lg" href="/solutions">
+              <Button variant="ghost" size="lg" href="/faq">
                 {COMPANY.cta_secondary}
               </Button>
             </motion.div>
@@ -127,9 +131,15 @@ export default function Hero() {
                 priority
               />
 
-              <p className="relative z-10 text-center text-white/45 text-sm leading-relaxed max-w-[220px]">
-                Premium biologics distribution<br />& provider infrastructure
-              </p>
+              <div className="relative z-10 text-center space-y-3 w-full">
+                {["MSCs", "Collagen Products", "PRP Kits"].map((p) => (
+                  <div key={p} className="flex items-center justify-center gap-2 text-white/50 text-sm">
+                    <span className="w-1.5 h-1.5 rounded-full bg-rb-teal-light flex-shrink-0" />
+                    {p}
+                  </div>
+                ))}
+                <p className="text-white/30 text-xs mt-4">Utah · Florida</p>
+              </div>
             </div>
           </motion.div>
         </div>

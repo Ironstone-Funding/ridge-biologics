@@ -6,11 +6,11 @@ import SectionLabel from "@/components/ui/SectionLabel";
 import Button from "@/components/ui/Button";
 
 const TRAITS = [
-  "Background in healthcare, life sciences, or medical distribution",
-  "Commitment to compliance-conscious practice",
-  "Ability to support documentation and operational processes",
+  "Licensed healthcare or medical distribution background preferred",
+  "Commitment to compliant, ethical biologics representation",
+  "Ability to support provider onboarding and documentation processes",
+  "Territory focus in Utah and Florida",
   "Interest in ongoing education and professional development",
-  "Relationship-oriented approach to provider engagement",
 ];
 
 export default function RepRecruitment() {
@@ -25,25 +25,23 @@ export default function RepRecruitment() {
       <div className="container-xl relative">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <SlideIn direction="left">
-            <SectionLabel light>Join the Ridge Network</SectionLabel>
+            <SectionLabel light>Become a Distribution Partner</SectionLabel>
             <h2 className="text-display-lg font-bold text-white mb-6">
-              We're Building a Field
-              <br />Team That Leads With
+              Representing Ridge as a
               <br />
-              <span className="text-rb-teal-light">Compliance</span>
+              <span className="text-rb-teal-light">1099 Sales Representative</span>
             </h2>
-            <p className="text-white/60 text-lg leading-relaxed mb-8">
-              Ridge representatives are more than sales professionals — they're operational
-              and compliance liaisons who genuinely support the practices they serve.
+            <p className="text-white/60 text-lg leading-relaxed mb-4">
+              We work with qualified independent sales representatives across Utah and Florida.
+              Ridge reps are more than commission earners — they're trusted liaisons who help
+              clinics integrate biologics responsibly.
             </p>
-            <div className="flex gap-4">
-              <Button variant="primary" href="/careers">
-                View Open Roles
-              </Button>
-              <Button variant="ghost" href="/contact">
-                Inquire About Opportunities
-              </Button>
-            </div>
+            <p className="text-white/50 text-sm leading-relaxed mb-8">
+              Contact us to learn about our commission program and certification requirements.
+            </p>
+            <Button variant="primary" href="/contact">
+              Inquire About Rep Opportunities
+            </Button>
           </SlideIn>
 
           <FadeIn delay={0.2}>

@@ -6,12 +6,12 @@ import SectionLabel from "@/components/ui/SectionLabel";
 import Button from "@/components/ui/Button";
 
 const STANDARDS = [
-  "Manufacturer documentation review",
-  "Regulatory positioning assessment",
-  "Standards-aligned vetting process",
-  "Ongoing relationship management",
-  "Product information and education support",
-  "Chain-of-custody verification",
+  "FDA-registered, GMP-certified manufacturers only",
+  "AATB standards compliance verified",
+  "Full donor screening and eligibility documentation",
+  "Certificate of Analysis (CoA) with every lot",
+  "Chain-of-custody verified from lab to clinic",
+  "21 CFR Part 1271 and state regulation alignment",
 ];
 
 export default function ManufacturerBar() {
@@ -20,25 +20,25 @@ export default function ManufacturerBar() {
       <div className="container-xl">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <SlideIn direction="left">
-            <SectionLabel>Manufacturer & Partner Alignment</SectionLabel>
+            <SectionLabel>Product Quality & Sourcing</SectionLabel>
             <h2 className="text-display-lg font-bold text-rb-navy mb-6">
-              Only Vetted Products
-              <br />Enter Our Network
+              GMP-Manufactured,
+              <br />Fully Traceable
             </h2>
             <p className="text-rb-text-body text-lg leading-relaxed mb-8">
-              Ridge conducts a structured manufacturer vetting process before any product enters our
-              distribution network. This includes standards documentation review, regulatory
-              positioning assessment, and an ongoing relationship management protocol.
+              We source exclusively from FDA-registered, GMP-certified manufacturers.
+              Every lot comes with full traceability documentation — so your clinic receives
+              products that are verified, documented, and audit-ready from day one.
             </p>
-            <Button variant="primary" href="/solutions#manufacturer">
-              Learn About Our Standards
+            <Button variant="primary" href="/services">
+              View Our Product Lines
             </Button>
           </SlideIn>
 
           <FadeIn delay={0.15}>
             <div className="bg-rb-slate rounded-3xl p-8 lg:p-10">
               <p className="text-xs font-semibold tracking-[0.18em] uppercase text-rb-teal mb-6">
-                Our vetting process covers
+                Our sourcing standards
               </p>
               <ul className="space-y-3">
                 {STANDARDS.map((s) => (
