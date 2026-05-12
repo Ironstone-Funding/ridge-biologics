@@ -29,7 +29,7 @@ export default function SolutionsPage() {
         <div className="container-xl">
           <div className="space-y-6">
             {SOLUTIONS.map((sol, i) => (
-              <FadeIn key={sol.id} delay={i * 0.07} id={sol.id}>
+              <div key={sol.id} id={sol.id}><FadeIn delay={i * 0.07}>
                 <div className="grid md:grid-cols-3 gap-8 p-8 lg:p-10 rounded-3xl border border-rb-slate-mid hover:border-rb-teal/40 hover:shadow-card-hover transition-all duration-300 bg-white">
                   <div className="md:col-span-2">
                     <div className="flex items-center gap-4 mb-5">
@@ -61,7 +61,7 @@ export default function SolutionsPage() {
                     </ul>
                   </div>
                 </div>
-              </FadeIn>
+              </FadeIn></div>
             ))}
           </div>
         </div>
