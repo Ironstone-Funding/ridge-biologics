@@ -2,6 +2,7 @@
 
 import { motion, type Variants } from "framer-motion";
 import type { ReactNode } from "react";
+import { cn } from "@/lib/utils";
 
 interface StaggerChildrenProps {
   children: ReactNode;
@@ -13,37 +14,26 @@ interface StaggerChildrenProps {
 
 const containerVariants: Variants = {
   hidden: {},
-  visible: (custom: { staggerDelay: number; initialDelay: number }) => ({
-    transition: {
-      staggerChildren: custom.staggerDelay,
-      delayChildren: custom.initialDelay,
-    },
+  visible: (c: { s: number; d: number }) => ({
+    transition: { staggerChildren: c.s, delayChildren: c.d },
   }),
 };
 
-export const staggerItemVariants: Variants = {
-  hidden: { opacity: 0, y: 24 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.55, ease: [0.25, 0.1, 0.25, 1] },
-  },
+export const itemVariants: Variants = {
+  hidden:  { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
 };
 
 export default function StaggerChildren({
-  children,
-  staggerDelay = 0.1,
-  initialDelay = 0,
-  className,
-  once = true,
+  children, staggerDelay = 0.1, initialDelay = 0, className, once = true,
 }: StaggerChildrenProps) {
   return (
     <motion.div
-      className={className}
+      className={cn(className)}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once, margin: "-80px" }}
-      custom={{ staggerDelay, initialDelay }}
+      viewport={{ once, margin: "-60px" }}
+      custom={{ s: staggerDelay, d: initialDelay }}
       variants={containerVariants}
     >
       {children}

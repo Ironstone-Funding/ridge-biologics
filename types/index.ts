@@ -6,36 +6,29 @@ export interface NavItem {
   children?: NavItem[];
 }
 
-// ─── Pipeline ────────────────────────────────────────────────────────────────
+// ─── Trust Pillars ────────────────────────────────────────────────────────────
 
-export type TrialPhase = "Preclinical" | "Phase 1" | "Phase 2" | "Phase 3" | "Approved";
-export type TherapeuticArea = "Oncology" | "Immunology" | "Rare Disease" | "Neurology" | "Cardiology";
-
-export interface PipelineCandidate {
-  id: string;
-  name: string;
-  genericName: string;
-  indication: string;
-  therapeuticArea: TherapeuticArea;
-  phase: TrialPhase;
-  mechanism: string;
-  status: "Active" | "On Hold" | "Approved" | "Discontinued";
-  partnerCompany?: string;
-  lastUpdated: string;
+export interface TrustPillar {
+  label: string;
+  icon: string;
 }
 
-// ─── News & Press ─────────────────────────────────────────────────────────────
+// ─── Solutions ────────────────────────────────────────────────────────────────
 
-export type NewsCategory = "Press Release" | "Publication" | "Conference" | "Award";
-
-export interface NewsItem {
+export interface Solution {
   id: string;
   title: string;
-  excerpt: string;
-  date: string;
-  category: NewsCategory;
-  href: string;
-  featured?: boolean;
+  description: string;
+  bullets: string[];
+  icon: string;
+}
+
+// ─── Process Steps ────────────────────────────────────────────────────────────
+
+export interface ProcessStep {
+  step: number;
+  title: string;
+  description: string;
 }
 
 // ─── Team ─────────────────────────────────────────────────────────────────────
@@ -45,33 +38,31 @@ export interface TeamMember {
   name: string;
   title: string;
   bio: string;
-  imageUrl?: string;
-  linkedIn?: string;
 }
 
-// ─── Science ──────────────────────────────────────────────────────────────────
+// ─── Career ───────────────────────────────────────────────────────────────────
 
-export interface TechnologyPlatform {
+export interface CareerRole {
   id: string;
-  name: string;
-  tagline: string;
+  title: string;
+  department: string;
+  location: string;
+  type: string;
+}
+
+// ─── Training Module ──────────────────────────────────────────────────────────
+
+export interface TrainingModule {
+  id: string;
+  title: string;
   description: string;
-  applications: string[];
-  icon: string;
+  duration: string;
+  audience: string;
 }
 
-// ─── Investors ────────────────────────────────────────────────────────────────
+// ─── FAQ ──────────────────────────────────────────────────────────────────────
 
-export interface FinancialHighlight {
-  label: string;
-  value: string;
-  change?: string;
-  positive?: boolean;
-}
-
-// ─── Shared ───────────────────────────────────────────────────────────────────
-
-export interface MetaProps {
-  title?: string;
-  description?: string;
+export interface FAQItem {
+  question: string;
+  answer: string;
 }

@@ -1,13 +1,12 @@
 "use client";
 
-import { motion, type Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import type { ReactNode } from "react";
-
-type Direction = "left" | "right" | "up" | "down";
+import { cn } from "@/lib/utils";
 
 interface SlideInProps {
   children: ReactNode;
-  direction?: Direction;
+  direction?: "left" | "right" | "up" | "down";
   delay?: number;
   duration?: number;
   distance?: number;
@@ -15,46 +14,20 @@ interface SlideInProps {
   once?: boolean;
 }
 
-const getVariants = (direction: Direction, distance: number): Variants => {
-  const offsets: Record<Direction, { x?: number; y?: number }> = {
-    left:  { x: -distance },
-    right: { x: distance },
-    up:    { y: -distance },
-    down:  { y: distance },
-  };
-
-  return {
-    hidden: { opacity: 0, ...offsets[direction] },
-    visible: (custom: { delay: number; duration: number }) => ({
-      opacity: 1,
-      x: 0,
-      y: 0,
-      transition: {
-        delay: custom.delay,
-        duration: custom.duration,
-        ease: [0.25, 0.1, 0.25, 1],
-      },
-    }),
-  };
-};
-
 export default function SlideIn({
-  children,
-  direction = "left",
-  delay = 0,
-  duration = 0.7,
-  distance = 40,
-  className,
-  once = true,
+  children, direction = "left", delay = 0, duration = 0.6,
+  distance = 36, className, once = true,
 }: SlideInProps) {
+  const axis = direction === "left" || direction === "right" ? "x" : "y";
+  const sign = direction === "right" || direction === "down" ? 1 : -1;
+
   return (
     <motion.div
-      className={className}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once, margin: "-80px" }}
-      custom={{ delay, duration }}
-      variants={getVariants(direction, distance)}
+      className={cn(className)}
+      initial={{ opacity: 0, [axis]: sign * distance }}
+      whileInView={{ opacity: 1, [axis]: 0 }}
+      viewport={{ once, margin: "-60px" }}
+      transition={{ delay, duration, ease: [0.22, 1, 0.36, 1] }}
     >
       {children}
     </motion.div>

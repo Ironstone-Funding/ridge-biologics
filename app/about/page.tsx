@@ -1,120 +1,124 @@
 "use client";
 
-import { LEADERSHIP_TEAM, COMPANY_META } from "@/lib/constants";
+import Image from "next/image";
+import { LEADERSHIP_TEAM } from "@/lib/constants";
 import FadeIn from "@/components/animations/FadeIn";
 import SlideIn from "@/components/animations/SlideIn";
-import StaggerChildren, { staggerItemVariants } from "@/components/animations/StaggerChildren";
+import StaggerChildren, { itemVariants } from "@/components/animations/StaggerChildren";
 import { motion } from "framer-motion";
 import SectionLabel from "@/components/ui/SectionLabel";
+import Button from "@/components/ui/Button";
 
-
-const COMPANY_VALUES = [
+const MISSION_POINTS = [
   {
-    title: "Patient-First",
-    description: "Every program, every decision, every dollar is directed toward improving lives.",
-    icon: "❤️",
+    title: "Distribution with Discipline",
+    body: "We believe that how you distribute matters as much as what you distribute. Every logistics decision Ridge makes is anchored in documentation integrity and chain-of-custody discipline.",
   },
   {
-    title: "Scientific Rigor",
-    description: "We pursue mechanistic truth — even when it challenges our assumptions.",
-    icon: "🔬",
+    title: "Education Before Introduction",
+    body: "No provider enters our network without completing a structured compliance orientation. We invest in education because informed providers make better decisions.",
   },
   {
-    title: "Collaborative Spirit",
-    description: "The best science happens at the intersection of diverse minds working in concert.",
-    icon: "🤝",
-  },
-  {
-    title: "Relentless Execution",
-    description: "From bench to bedside, we move with urgency because patients are waiting.",
-    icon: "⚡",
+    title: "Infrastructure Over Transactions",
+    body: "Ridge builds infrastructure — operational frameworks, compliance processes, training programs — that support practices over the long term.",
   },
 ];
 
 export default function AboutPage() {
   return (
-    <div className="pt-24 pb-32 bg-ridge-navy min-h-screen">
-      {/* Hero */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <FadeIn>
-            <SectionLabel className="mb-4">About Ridge Biologics</SectionLabel>
-            <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-              A Mission Forged
-              <br />
-              in Science.
+    <div className="pt-20">
+      <section className="section-py bg-rb-navy relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-rb-teal/10 rounded-full blur-[120px] pointer-events-none" />
+        <div className="container-xl relative">
+          <SlideIn direction="left">
+            <SectionLabel light>About Ridge Biologics</SectionLabel>
+            <h1 className="text-display-xl font-bold text-white mb-6 max-w-3xl">
+              Built to Support the Providers<br />Who Support Patients
             </h1>
-            <p className="text-xl text-white/55 leading-relaxed mb-4">
-              Founded in {COMPANY_META.founded} in {COMPANY_META.hq}, Ridge Biologics
-              was built on the belief that the most transformative medicines come from
-              the deepest biological understanding.
+            <p className="text-white/60 text-xl leading-relaxed max-w-2xl">
+              Ridge Biologics is a premium regenerative biologics distribution and provider-support company.
+              We exist to provide the infrastructure, education, and operational guidance that allows
+              practices to integrate biologics with confidence.
             </p>
-            <p className="text-lg text-white/45 leading-relaxed">
-              We recruit extraordinary scientists, build proprietary platforms that
-              create sustained competitive advantage, and focus relentlessly on
-              diseases where patients have no good options.
-            </p>
-          </FadeIn>
-
-          <SlideIn direction="right" delay={0.2}>
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { label: "Founded", value: COMPANY_META.founded },
-                { label: "Headquarters", value: COMPANY_META.hq },
-                { label: "Employees", value: COMPANY_META.employees },
-                { label: "Exchange", value: `${COMPANY_META.ticker} · ${COMPANY_META.exchange}` },
-              ].map((item) => (
-                <div
-                  key={item.label}
-                  className="bg-ridge-navy-light border border-white/10 rounded-2xl p-6"
-                >
-                  <div className="text-2xl font-bold text-white mb-1">{item.value}</div>
-                  <div className="text-sm text-white/45">{item.label}</div>
-                </div>
-              ))}
-            </div>
           </SlideIn>
         </div>
-      </div>
+      </section>
 
-      {/* Values */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-24">
-        <FadeIn className="mb-12">
-          <h2 className="text-3xl font-bold text-white">Our Values</h2>
-        </FadeIn>
-        <StaggerChildren staggerDelay={0.1} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {COMPANY_VALUES.map((value) => (
-            <motion.div key={value.title} variants={staggerItemVariants}>
-              <div className="h-full bg-ridge-navy-light border border-white/10 rounded-2xl p-6 hover:border-ridge-teal/25 transition-colors">
-                <div className="text-3xl mb-4">{value.icon}</div>
-                <h3 className="font-semibold text-white mb-2">{value.title}</h3>
-                <p className="text-sm text-white/55 leading-relaxed">{value.description}</p>
-              </div>
-            </motion.div>
-          ))}
-        </StaggerChildren>
-      </div>
+      <section className="section-py bg-white">
+        <div className="container-xl">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <FadeIn className="flex justify-center lg:justify-start">
+              <Image src="/images/logo.png" alt="Ridge Biologics" width={320} height={100} className="w-full max-w-xs h-auto" />
+            </FadeIn>
+            <SlideIn direction="right">
+              <SectionLabel>Our Mission</SectionLabel>
+              <h2 className="text-display-md font-bold text-rb-navy mb-6">
+                Compliance-Conscious Infrastructure for Modern Regenerative Medicine
+              </h2>
+              <p className="text-rb-text-body text-lg leading-relaxed">
+                Ridge was founded on the belief that providers deserve a distribution partner
+                who takes compliance, documentation, and education as seriously as they do —
+                and who builds operational infrastructure to match.
+              </p>
+            </SlideIn>
+          </div>
+        </div>
+      </section>
 
-      {/* Leadership */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-8" id="leadership">
-        <FadeIn className="mb-12">
-          <h2 className="text-3xl font-bold text-white">Leadership Team</h2>
-        </FadeIn>
-        <StaggerChildren staggerDelay={0.1} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {LEADERSHIP_TEAM.map((member) => (
-            <motion.div key={member.id} variants={staggerItemVariants}>
-              <div className="group">
-                <div className="w-full aspect-square rounded-2xl bg-ridge-navy-mid border border-white/10 mb-4 overflow-hidden flex items-center justify-center group-hover:border-ridge-teal/30 transition-colors">
-                  <span className="text-5xl opacity-30 group-hover:opacity-50 transition-opacity">👤</span>
+      <section className="section-py bg-rb-slate">
+        <div className="container-xl">
+          <FadeIn className="mb-12">
+            <h2 className="text-display-md font-bold text-rb-navy">How We Operate</h2>
+          </FadeIn>
+          <div className="grid md:grid-cols-3 gap-6">
+            {MISSION_POINTS.map((p, i) => (
+              <FadeIn key={p.title} delay={i * 0.1}>
+                <div className="h-full bg-white rounded-2xl border border-rb-slate-mid p-8 hover:border-rb-teal/40 hover:shadow-card-hover transition-all duration-300">
+                  <div className="w-8 h-0.5 bg-rb-teal rounded-full mb-6" />
+                  <h3 className="font-semibold text-rb-navy text-lg mb-3">{p.title}</h3>
+                  <p className="text-rb-text-body text-sm leading-relaxed">{p.body}</p>
                 </div>
-                <h3 className="font-semibold text-white mb-0.5">{member.name}</h3>
-                <p className="text-xs text-ridge-teal mb-3">{member.title}</p>
-                <p className="text-sm text-white/50 leading-relaxed">{member.bio}</p>
-              </div>
-            </motion.div>
-          ))}
-        </StaggerChildren>
-      </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-py bg-white">
+        <div className="container-xl">
+          <FadeIn className="mb-12">
+            <SectionLabel>Leadership</SectionLabel>
+            <h2 className="text-display-md font-bold text-rb-navy">Our Team</h2>
+          </FadeIn>
+          <StaggerChildren staggerDelay={0.1} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {LEADERSHIP_TEAM.map((m) => (
+              <motion.div key={m.id} variants={itemVariants}>
+                <div className="h-full bg-rb-slate rounded-2xl p-7 hover:shadow-card transition-all duration-300">
+                  <div className="w-14 h-14 rounded-full bg-rb-navy flex items-center justify-center mb-4">
+                    <svg className="w-6 h-6 text-white/60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                    </svg>
+                  </div>
+                  <div className="text-xs font-semibold tracking-widest uppercase text-rb-teal mb-2">{m.title}</div>
+                  <p className="text-rb-text-body text-sm leading-relaxed">{m.bio}</p>
+                </div>
+              </motion.div>
+            ))}
+          </StaggerChildren>
+        </div>
+      </section>
+
+      <section className="section-py-sm bg-rb-navy">
+        <div className="container-lg text-center">
+          <FadeIn>
+            <h2 className="text-display-md font-bold text-white mb-5">Work With Ridge</h2>
+            <p className="text-white/60 text-lg mb-8">
+              Provider, representative, or manufacturer — we'd like to hear from you.
+            </p>
+            <Button variant="primary" size="lg" href="/contact">Get in Touch</Button>
+          </FadeIn>
+        </div>
+      </section>
     </div>
   );
 }

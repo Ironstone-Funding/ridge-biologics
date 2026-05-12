@@ -5,8 +5,8 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import type { ReactNode } from "react";
 
-type Variant = "primary" | "secondary" | "ghost" | "outline";
-type Size = "sm" | "md" | "lg";
+type Variant = "primary" | "secondary" | "outline" | "ghost" | "white";
+type Size    = "sm" | "md" | "lg";
 
 interface ButtonProps {
   children: ReactNode;
@@ -18,58 +18,48 @@ interface ButtonProps {
   external?: boolean;
   disabled?: boolean;
   type?: "button" | "submit" | "reset";
+  fullWidth?: boolean;
 }
 
 const variantStyles: Record<Variant, string> = {
-  primary:
-    "bg-ridge-teal text-white hover:bg-ridge-teal-dark shadow-glow-teal font-semibold",
-  secondary:
-    "bg-ridge-gold text-ridge-navy hover:bg-ridge-gold-light shadow-glow-gold font-semibold",
-  ghost:
-    "bg-transparent text-white hover:bg-white/10 border border-white/20",
-  outline:
-    "bg-transparent text-ridge-teal border border-ridge-teal hover:bg-ridge-teal hover:text-white",
+  primary:   "bg-rb-teal text-white hover:bg-rb-teal-dark shadow-button font-semibold",
+  secondary: "bg-rb-navy text-white hover:bg-rb-navy-dark font-semibold",
+  outline:   "bg-transparent text-rb-navy border-2 border-rb-navy hover:bg-rb-navy hover:text-white font-semibold",
+  ghost:     "bg-transparent text-rb-teal border border-rb-teal/40 hover:bg-rb-teal/5 font-medium",
+  white:     "bg-white text-rb-navy hover:bg-rb-slate font-semibold shadow-card",
 };
 
 const sizeStyles: Record<Size, string> = {
-  sm: "px-4 py-2 text-sm rounded-lg",
-  md: "px-6 py-3 text-base rounded-xl",
-  lg: "px-8 py-4 text-lg rounded-xl",
+  sm: "px-5 py-2.5 text-sm rounded-xl",
+  md: "px-7 py-3.5 text-[0.95rem] rounded-xl",
+  lg: "px-9 py-4.5 text-base rounded-xl",
 };
 
 export default function Button({
-  children,
-  variant = "primary",
-  size = "md",
-  href,
-  onClick,
-  className,
-  external = false,
-  disabled = false,
-  type = "button",
+  children, variant = "primary", size = "md",
+  href, onClick, className, external = false,
+  disabled = false, type = "button", fullWidth = false,
 }: ButtonProps) {
-  const baseStyles = cn(
-    "inline-flex items-center gap-2 transition-all duration-200 whitespace-nowrap",
+  const base = cn(
+    "inline-flex items-center justify-center gap-2 transition-all duration-200 whitespace-nowrap tracking-[-0.01em]",
     variantStyles[variant],
     sizeStyles[size],
+    fullWidth && "w-full",
     disabled && "opacity-50 cursor-not-allowed pointer-events-none",
     className
   );
 
-  const motionProps = {
-    whileHover: { scale: disabled ? 1 : 1.02 },
-    whileTap: { scale: disabled ? 1 : 0.98 },
-    transition: { type: "spring", stiffness: 400, damping: 17 },
+  const motion_props = {
+    whileHover: { scale: disabled ? 1 : 1.015 },
+    whileTap:   { scale: disabled ? 1 : 0.985 },
+    transition: { type: "spring", stiffness: 500, damping: 22 },
   };
 
   if (href) {
     return (
-      <motion.div {...motionProps} className="inline-block">
-        <Link
-          href={href}
-          className={baseStyles}
-          {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-        >
+      <motion.div {...motion_props} className="inline-block">
+        <Link href={href} className={base}
+          {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
           {children}
         </Link>
       </motion.div>
@@ -77,13 +67,8 @@ export default function Button({
   }
 
   return (
-    <motion.button
-      {...motionProps}
-      type={type}
-      onClick={onClick}
-      disabled={disabled}
-      className={baseStyles}
-    >
+    <motion.button {...motion_props} type={type} onClick={onClick}
+      disabled={disabled} className={base}>
       {children}
     </motion.button>
   );

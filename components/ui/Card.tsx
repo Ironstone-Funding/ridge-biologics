@@ -8,37 +8,22 @@ interface CardProps {
   children: ReactNode;
   className?: string;
   hover?: boolean;
-  glass?: boolean;
-  dark?: boolean;
-  padding?: "none" | "sm" | "md" | "lg";
+  padding?: "sm" | "md" | "lg" | "none";
+  border?: boolean;
 }
 
-const paddingStyles = {
-  none: "",
-  sm: "p-4",
-  md: "p-6",
-  lg: "p-8",
-};
+const paddings = { none: "", sm: "p-5", md: "p-7", lg: "p-9" };
 
-export default function Card({
-  children,
-  className,
-  hover = true,
-  glass = false,
-  dark = true,
-  padding = "md",
-}: CardProps) {
+export default function Card({ children, className, hover = true, padding = "md", border = true }: CardProps) {
   return (
     <motion.div
-      whileHover={hover ? { y: -4, transition: { duration: 0.2 } } : undefined}
+      whileHover={hover ? { y: -3, boxShadow: "0 8px 40px rgba(40,68,84,0.12)" } : undefined}
+      transition={{ duration: 0.2 }}
       className={cn(
-        "rounded-2xl border transition-all duration-300",
-        dark
-          ? "bg-ridge-navy-light border-white/10 shadow-card-dark"
-          : "bg-white border-gray-200 shadow-card-light",
-        glass && "backdrop-blur-sm bg-white/5 border-white/10",
-        hover && (dark ? "hover:border-ridge-teal/30" : "hover:border-ridge-teal/50"),
-        paddingStyles[padding],
+        "bg-white rounded-2xl shadow-card transition-all duration-200",
+        border && "border border-rb-slate-mid",
+        hover && "hover:border-rb-teal/30",
+        paddings[padding],
         className
       )}
     >

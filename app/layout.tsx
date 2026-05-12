@@ -2,58 +2,44 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { COMPANY_META } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: {
-    default: `${COMPANY_META.name} | ${COMPANY_META.tagline}`,
-    template: `%s | ${COMPANY_META.name}`,
+    default: "Ridge Biologics | Compliance-First Regenerative Biologics Distribution",
+    template: "%s | Ridge Biologics",
   },
   description:
-    "Ridge Biologics engineers next-generation antibodies, cell therapies, and mRNA medicines to defeat diseases that devastate lives. Seven clinical programs. Three Phase 3 trials.",
+    "Ridge Biologics provides compliance-conscious regenerative biologics distribution, provider onboarding, clinical education, and operational infrastructure for modern healthcare practices.",
   keywords: [
-    "biopharmaceutical",
-    "biologics",
-    "oncology",
-    "immunology",
-    "rare disease",
-    "CAR-T",
-    "mRNA",
-    "antibody",
-    "clinical trials",
+    "regenerative biologics distribution",
+    "compliance-conscious biologics",
+    "provider biologics support",
+    "biologics onboarding",
+    "clinical education biologics",
+    "chain of custody biologics",
+    "regenerative medicine support",
   ],
-  authors: [{ name: "Ridge Biologics, Inc." }],
+  authors: [{ name: "Ridge Biologics" }],
   openGraph: {
     type: "website",
-    locale: "en_US",
-    url: "https://ridgebiologics.com",
-    siteName: COMPANY_META.name,
-    title: `${COMPANY_META.name} | ${COMPANY_META.tagline}`,
+    siteName: "Ridge Biologics",
+    title: "Ridge Biologics | Compliance-First Regenerative Biologics Distribution",
     description:
-      "Advancing transformative biologics for patients with serious diseases worldwide.",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: `${COMPANY_META.name} | ${COMPANY_META.tagline}`,
-    description: "Advancing transformative biologics for patients with serious diseases.",
+      "Premium regenerative biologics distribution and provider infrastructure. Compliance-conscious. Documentation-focused. Provider-first.",
   },
   robots: { index: true, follow: true },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0A1628",
+  themeColor: "#284454",
   width: "device-width",
   initialScale: 1,
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="min-h-screen flex flex-col antialiased">
+      <body className="min-h-screen flex flex-col antialiased bg-white text-rb-navy">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

@@ -1,236 +1,382 @@
-import type { NavItem, PipelineCandidate, NewsItem, TechnologyPlatform, TeamMember, FinancialHighlight } from "@/types";
+import type {
+  NavItem, TrustPillar, Solution, ProcessStep,
+  TeamMember, CareerRole, TrainingModule, FAQItem,
+} from "@/types";
 
 // ─── Navigation ───────────────────────────────────────────────────────────────
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: "About", href: "/about" },
+  { label: "About",    href: "/about" },
+  { label: "Solutions", href: "/solutions" },
   {
-    label: "Science",
-    href: "/science",
+    label: "Compliance",
+    href: "/compliance",
     children: [
-      { label: "Technology Platforms", href: "/science#platforms" },
-      { label: "Research Areas", href: "/science#research" },
-      { label: "Publications", href: "/science#publications" },
+      { label: "Compliance Overview",       href: "/compliance" },
+      { label: "Documentation Support",     href: "/compliance#documentation" },
+      { label: "Chain-of-Custody Approach", href: "/compliance#chain-of-custody" },
     ],
   },
-  {
-    label: "Pipeline",
-    href: "/pipeline",
-    children: [
-      { label: "Clinical Pipeline", href: "/pipeline#clinical" },
-      { label: "Preclinical Programs", href: "/pipeline#preclinical" },
-    ],
-  },
-  { label: "Investors", href: "/investors" },
-  { label: "Contact", href: "/contact" },
+  { label: "Provider Onboarding", href: "/provider-onboarding" },
+  { label: "Training",  href: "/training" },
+  { label: "Careers",   href: "/careers" },
+  { label: "Contact",   href: "/contact" },
 ];
 
-export const COMPANY_META = {
-  name: "Ridge Biologics",
-  tagline: "Precision Biology. Transformative Medicine.",
-  ticker: "RDGB",
-  exchange: "NASDAQ",
-  founded: "2014",
-  hq: "San Diego, CA",
-  employees: "580+",
-  phone: "+1 (858) 555-0192",
-  email: "info@ridgebiologics.com",
-  address: "10755 Science Center Drive, Suite 300\nSan Diego, CA 92121",
+export const COMPANY = {
+  name:    "Ridge Biologics",
+  tagline: "The Compliance-First Infrastructure Behind Modern Regenerative Medicine",
+  sub:     "Ridge Biologics supports providers with regenerative biologics distribution, compliance-conscious education, documentation support, and operational guidance.",
+  email:   "info@ridgebiologics.com",
+  phone:   "Contact us for information",
+  cta_primary:   "Schedule a Provider Consultation",
+  cta_secondary: "Explore Our Solutions",
 };
 
-// ─── Pipeline Data ────────────────────────────────────────────────────────────
+// ─── Trust Pillars ────────────────────────────────────────────────────────────
 
-export const PIPELINE_CANDIDATES: PipelineCandidate[] = [
+export const TRUST_PILLARS: TrustPillar[] = [
+  { label: "Compliance-Conscious",      icon: "shield" },
+  { label: "Provider Support",          icon: "users" },
+  { label: "Documentation-Focused",     icon: "file" },
+  { label: "Operational Guidance",      icon: "chart" },
+  { label: "Chain-of-Custody Mindset",  icon: "link" },
+];
+
+// ─── Why Clinics Choose Ridge ────────────────────────────────────────────────
+
+export const WHY_RIDGE = [
   {
-    id: "rb-001",
-    name: "Ridlimab",
-    genericName: "anti-IL-33 mAb",
-    indication: "Moderate-to-Severe Atopic Dermatitis",
-    therapeuticArea: "Immunology",
-    phase: "Phase 3",
-    mechanism: "IL-33 / ST2 Axis Blockade",
-    status: "Active",
-    lastUpdated: "2026-03-01",
+    title: "Built Around the Provider",
+    description:
+      "We recognize that clinical teams are focused on patient outcomes. Our role is to handle the operational and documentation complexity so practitioners can stay focused on care delivery.",
+    icon: "👨‍⚕️",
   },
   {
-    id: "rb-002",
-    name: "RB-402",
-    genericName: "bispecific T-cell engager",
-    indication: "Relapsed/Refractory DLBCL",
-    therapeuticArea: "Oncology",
-    phase: "Phase 2",
-    mechanism: "CD20 × CD3 Bispecific",
-    status: "Active",
-    lastUpdated: "2026-02-15",
+    title: "Compliance-Conscious by Design",
+    description:
+      "Every process we've built — from onboarding to distribution — is structured with regulatory awareness, documentation integrity, and chain-of-custody discipline in mind.",
+    icon: "🛡️",
   },
   {
-    id: "rb-003",
-    name: "RB-517",
-    genericName: "CAR-T cell therapy",
-    indication: "AML (Acute Myeloid Leukemia)",
-    therapeuticArea: "Oncology",
-    phase: "Phase 1",
-    mechanism: "CD33-directed CAR-T",
-    status: "Active",
-    lastUpdated: "2026-01-20",
+    title: "Education-Driven Relationships",
+    description:
+      "We invest in training and education resources that help providers make informed, defensible decisions about the biologics they incorporate into their practice.",
+    icon: "📚",
   },
   {
-    id: "rb-004",
-    name: "RB-214",
-    genericName: "small molecule kinase inhibitor",
-    indication: "Rett Syndrome",
-    therapeuticArea: "Rare Disease",
-    phase: "Phase 2",
-    mechanism: "MECP2 pathway modulator",
-    status: "Active",
-    lastUpdated: "2026-03-10",
-  },
-  {
-    id: "rb-005",
-    name: "RB-891",
-    genericName: "biologic enzyme replacement",
-    indication: "Pompe Disease (Late-Onset)",
-    therapeuticArea: "Rare Disease",
-    phase: "Phase 3",
-    mechanism: "Next-Gen GAA Replacement",
-    status: "Active",
-    lastUpdated: "2026-03-18",
-  },
-  {
-    id: "rb-006",
-    name: "RB-103",
-    genericName: "anti-TDP-43 mAb",
-    indication: "ALS / Frontotemporal Dementia",
-    therapeuticArea: "Neurology",
-    phase: "Phase 1",
-    mechanism: "TDP-43 Aggregation Inhibition",
-    status: "Active",
-    lastUpdated: "2025-11-05",
-  },
-  {
-    id: "rb-007",
-    name: "RB-720",
-    genericName: "mRNA-LNP therapeutic",
-    indication: "Transthyretin Amyloidosis (ATTR)",
-    therapeuticArea: "Cardiology",
-    phase: "Preclinical",
-    mechanism: "Hepatic TTR Silencing via mRNA",
-    status: "Active",
-    lastUpdated: "2026-01-08",
+    title: "Operational Infrastructure That Scales",
+    description:
+      "Whether you're a single-location clinic or a multi-site practice, Ridge provides a consistent, standards-oriented support infrastructure that grows with you.",
+    icon: "🏗️",
   },
 ];
 
-// ─── News ─────────────────────────────────────────────────────────────────────
+// ─── Solutions ────────────────────────────────────────────────────────────────
 
-export const NEWS_ITEMS: NewsItem[] = [
+export const SOLUTIONS: Solution[] = [
   {
-    id: "n-001",
-    title: "Ridge Biologics Reports Positive Phase 3 Data for Ridlimab in Atopic Dermatitis",
-    excerpt:
-      "Pivotal CLEAR-AD trial meets all primary and secondary endpoints at 52 weeks with a favorable safety profile.",
-    date: "2026-04-08",
-    category: "Press Release",
-    href: "/news/ridlimab-phase3-results",
-    featured: true,
+    id: "distribution",
+    title: "Biologics Distribution",
+    description:
+      "Ridge operates a structured distribution model connecting provider practices with established regenerative biologics manufacturers. Our distribution process emphasizes documentation integrity, temperature-monitored logistics, and traceable chain-of-custody records.",
+    bullets: [
+      "Temperature-monitored cold-chain logistics",
+      "Chain-of-custody documentation support",
+      "Manufacturer verification and alignment",
+      "Inventory coordination for practice needs",
+    ],
+    icon: "📦",
   },
   {
-    id: "n-002",
-    title: "RB-402 Achieves 68% ORR in Phase 2 Interim Analysis for Relapsed DLBCL",
-    excerpt:
-      "Data presented at ASH 2026 reinforce best-in-class potential of the CD20 × CD3 bispecific program.",
-    date: "2026-03-22",
-    category: "Conference",
-    href: "/news/rb402-interim-analysis",
-    featured: false,
+    id: "compliance",
+    title: "Compliance Infrastructure",
+    description:
+      "Navigating the regulatory environment around regenerative biologics requires ongoing attention. Ridge provides documentation frameworks, compliance-conscious processes, and education resources designed to help practices operate with confidence.",
+    bullets: [
+      "Documentation framework development",
+      "Regulatory-aligned internal processes",
+      "Compliance review support materials",
+      "Practice-level guidance resources",
+    ],
+    icon: "🛡️",
   },
   {
-    id: "n-003",
-    title: "Ridge Biologics Awarded NIH BARDA Grant for Next-Generation mRNA Platform",
-    excerpt:
-      "$42M grant will accelerate development of the Company's lipid nanoparticle delivery technology.",
-    date: "2026-02-14",
-    category: "Press Release",
-    href: "/news/barda-grant-award",
-    featured: false,
+    id: "onboarding",
+    title: "Provider Onboarding",
+    description:
+      "Introducing regenerative biologics into a clinical practice requires preparation. Ridge's structured onboarding process prepares practices operationally and educationally before any product is introduced.",
+    bullets: [
+      "Step-by-step onboarding workflow",
+      "Documentation checklist support",
+      "Initial compliance orientation",
+      "Ongoing relationship support post-launch",
+    ],
+    icon: "🚀",
   },
   {
-    id: "n-004",
-    title: "Publication in Nature Medicine: Mechanism of Ridlimab in IL-33 Pathway Modulation",
-    excerpt:
-      "Peer-reviewed manuscript details the structural basis of Ridlimab's ultra-high IL-33 affinity.",
-    date: "2026-01-30",
-    category: "Publication",
-    href: "/news/ridlimab-nature-medicine",
-    featured: false,
+    id: "education",
+    title: "Clinical Education & Training",
+    description:
+      "Our education programs are designed to help provider teams understand the regenerative biologics landscape — including product sourcing, handling standards, patient communication, and documentation practices.",
+    bullets: [
+      "Provider and staff training programs",
+      "Biologics sourcing and handling education",
+      "Patient communication guidelines",
+      "Continuing education resources",
+    ],
+    icon: "🎓",
+  },
+  {
+    id: "rep-support",
+    title: "Representative Field Support",
+    description:
+      "Ridge's field representatives serve as operational and educational liaisons to provider practices. Each rep is trained to support documentation, compliance awareness, and practice-level operational needs.",
+    bullets: [
+      "Dedicated field representative assignment",
+      "On-site operational support visits",
+      "Documentation and process review",
+      "Ongoing education reinforcement",
+    ],
+    icon: "🤝",
+  },
+  {
+    id: "manufacturer",
+    title: "Manufacturer Alignment",
+    description:
+      "Ridge maintains relationships with established biologics manufacturers. Our partner alignment process evaluates manufacturing standards, regulatory positioning, and documentation practices before any product enters our distribution network.",
+    bullets: [
+      "Manufacturer vetting and alignment process",
+      "Standards documentation review",
+      "Ongoing manufacturer relationship management",
+      "Product information and education support",
+    ],
+    icon: "🏭",
   },
 ];
 
-// ─── Technology Platforms ────────────────────────────────────────────────────
+// ─── Provider Onboarding Steps ────────────────────────────────────────────────
 
-export const TECH_PLATFORMS: TechnologyPlatform[] = [
+export const ONBOARDING_STEPS: ProcessStep[] = [
   {
-    id: "tp-001",
-    name: "RidgeMab™",
-    tagline: "Next-Generation Antibody Engineering",
+    step: 1,
+    title: "Initial Consultation",
     description:
-      "Proprietary antibody optimization platform delivering ultra-high affinity, extended half-life, and pH-dependent recycling for unparalleled clinical performance.",
-    applications: ["Monoclonal Antibodies", "Bispecifics", "ADCs", "Half-life Extension"],
-    icon: "🧬",
+      "A Ridge representative conducts a discovery call to understand your practice model, current biologics experience, and operational readiness.",
   },
   {
-    id: "tp-002",
-    name: "ClearCell™",
-    tagline: "Precision Cell Therapy Architecture",
+    step: 2,
+    title: "Compliance Orientation",
     description:
-      "Armored CAR-T and NK-cell engineering framework integrating advanced co-stimulatory domains, logic-gated targeting, and off-the-shelf manufacturing compatibility.",
-    applications: ["CAR-T", "CAR-NK", "Logic-Gated Targeting", "iPSC Derivation"],
-    icon: "⚗️",
+      "Providers receive a structured compliance orientation covering regulatory environment awareness, documentation expectations, and operational standards.",
   },
   {
-    id: "tp-003",
-    name: "RidgeRNA™",
-    tagline: "Therapeutic mRNA & LNP Delivery",
+    step: 3,
+    title: "Documentation Framework",
     description:
-      "Modular mRNA design engine paired with organ-selective lipid nanoparticle formulations enabling efficient hepatic, pulmonary, and tumor delivery with minimal immunogenicity.",
-    applications: ["Enzyme Replacement", "Gene Silencing", "Protein Replacement", "In vivo Editing"],
-    icon: "💊",
+      "Ridge provides a documentation support framework tailored to your practice. This includes intake records, consent considerations, and chain-of-custody templates.",
+  },
+  {
+    step: 4,
+    title: "Team Training",
+    description:
+      "Your clinical and administrative team completes Ridge's foundational training program covering biologics handling, documentation, and patient communication.",
+  },
+  {
+    step: 5,
+    title: "Distribution Setup",
+    description:
+      "Logistics and distribution parameters are established, including storage standards, ordering protocols, and chain-of-custody record maintenance.",
+  },
+  {
+    step: 6,
+    title: "Ongoing Support",
+    description:
+      "A dedicated Ridge representative provides continued field support, compliance check-ins, and access to updated education resources.",
   },
 ];
 
-// ─── Leadership Team ──────────────────────────────────────────────────────────
+// ─── Training Modules ─────────────────────────────────────────────────────────
 
-export const LEADERSHIP_TEAM: TeamMember[] = [
+export const TRAINING_MODULES: TrainingModule[] = [
   {
     id: "tm-001",
-    name: "Dr. Sarah Chen, Ph.D.",
-    title: "Chief Executive Officer & Co-Founder",
-    bio: "Former SVP at Genentech. Pioneer in structural immunology with 30+ peer-reviewed publications and 18 issued patents.",
+    title: "Regenerative Biologics Fundamentals",
+    description:
+      "An orientation to the regenerative biologics landscape, including product categories, sourcing considerations, and the regulatory environment.",
+    duration: "2–3 hours",
+    audience: "All provider staff",
   },
   {
     id: "tm-002",
-    name: "James R. Merritt, M.D.",
-    title: "Chief Medical Officer",
-    bio: "Board-certified oncologist and translational medicine leader. Led clinical development programs that generated three FDA approvals.",
+    title: "Compliance & Documentation Standards",
+    description:
+      "A focused review of documentation practices, chain-of-custody concepts, and the compliance frameworks relevant to biologics integration.",
+    duration: "3–4 hours",
+    audience: "Clinical leads & administrators",
   },
   {
     id: "tm-003",
-    name: "Dr. Anika Patel, Ph.D.",
-    title: "Chief Scientific Officer",
-    bio: "Structural biologist and antibody engineer. Founding scientist of the RidgeMab™ platform, ex-MIT Whitehead Fellow.",
+    title: "Patient Communication & Informed Consent",
+    description:
+      "Guidance on communicating with patients about regenerative biologics — including what providers can and should say, and how to support informed decision-making.",
+    duration: "1–2 hours",
+    audience: "Provider-facing staff",
   },
   {
     id: "tm-004",
-    name: "Marcus D. Wells",
-    title: "Chief Financial Officer",
-    bio: "20+ years in healthcare investment banking and capital markets. Previously CFO at two NASDAQ-listed biotech companies.",
+    title: "Handling, Storage & Chain-of-Custody",
+    description:
+      "Operational training on biologics receipt, storage, temperature monitoring, and the documentation practices that support defensible chain-of-custody records.",
+    duration: "2 hours",
+    audience: "Clinical & logistics staff",
+  },
+  {
+    id: "tm-005",
+    title: "Practice Integration & Operational Workflow",
+    description:
+      "Step-by-step guidance on integrating biologics distribution into existing practice workflows — including scheduling, intake, documentation, and billing coordination.",
+    duration: "2–3 hours",
+    audience: "Practice managers & administrators",
   },
 ];
 
-// ─── Financial Highlights ────────────────────────────────────────────────────
+// ─── Leadership ────────────────────────────────────────────────────────────────
 
-export const FINANCIAL_HIGHLIGHTS: FinancialHighlight[] = [
-  { label: "Cash & Equivalents", value: "$1.24B", change: "+$340M", positive: true },
-  { label: "R&D Investment (FY2025)", value: "$487M", change: "+18% YoY", positive: true },
-  { label: "Revenue (FY2025)", value: "$112M", change: "+64% YoY", positive: true },
-  { label: "Market Capitalization", value: "$8.2B" },
+export const LEADERSHIP_TEAM: TeamMember[] = [
+  {
+    id: "l-001",
+    name: "Executive Leadership",
+    title: "Chief Executive Officer",
+    bio: "Providing strategic direction across Ridge's national distribution platform, compliance infrastructure, and provider relationships.",
+  },
+  {
+    id: "l-002",
+    name: "Compliance & Operations",
+    title: "Director of Compliance & Operations",
+    bio: "Overseeing Ridge's documentation standards, chain-of-custody protocols, and operational compliance frameworks across all provider partnerships.",
+  },
+  {
+    id: "l-003",
+    name: "Provider Relations",
+    title: "Director of Provider Relations",
+    bio: "Managing Ridge's provider onboarding experience, field representative network, and ongoing clinical education programs.",
+  },
+  {
+    id: "l-004",
+    name: "Manufacturer Partnerships",
+    title: "Director of Manufacturer Alignment",
+    bio: "Leading Ridge's manufacturer vetting processes, distribution relationships, and product standards oversight.",
+  },
+];
+
+// ─── Career Roles ─────────────────────────────────────────────────────────────
+
+export const CAREER_ROLES: CareerRole[] = [
+  {
+    id: "c-001",
+    title: "Regional Field Representative",
+    department: "Provider Relations",
+    location: "Multiple Regions",
+    type: "Full-Time",
+  },
+  {
+    id: "c-002",
+    title: "Compliance Documentation Specialist",
+    department: "Compliance & Operations",
+    location: "Remote / Hybrid",
+    type: "Full-Time",
+  },
+  {
+    id: "c-003",
+    title: "Provider Onboarding Coordinator",
+    department: "Provider Relations",
+    location: "Remote",
+    type: "Full-Time",
+  },
+  {
+    id: "c-004",
+    title: "Clinical Education Specialist",
+    department: "Training & Education",
+    location: "Remote / Field",
+    type: "Full-Time",
+  },
+  {
+    id: "c-005",
+    title: "Distribution Operations Associate",
+    department: "Operations & Logistics",
+    location: "Varies by Region",
+    type: "Full-Time",
+  },
+];
+
+// ─── Compliance FAQs ──────────────────────────────────────────────────────────
+
+export const COMPLIANCE_FAQS: FAQItem[] = [
+  {
+    question: "What is Ridge Biologics' approach to compliance?",
+    answer:
+      "Ridge operates with a compliance-conscious framework embedded into every layer of our model — from manufacturer vetting to provider onboarding to ongoing field support. We prioritize documentation integrity, regulatory awareness, and education at every touchpoint.",
+  },
+  {
+    question: "How does Ridge support documentation at the practice level?",
+    answer:
+      "We provide documentation frameworks that help practices maintain consistent, organized records related to biologics receipt, storage, patient intake, and chain-of-custody. These frameworks are designed to help practices operate in a defensible, standards-aligned manner.",
+  },
+  {
+    question: "Does Ridge make claims about clinical outcomes?",
+    answer:
+      "No. Ridge does not make efficacy claims about biologics products. Our role is distribution, education, and operational support. We provide information resources, but clinical decisions remain the responsibility of licensed providers.",
+  },
+  {
+    question: "How does Ridge evaluate its manufacturer partners?",
+    answer:
+      "Ridge conducts a structured vetting process that includes review of manufacturing standards documentation, regulatory positioning, and compliance posture before any manufacturer enters our distribution network.",
+  },
+  {
+    question: "What is chain-of-custody and why does Ridge emphasize it?",
+    answer:
+      "Chain-of-custody refers to the documented chronological record of product handling from manufacturer to point of use. Ridge treats this as a core operational discipline — not an afterthought — and builds documentation processes to support it at every stage.",
+  },
+];
+
+// ─── Value Props (homepage card section) ─────────────────────────────────────
+
+export const VALUE_PROPS = [
+  {
+    title: "Compliance Infrastructure",
+    description:
+      "Documentation frameworks, chain-of-custody protocols, and regulatory-aligned processes built into every layer of our model.",
+    href: "/compliance",
+  },
+  {
+    title: "Biologics Distribution",
+    description:
+      "Structured distribution with temperature-monitored logistics, manufacturer verification, and traceable documentation support.",
+    href: "/solutions#distribution",
+  },
+  {
+    title: "Provider Onboarding",
+    description:
+      "A step-by-step onboarding process that prepares practices operationally and educationally before any product introduction.",
+    href: "/provider-onboarding",
+  },
+  {
+    title: "Training & Education",
+    description:
+      "Education programs covering biologics fundamentals, compliance standards, handling protocols, and patient communication.",
+    href: "/training",
+  },
+  {
+    title: "Field Representative Support",
+    description:
+      "Dedicated field representatives serving as operational and compliance liaisons to your practice on an ongoing basis.",
+    href: "/solutions#rep-support",
+  },
+  {
+    title: "Manufacturer Alignment",
+    description:
+      "Rigorous manufacturer vetting ensures every product in our network meets Ridge's documentation and standards criteria.",
+    href: "/solutions#manufacturer",
+  },
 ];
