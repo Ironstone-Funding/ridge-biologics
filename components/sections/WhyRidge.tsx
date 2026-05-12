@@ -1,9 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import FadeIn from "@/components/animations/FadeIn";
 
-const ease = [0.22, 1, 0.36, 1] as const;
+const ease = [0.16, 1, 0.3, 1] as const;
 
 const PILLARS = [
   {
@@ -26,71 +25,86 @@ const PILLARS = [
 export default function WhyRidge() {
   return (
     <section className="bg-white">
-      <div className="max-w-7xl mx-auto px-8 lg:px-14 py-28 lg:py-36">
-        <div className="grid lg:grid-cols-12 gap-16 lg:gap-20">
+      <div className="max-w-7xl mx-auto px-8 lg:px-16 py-40 lg:py-56">
+        <div className="grid lg:grid-cols-12 gap-20 lg:gap-24">
 
-          {/* Left — editorial statement */}
-          <div className="lg:col-span-4 xl:col-span-4 lg:sticky lg:top-32 lg:self-start">
-            <FadeIn>
-              <div className="flex items-center gap-3 mb-10">
-                <span className="block w-6 h-px bg-[#38747e]" />
-                <span className="text-[10px] text-[#38747e] tracking-[0.28em] uppercase font-medium">
+          {/* Left — oversized editorial statement, sticky */}
+          <div className="lg:col-span-4 lg:sticky lg:top-28 lg:self-start">
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 1.6, delay: 0.1, ease }}
+            >
+              <div className="flex items-center gap-4 mb-12">
+                <span className="block w-8 h-px bg-[#38747e]/60" />
+                <span className="text-[9.5px] text-[#38747e]/70 tracking-[0.32em] uppercase font-medium">
                   Why Clinics Choose Ridge
                 </span>
               </div>
 
               <h2
-                className="font-serif font-light text-[#284454] leading-[1.05] mb-8"
-                style={{ fontSize: "clamp(2.4rem, 3.5vw, 3.4rem)", letterSpacing: "-0.01em" }}
+                className="font-serif font-light text-[#284454] leading-[0.96]"
+                style={{
+                  fontSize: "clamp(3.2rem, 5.5vw, 5.5rem)",
+                  letterSpacing: "-0.02em",
+                }}
               >
                 The Standard
                 <br />
                 That Practices
                 <br />
-                <em style={{ fontStyle: "italic" }}>Expect.</em>
+                <em style={{ fontStyle: "italic", color: "#38747e", opacity: 0.85 }}>Expect.</em>
               </h2>
-
-              <p className="text-[#3d5a68]/60 text-sm leading-[1.8] font-light max-w-xs">
-                Ridge exists to handle the operational complexity of biologics distribution
-                so providers can remain focused on what matters — delivering exceptional patient care.
-              </p>
-            </FadeIn>
+            </motion.div>
           </div>
 
           {/* Right — vertical editorial list */}
-          <div className="lg:col-span-8 xl:col-span-8">
-            <div className="divide-y divide-[#dde7eb]">
+          <div className="lg:col-span-8">
+            <div>
               {PILLARS.map((item, i) => (
                 <motion.div
                   key={item.num}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-60px" }}
-                  transition={{ duration: 1.1, delay: i * 0.12, ease }}
-                  className="group py-10 lg:py-12 flex flex-col sm:flex-row gap-6 sm:gap-10"
+                  viewport={{ once: true, margin: "-80px" }}
+                  transition={{ duration: 1.5, delay: i * 0.15, ease }}
+                  className="group border-t border-[#dde7eb] py-14 lg:py-16 flex flex-col sm:flex-row gap-8 sm:gap-12"
                 >
-                  {/* Number */}
+                  {/* Number — large ghosted serif anchor */}
                   <span
-                    className="font-serif font-light text-[#284454]/18 flex-shrink-0 leading-none group-hover:text-[#38747e]/30 transition-colors duration-500"
-                    style={{ fontSize: "clamp(2.5rem, 4vw, 3.5rem)", letterSpacing: "-0.02em" }}
+                    className="font-serif font-light flex-shrink-0 leading-none select-none transition-colors duration-700"
+                    style={{
+                      fontSize: "clamp(4rem, 7vw, 6.5rem)",
+                      letterSpacing: "-0.03em",
+                      color: "rgba(40,68,84,0.08)",
+                    }}
                   >
                     {item.num}
                   </span>
 
                   {/* Content */}
-                  <div className="pt-1">
+                  <div className="pt-2 lg:pt-3">
                     <h3
-                      className="font-serif font-light text-[#284454] mb-4 leading-[1.25] group-hover:text-[#38747e] transition-colors duration-500"
-                      style={{ fontSize: "clamp(1.2rem, 1.8vw, 1.55rem)", letterSpacing: "-0.01em" }}
+                      className="font-serif font-light text-[#284454] mb-5 leading-[1.2] group-hover:text-[#38747e] transition-colors duration-700"
+                      style={{
+                        fontSize: "clamp(1.25rem, 2vw, 1.7rem)",
+                        letterSpacing: "-0.01em",
+                      }}
                     >
                       {item.title}
                     </h3>
-                    <p className="text-[#3d5a68]/55 text-sm lg:text-[0.9rem] leading-[1.85] font-light max-w-xl">
+                    <p
+                      className="text-[#3d5a68] text-sm leading-[1.9] font-light"
+                      style={{ opacity: 0.42, maxWidth: "38rem" }}
+                    >
                       {item.body}
                     </p>
                   </div>
                 </motion.div>
               ))}
+              {/* Final bottom rule */}
+              <div className="border-t border-[#dde7eb]" />
             </div>
           </div>
 
