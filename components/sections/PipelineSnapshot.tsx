@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { PIPELINE_CANDIDATES } from "@/lib/constants";
 import FadeIn from "@/components/animations/FadeIn";

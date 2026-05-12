@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+"use client";
+
 import { PIPELINE_CANDIDATES } from "@/lib/constants";
 import FadeIn from "@/components/animations/FadeIn";
 import StaggerChildren, { staggerItemVariants } from "@/components/animations/StaggerChildren";
@@ -8,11 +9,6 @@ import PhaseBar from "@/components/ui/PhaseBar";
 import SectionLabel from "@/components/ui/SectionLabel";
 import Card from "@/components/ui/Card";
 
-export const metadata: Metadata = {
-  title: "Pipeline",
-  description:
-    "Ridge Biologics' clinical pipeline: seven programs across oncology, immunology, rare disease, neurology, and cardiology.",
-};
 
 export default function PipelinePage() {
   const clinical = PIPELINE_CANDIDATES.filter((c) => c.phase !== "Preclinical");

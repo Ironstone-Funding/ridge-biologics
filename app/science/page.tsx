@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+"use client";
+
 import { TECH_PLATFORMS } from "@/lib/constants";
 import FadeIn from "@/components/animations/FadeIn";
 import SlideIn from "@/components/animations/SlideIn";
@@ -7,11 +8,6 @@ import { motion } from "framer-motion";
 import SectionLabel from "@/components/ui/SectionLabel";
 import Card from "@/components/ui/Card";
 
-export const metadata: Metadata = {
-  title: "Science",
-  description:
-    "Ridge Biologics' three proprietary technology platforms: RidgeMab™ antibody engineering, ClearCell™ CAR-T, and RidgeRNA™ mRNA delivery.",
-};
 
 const RESEARCH_AREAS = [
   {

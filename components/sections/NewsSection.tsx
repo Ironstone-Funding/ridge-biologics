@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { NEWS_ITEMS } from "@/lib/constants";
 import { formatDate } from "@/lib/utils";

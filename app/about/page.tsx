@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+"use client";
+
 import { LEADERSHIP_TEAM, COMPANY_META } from "@/lib/constants";
 import FadeIn from "@/components/animations/FadeIn";
 import SlideIn from "@/components/animations/SlideIn";
@@ -6,11 +7,6 @@ import StaggerChildren, { staggerItemVariants } from "@/components/animations/St
 import { motion } from "framer-motion";
 import SectionLabel from "@/components/ui/SectionLabel";
 
-export const metadata: Metadata = {
-  title: "About",
-  description:
-    "Ridge Biologics was founded in 2014 with the mission to engineer next-generation biologics and bring them to patients who need them most.",
-};
 
 const COMPANY_VALUES = [
   {

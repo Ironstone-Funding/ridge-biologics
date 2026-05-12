@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+"use client";
+
 import { FINANCIAL_HIGHLIGHTS, NEWS_ITEMS, COMPANY_META } from "@/lib/constants";
 import { formatDate } from "@/lib/utils";
 import FadeIn from "@/components/animations/FadeIn";
@@ -8,10 +9,6 @@ import SectionLabel from "@/components/ui/SectionLabel";
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
 
-export const metadata: Metadata = {
-  title: "Investors",
-  description: "Ridge Biologics investor relations: financial highlights, SEC filings, and upcoming events.",
-};
 
 const IR_EVENTS = [
   { date: "2026-05-14", title: "Q1 2026 Earnings Call", type: "Earnings" },
