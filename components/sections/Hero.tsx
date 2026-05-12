@@ -57,43 +57,71 @@ export default function Hero() {
       {/* ─── HERO ────────────────────────────────────────────────────── */}
       <section className="relative min-h-screen flex flex-col justify-end overflow-hidden">
 
-        {/* Background — deeply atmospheric */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[#070f16]" />
-          {/* Teal atmospheric source — upper right */}
-          <div className="absolute inset-0" style={{
-            background: "radial-gradient(ellipse 130% 100% at 100% -5%, rgba(32,90,108,0.22) 0%, transparent 50%)"
-          }} />
-          {/* Warm depth pocket — lower left */}
-          <div className="absolute inset-0" style={{
-            background: "radial-gradient(ellipse 80% 70% at -5% 110%, rgba(20,44,60,0.55) 0%, transparent 55%)"
-          }} />
-          {/* Radial vignette — edges darken */}
-          <div className="absolute inset-0" style={{
-            background: "radial-gradient(ellipse 105% 105% at 50% 50%, transparent 38%, rgba(4,8,13,0.7) 100%)"
-          }} />
-          {/* Subtle top fade */}
-          <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#04080d]/60 to-transparent" />
-          {/* Film grain — filmic texture */}
-          <div
-            className="absolute inset-0 opacity-[0.048]"
-            style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23n)'/%3E%3C/svg%3E")`,
-              backgroundSize: "256px 256px",
-            }}
-          />
-        </div>
+        {/* ─── Background stack ─── */}
 
-        {/* Slow atmospheric bloom — enters over 4 seconds */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 4.5, ease: "easeOut" }}
-          className="absolute top-0 right-0 w-[65vw] h-[80vh] pointer-events-none"
-          style={{ background: "radial-gradient(ellipse at 100% 0%, rgba(44,108,126,0.06) 0%, transparent 62%)" }}
+        {/* 1. Fallback color — visible before video loads */}
+        <div className="absolute inset-0 bg-[#070f16]" />
+
+        {/* 2. Video — full-cover seamless loop */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        >
+          <source src="/videos/hero.mp4" type="video/mp4" />
+        </video>
+
+        {/* 3. Primary dark overlay — base contrast across entire frame */}
+        <div
+          className="absolute inset-0"
+          style={{ backgroundColor: "rgba(5,12,20,0.55)" }}
         />
 
-        {/* Content — anchored low, maximum atmosphere above */}
+        {/* 4. Vertical gradient — heavy at bottom where content lives */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: "linear-gradient(to top, rgba(5,12,20,0.96) 0%, rgba(5,12,20,0.82) 28%, rgba(5,12,20,0.45) 55%, rgba(5,12,20,0.15) 100%)",
+          }}
+        />
+
+        {/* 5. Top fade — protects nav readability */}
+        <div
+          className="absolute inset-x-0 top-0 h-36"
+          style={{ background: "linear-gradient(to bottom, rgba(5,12,20,0.72) 0%, transparent 100%)" }}
+        />
+
+        {/* 6. Edge vignette — cinematic darkening at sides */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: "radial-gradient(ellipse 110% 110% at 50% 50%, transparent 42%, rgba(3,7,12,0.62) 100%)",
+          }}
+        />
+
+        {/* 7. Teal atmospheric tint — brand color integration with video */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: "radial-gradient(ellipse 120% 90% at 95% 5%, rgba(28,85,100,0.20) 0%, transparent 52%)",
+          }}
+        />
+
+        {/* 8. Film grain — preserves cinematic texture on top of video */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            opacity: 0.028,
+            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23n)'/%3E%3C/svg%3E")`,
+            backgroundSize: "256px 256px",
+          }}
+        />
+
+        {/* ─── Content — anchored low, atmosphere above ─── */}
         <div className="relative z-10 max-w-7xl mx-auto px-8 lg:px-16 w-full pb-20 pt-40">
 
           {/* Overline */}
@@ -103,30 +131,36 @@ export default function Hero() {
             transition={{ duration: 1.6, delay: 0.5, ease: "easeOut" }}
             className="flex items-center gap-5 mb-12 lg:mb-16"
           >
-            <span className="block w-10 h-px bg-[#38747e]/70" />
-            <span className="text-[9.5px] text-[#38747e]/50 tracking-[0.38em] uppercase font-medium">
+            <span className="block w-10 h-px" style={{ backgroundColor: "rgba(56,116,126,0.65)" }} />
+            <span
+              className="text-[9.5px] font-medium uppercase"
+              style={{ color: "rgba(56,116,126,0.55)", letterSpacing: "0.38em" }}
+            >
               Utah-Licensed · Class C Virtual Wholesale Distributor
             </span>
           </motion.div>
 
-          {/* Headline — editorial serif, full presence */}
+          {/* Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.7, delay: 0.8, ease }}
-            className="font-serif font-light text-white leading-[0.96] mb-10 lg:mb-14"
+            className="font-serif font-light text-white"
             style={{
               fontSize: "clamp(3.8rem, 6.5vw, 6.5rem)",
               letterSpacing: "-0.02em",
+              lineHeight: "0.96",
+              marginBottom: "clamp(2.5rem, 4vw, 3.5rem)",
+              textShadow: "0 2px 40px rgba(0,0,0,0.5)",
             }}
           >
             The Compliance
             <br />
-            <em style={{ fontStyle: "italic", opacity: 0.92 }}>Infrastructure</em>
+            <em style={{ fontStyle: "italic", opacity: 0.93 }}>Infrastructure</em>
             <br />
             Behind Modern
             <br />
-            <span style={{ color: "#3d8a97", opacity: 0.95 }}>Regenerative Medicine.</span>
+            <span style={{ color: "#3d8a97" }}>Regenerative Medicine.</span>
           </motion.h1>
 
           {/* Subtext + CTAs */}
@@ -137,8 +171,15 @@ export default function Hero() {
             className="flex flex-col sm:flex-row sm:items-end gap-10 sm:gap-16"
           >
             <p
-              className="text-white/20 text-[0.9rem] leading-[1.85] font-light max-w-xs"
-              style={{ letterSpacing: "0.01em" }}
+              className="text-white font-light"
+              style={{
+                fontSize: "0.9rem",
+                lineHeight: "1.85",
+                opacity: 0.45,
+                maxWidth: "22rem",
+                letterSpacing: "0.01em",
+                textShadow: "0 1px 20px rgba(0,0,0,0.8)",
+              }}
             >
               Premium biologics distribution and compliance-conscious
               operational guidance for practices that hold themselves
@@ -148,13 +189,33 @@ export default function Hero() {
             <div className="flex items-center gap-8 flex-shrink-0 pb-0.5">
               <Link
                 href="/contact"
-                className="group inline-flex items-center text-white/80 border border-white/12 hover:border-[#38747e]/60 hover:text-[#4a8f9a] px-7 py-3.5 text-[10.5px] tracking-[0.25em] uppercase font-medium transition-all duration-600"
+                className="group inline-flex items-center text-white hover:text-[#4a8f9a] transition-all duration-600"
+                style={{
+                  border: "1px solid rgba(255,255,255,0.18)",
+                  padding: "0.875rem 1.75rem",
+                  fontSize: "10.5px",
+                  letterSpacing: "0.25em",
+                  textTransform: "uppercase",
+                  fontWeight: 500,
+                  backdropFilter: "blur(8px)",
+                  backgroundColor: "rgba(5,12,20,0.25)",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.borderColor = "rgba(56,116,126,0.55)")}
+                onMouseLeave={(e) => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.18)")}
               >
                 Schedule Consultation
               </Link>
               <Link
                 href="/services"
-                className="group flex items-center gap-2 text-white/22 hover:text-white/60 text-[10.5px] tracking-[0.25em] uppercase font-medium transition-all duration-600"
+                className="group flex items-center gap-2 text-white font-medium transition-all duration-600"
+                style={{
+                  fontSize: "10.5px",
+                  letterSpacing: "0.25em",
+                  textTransform: "uppercase",
+                  opacity: 0.32,
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.7")}
+                onMouseLeave={(e) => (e.currentTarget.style.opacity = "0.32")}
               >
                 Explore Solutions
                 <svg className="w-3 h-3 group-hover:translate-x-0.5 transition-transform duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -165,22 +226,18 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Cinematic bottom fade — eases into trust bar */}
-        <div
-          className="absolute bottom-0 inset-x-0 h-28 pointer-events-none"
-          style={{ background: "linear-gradient(to top, rgba(7,15,22,0.6), transparent)" }}
-        />
-        {/* Hairline rule */}
+        {/* Hairline bottom rule */}
         <motion.div
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 2.8, delay: 2.0, ease }}
-          className="absolute bottom-0 left-0 right-0 h-px bg-white/[0.04] origin-left"
+          className="absolute bottom-0 left-0 right-0 h-px origin-left"
+          style={{ backgroundColor: "rgba(255,255,255,0.04)" }}
         />
       </section>
 
       {/* ─── TRUST BAR ───────────────────────────────────────────────── */}
-      <div className="bg-[#070f16] border-t border-white/[0.04]">
+      <div style={{ backgroundColor: "#070f16", borderTop: "1px solid rgba(255,255,255,0.04)" }}>
         <div className="max-w-7xl mx-auto px-8 lg:px-16 py-6">
           <motion.div
             initial={{ opacity: 0 }}
@@ -190,12 +247,17 @@ export default function Hero() {
           >
             {PILLARS.map((p, i) => (
               <React.Fragment key={p.label}>
-                <div className="flex items-center gap-2.5 text-white/25 hover:text-white/50 transition-colors duration-500 cursor-default">
-                  <span className="text-[#38747e]/50"><TrustIcon type={p.icon} /></span>
-                  <span className="text-[9.5px] tracking-[0.2em] uppercase font-medium">{p.label}</span>
+                <div
+                  className="flex items-center gap-2.5 cursor-default transition-all duration-500 hover:opacity-60"
+                  style={{ color: "rgba(255,255,255,0.25)" }}
+                >
+                  <span style={{ color: "rgba(56,116,126,0.5)" }}><TrustIcon type={p.icon} /></span>
+                  <span style={{ fontSize: "9.5px", letterSpacing: "0.20em", textTransform: "uppercase", fontWeight: 500 }}>
+                    {p.label}
+                  </span>
                 </div>
                 {i < PILLARS.length - 1 && (
-                  <div className="hidden lg:block w-px h-2.5 bg-white/[0.06]" />
+                  <div className="hidden lg:block w-px h-2.5" style={{ backgroundColor: "rgba(255,255,255,0.06)" }} />
                 )}
               </React.Fragment>
             ))}
