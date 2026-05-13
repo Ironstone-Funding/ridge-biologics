@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import FadeIn from "@/components/animations/FadeIn";
 import SlideIn from "@/components/animations/SlideIn";
 import SectionLabel from "@/components/ui/SectionLabel";
@@ -48,33 +47,20 @@ export default function ManufacturerBar() {
           </SlideIn>
 
           <FadeIn delay={0.15}>
-            <div className="space-y-6">
-              <div className="bg-white/10 backdrop-blur-sm border border-white/15 rounded-3xl p-8 lg:p-10">
-                <p className="text-xs font-semibold tracking-[0.18em] uppercase text-rb-teal-light mb-6">
-                  Our sourcing standards
-                </p>
-                <ul className="space-y-3">
-                  {STANDARDS.map((s) => (
-                    <li key={s} className="flex items-start gap-3 text-white/85 text-[0.95rem]">
-                      <svg className="w-5 h-5 text-rb-teal-light flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      {s}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              {/* Temperature monitoring image */}
-              <div className="rounded-2xl overflow-hidden bg-white/10 p-3">
-                <Image
-                  src="/images/services-temperature.png"
-                  alt="Verified cold-chain temperature monitoring"
-                  width={800}
-                  height={533}
-                  className="w-full h-auto rounded-xl"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-              </div>
+            <div className="bg-white/10 backdrop-blur-sm border border-white/15 rounded-3xl p-8 lg:p-10">
+              <p className="text-xs font-semibold tracking-[0.18em] uppercase text-rb-teal-light mb-6">
+                Our sourcing standards
+              </p>
+              <ul className="space-y-3">
+                {STANDARDS.map((s) => (
+                  <li key={s} className="flex items-start gap-3 text-white/85 text-[0.95rem]">
+                    <svg className="w-5 h-5 text-rb-teal-light flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    {s}
+                  </li>
+                ))}
+              </ul>
             </div>
           </FadeIn>
         </div>
