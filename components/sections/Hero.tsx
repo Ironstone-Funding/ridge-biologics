@@ -229,9 +229,9 @@ export default function Hero() {
             <p
               className="text-white font-light"
               style={{
-                fontSize: "0.9rem",
+                fontSize: "1rem",
                 lineHeight: "1.85",
-                opacity: 0.45,
+                opacity: 0.78,
                 maxWidth: "24rem",
                 letterSpacing: "0.01em",
                 textShadow: "0 1px 20px rgba(0,0,0,0.8)",

@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import RidgeIcon from "@/components/ui/RidgeIcon";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -66,7 +65,7 @@ export default function ComplianceStrip() {
             >
               <div className="flex items-center gap-4 mb-12">
                 <span className="block w-8 h-px bg-[#38747e]/60" />
-                <span className="text-[9.5px] text-[#38747e]/50 tracking-[0.32em] uppercase font-medium">
+                <span className="text-[12px] text-[#38747e]/80 tracking-[0.22em] uppercase font-medium">
                   Compliance Infrastructure
                 </span>
               </div>
@@ -86,8 +85,8 @@ export default function ComplianceStrip() {
               </h2>
 
               <p
-                className="text-white font-light text-sm leading-[1.9] mb-10"
-                style={{ opacity: 0.50, maxWidth: "18rem" }}
+                className="text-white font-light text-[0.95rem] leading-[1.85] mb-10"
+                style={{ opacity: 0.72, maxWidth: "18rem" }}
               >
                 From manufacturer vetting to provider onboarding to field operations —
                 every layer of Ridge is built around compliance-consciousness.
@@ -140,9 +139,19 @@ export default function ComplianceStrip() {
                   transition={{ duration: 1.4, delay: i * 0.18 + 0.25, ease }}
                   className="group py-12 lg:py-14 pl-9 flex flex-col sm:flex-row gap-8 sm:gap-12"
                 >
-                  {/* Ridge icon */}
-                  <div className="flex-shrink-0 mt-1 transition-all duration-700 group-hover:opacity-100" style={{ opacity: 0.80 }}>
-                    <RidgeIcon size={44} variant="light" />
+                  {/* Ridge logo icon */}
+                  <div
+                    className="flex-shrink-0 mt-1 transition-all duration-700 group-hover:opacity-100"
+                    style={{ opacity: 0.85, filter: "brightness(1.4) drop-shadow(0 0 6px rgba(74,143,154,0.40))" }}
+                  >
+                    <Image
+                      src="/images/ridge-logo-icon.png"
+                      alt=""
+                      width={48}
+                      height={48}
+                      className="w-12 h-auto"
+                      style={{ objectFit: "contain" }}
+                    />
                   </div>
 
                   {/* Content */}
@@ -158,8 +167,8 @@ export default function ComplianceStrip() {
                       {layer.title}
                     </h3>
                     <p
-                      className="text-white font-light text-[0.84rem] leading-[1.9] group-hover:opacity-35 transition-opacity duration-700"
-                      style={{ opacity: 0.55, maxWidth: "36rem" }}
+                      className="text-white font-light text-[0.96rem] leading-[1.85] group-hover:opacity-50 transition-opacity duration-700"
+                      style={{ opacity: 0.82, maxWidth: "36rem" }}
                     >
                       {layer.body}
                     </p>
