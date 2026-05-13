@@ -72,17 +72,15 @@ export default function WhyRidge() {
                   transition={{ duration: 1.5, delay: i * 0.15, ease }}
                   className="group border-t border-[#dde7eb] py-14 lg:py-16 flex flex-col sm:flex-row gap-8 sm:gap-12"
                 >
-                  {/* Number — large ghosted serif anchor */}
-                  <span
-                    className="font-serif font-light flex-shrink-0 leading-none select-none transition-colors duration-700"
-                    style={{
-                      fontSize: "clamp(4rem, 7vw, 6.5rem)",
-                      letterSpacing: "-0.03em",
-                      color: "rgba(40,68,84,0.22)",
-                    }}
+                  {/* Checkmark icon */}
+                  <div
+                    className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mt-1 transition-all duration-700 group-hover:scale-110"
+                    style={{ backgroundColor: "rgba(56,116,126,0.12)", border: "1.5px solid rgba(56,116,126,0.30)" }}
                   >
-                    {item.num}
-                  </span>
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="#38747e" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
 
                   {/* Content */}
                   <div className="pt-2 lg:pt-3">

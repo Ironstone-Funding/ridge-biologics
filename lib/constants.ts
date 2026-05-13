@@ -25,11 +25,9 @@ export const COMPANY = {
 // ─── Trust Pillars ────────────────────────────────────────────────────────────
 
 export const TRUST_PILLARS: TrustPillar[] = [
-  { label: "Utah DOPL Class C Licensed",      icon: "shield" },
+  { label: "Utah & Florida Licensed",         icon: "shield" },
   { label: "FDA-Registered Manufacturers",    icon: "file" },
   { label: "Verified Cold-Chain Logistics",   icon: "link" },
-  { label: "GMP-Certified Products",          icon: "chart" },
-  { label: "Full Chain-of-Custody",           icon: "users" },
 ];
 
 // ─── Products ─────────────────────────────────────────────────────────────────

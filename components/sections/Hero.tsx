@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { TRUST_PILLARS } from "@/lib/constants";
 
 const TrustIcon = ({ type }: { type: string }) => {
-  const cls = "w-[13px] h-[13px] flex-shrink-0";
+  const cls = "w-[16px] h-[16px] flex-shrink-0";
   switch (type) {
     case "shield":
       return (
@@ -295,7 +295,7 @@ export default function Hero() {
 
       {/* ─── TRUST BAR ───────────────────────────────────────────────── */}
       <div style={{ backgroundColor: "#070f16", borderTop: "1px solid rgba(255,255,255,0.04)" }}>
-        <div className="max-w-7xl mx-auto px-8 lg:px-16 py-6">
+        <div className="max-w-7xl mx-auto px-8 lg:px-16 py-8">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -305,16 +305,16 @@ export default function Hero() {
             {TRUST_PILLARS.map((p, i) => (
               <React.Fragment key={p.label}>
                 <div
-                  className="flex items-center gap-2.5 cursor-default transition-all duration-500 hover:opacity-60"
-                  style={{ color: "rgba(255,255,255,0.25)" }}
+                  className="flex items-center gap-3 cursor-default transition-all duration-500 hover:opacity-70"
+                  style={{ color: "rgba(255,255,255,0.60)" }}
                 >
-                  <span style={{ color: "rgba(56,116,126,0.5)" }}><TrustIcon type={p.icon} /></span>
-                  <span style={{ fontSize: "9.5px", letterSpacing: "0.20em", textTransform: "uppercase", fontWeight: 500 }}>
+                  <span style={{ color: "rgba(56,116,126,0.85)" }}><TrustIcon type={p.icon} /></span>
+                  <span style={{ fontSize: "11.5px", letterSpacing: "0.16em", textTransform: "uppercase", fontWeight: 500 }}>
                     {p.label}
                   </span>
                 </div>
                 {i < TRUST_PILLARS.length - 1 && (
-                  <div className="hidden lg:block w-px h-2.5" style={{ backgroundColor: "rgba(255,255,255,0.06)" }} />
+                  <div className="hidden lg:block w-px h-3" style={{ backgroundColor: "rgba(255,255,255,0.10)" }} />
                 )}
               </React.Fragment>
             ))}
