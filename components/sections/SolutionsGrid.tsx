@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { PRODUCTS } from "@/lib/constants";
 import FadeIn from "@/components/animations/FadeIn";
@@ -23,6 +24,22 @@ export default function SolutionsGrid() {
           <Button variant="outline" href="/services">
             View All Products
           </Button>
+        </FadeIn>
+
+        {/* Product lineup hero image */}
+        <FadeIn className="mb-10">
+          <div className="relative w-full rounded-2xl overflow-hidden" style={{ maxWidth: "90%", margin: "0 auto" }}>
+            <Image
+              src="/images/product-lineup-hero.png"
+              alt="Ridge Biologics advanced biologics solutions — MSC, collagen, and PRP product lineup"
+              width={1400}
+              height={600}
+              className="w-full h-auto"
+              style={{ display: "block" }}
+              sizes="(max-width: 768px) 100vw, 90vw"
+              priority
+            />
+          </div>
         </FadeIn>
 
         <StaggerChildren staggerDelay={0.1} className="grid md:grid-cols-3 gap-6">

@@ -171,12 +171,13 @@ export default function ComplianceStrip() {
                     </p>
                     {/* Documentation image — layer 01 only */}
                     {i === 0 && (
-                      <div className="relative mt-8 w-full max-w-lg h-52 rounded-xl overflow-hidden">
+                      <div className="mt-8 w-full max-w-lg rounded-xl overflow-hidden bg-white/5 p-3">
                         <Image
                           src="/images/services-documentation.png"
                           alt="Ridge Biologics compliance documentation binders"
-                          fill
-                          className="object-cover"
+                          width={800}
+                          height={533}
+                          className="w-full h-auto rounded-lg"
                           sizes="(max-width: 1024px) 100vw, 50vw"
                         />
                       </div>

@@ -65,12 +65,13 @@ export default function ManufacturerBar() {
                 </ul>
               </div>
               {/* Temperature monitoring image */}
-              <div className="relative w-full h-52 rounded-2xl overflow-hidden">
+              <div className="rounded-2xl overflow-hidden bg-white/10 p-3">
                 <Image
                   src="/images/services-temperature.png"
                   alt="Verified cold-chain temperature monitoring"
-                  fill
-                  className="object-cover"
+                  width={800}
+                  height={533}
+                  className="w-full h-auto rounded-xl"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
