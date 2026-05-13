@@ -45,7 +45,7 @@ export default function FAQPage() {
             <h1 className="text-display-xl font-bold text-white mb-6 max-w-3xl">
               Frequently Asked Questions
             </h1>
-            <p className="text-white/60 text-xl leading-relaxed max-w-2xl">
+            <p className="text-white/75 text-xl leading-relaxed max-w-2xl">
               We've compiled answers to the most common questions from providers exploring
               regenerative medicine for their practices.
             </p>

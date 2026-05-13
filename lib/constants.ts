@@ -41,8 +41,8 @@ export const PRODUCTS = [
       "Human-derived MSCs from a GMP-certified, FDA-registered manufacturer. Cryogenically stored and shipped with full chain-of-custody documentation. For licensed providers only.",
     classification: "Section 351 Biologic",
     storage: "Cryogenic −196°C",
-    storageIcon: "🧊",
-    icon: "🔬",
+    storageIcon: "snowflake",
+    icon: "microscope",
   },
   {
     id: "collagen",
@@ -51,8 +51,8 @@ export const PRODUCTS = [
       "Human-derived collagen in multiple forms including injectable vials, sheets, and pads. Section 361 HCT/P classified, ethically sourced, and manufactured under GMP conditions.",
     classification: "Section 361 HCT/P",
     storage: "Refrigerated 2–8°C",
-    storageIcon: "❄️",
-    icon: "💉",
+    storageIcon: "thermometer",
+    icon: "vial",
   },
   {
     id: "prp",
@@ -61,8 +61,8 @@ export const PRODUCTS = [
       "Point-of-care platelet-rich plasma kits for in-office use. FDA-cleared devices enabling providers to prepare autologous PRP quickly and consistently for a range of applications.",
     classification: "Point-of-Care Device Kit",
     storage: "Refrigerated 2–8°C",
-    storageIcon: "❄️",
-    icon: "🩸",
+    storageIcon: "thermometer",
+    icon: "droplet",
   },
 ];
 
@@ -85,7 +85,7 @@ export const RIDGE_DIFFERENCE = [
     title: "GMP-Manufactured Products",
     description:
       "We source exclusively from FDA-registered, GMP-certified manufacturers. Every lot comes with full traceability documentation — donor screening, CoA, and chain of custody.",
-    icon: "badge",
+    icon: "file",
   },
   {
     title: "Provider Training & Support",
@@ -100,42 +100,42 @@ export const RIDGE_DIFFERENCE = [
 export const SERVICES = [
   {
     id: "distribution",
-    icon: "📦",
+    icon: "package",
     title: "Regenerative Biologic Products",
     description:
       "We distribute a curated portfolio of biologics for wound care, orthopedics, pain management, and aesthetic practices — including MSCs, Extracellular Vesicles (EVs), PRP kits, and collagen-based products. Each product line is selected based on manufacturer compliance, product pedigree, and suitability for licensed provider use.",
   },
   {
     id: "partnership",
-    icon: "🤝",
+    icon: "handshake",
     title: "Clinic Partnership & Support",
     description:
       "We become an extension of your team — providing dedicated account support, practice-specific program planning, and ongoing guidance as your biologics offering grows. Our goal is a long-term partnership, not a one-time transaction.",
   },
   {
     id: "education",
-    icon: "📚",
+    icon: "book-open",
     title: "Provider Education & Training",
     description:
       "Our education resources serve both practices new to biologics and those expanding existing programs. We cover state-specific compliance for Utah and Florida, proper patient communication protocols, and step-by-step product handling procedures.",
   },
   {
     id: "compliance",
-    icon: "🛡️",
+    icon: "shield",
     title: "Compliance & Regulatory Guidance",
     description:
       "We help your practice understand and maintain compliance with DOPL requirements, FDA 21 CFR Part 1271, and state-specific regulations in Utah and Florida — including proper product labeling, pedigree documentation, and audit-ready recordkeeping.",
   },
   {
     id: "coldchain",
-    icon: "🧊",
+    icon: "snowflake",
     title: "Cold-Chain Storage & Handling",
     description:
       "Proper temperature control is critical to product viability. We advise on the right storage equipment for your product mix — whether standard refrigeration, ultra-low −80°C, or cryogenic systems — and provide verified handling protocols from manufacturer to point of care.",
   },
   {
     id: "service",
-    icon: "⭐",
+    icon: "star",
     title: "White-Glove Client Service",
     description:
       "Dedicated, personalized support for ordering, inventory, clinical questions, and ongoing program development.",

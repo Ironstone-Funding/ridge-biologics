@@ -6,6 +6,7 @@ import FadeIn from "@/components/animations/FadeIn";
 import StaggerChildren, { itemVariants } from "@/components/animations/StaggerChildren";
 import SectionLabel from "@/components/ui/SectionLabel";
 import Button from "@/components/ui/Button";
+import Icon from "@/components/ui/Icon";
 
 export default function TrainingPreview() {
   const preview = SERVICES.slice(0, 3);
@@ -28,8 +29,8 @@ export default function TrainingPreview() {
           {preview.map((svc) => (
             <motion.div key={svc.id} variants={itemVariants}>
               <div className="group h-full bg-white rounded-2xl border border-rb-slate-mid p-7 hover:border-rb-teal/40 hover:shadow-card-hover transition-all duration-300">
-                <div className="w-12 h-12 rounded-xl bg-rb-teal-pale flex items-center justify-center text-2xl mb-5">
-                  {svc.icon}
+                <div className="w-12 h-12 rounded-xl bg-rb-teal-pale flex items-center justify-center text-rb-teal mb-5">
+                  <Icon name={svc.icon} className="w-6 h-6" />
                 </div>
                 <h3 className="font-semibold text-rb-navy text-[1rem] mb-3 leading-snug group-hover:text-rb-teal transition-colors">
                   {svc.title}

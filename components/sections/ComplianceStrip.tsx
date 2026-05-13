@@ -85,7 +85,7 @@ export default function ComplianceStrip() {
 
               <p
                 className="text-white font-light text-sm leading-[1.9] mb-10"
-                style={{ opacity: 0.22, maxWidth: "18rem" }}
+                style={{ opacity: 0.50, maxWidth: "18rem" }}
               >
                 From manufacturer vetting to provider onboarding to field operations —
                 every layer of Ridge is built around compliance-consciousness.
@@ -157,14 +157,14 @@ export default function ComplianceStrip() {
                       style={{
                         fontSize: "clamp(1.1rem, 1.6vw, 1.4rem)",
                         letterSpacing: "-0.008em",
-                        opacity: 0.75,
+                        opacity: 0.90,
                       }}
                     >
                       {layer.title}
                     </h3>
                     <p
                       className="text-white font-light text-[0.84rem] leading-[1.9] group-hover:opacity-35 transition-opacity duration-700"
-                      style={{ opacity: 0.24, maxWidth: "36rem" }}
+                      style={{ opacity: 0.55, maxWidth: "36rem" }}
                     >
                       {layer.body}
                     </p>

@@ -6,11 +6,12 @@ import FadeIn from "@/components/animations/FadeIn";
 import SlideIn from "@/components/animations/SlideIn";
 import SectionLabel from "@/components/ui/SectionLabel";
 import Button from "@/components/ui/Button";
+import Icon from "@/components/ui/Icon";
 
 const CONTACT_OPTIONS = [
-  { icon: "👨‍⚕️", title: "Provider Inquiry", body: "Licensed healthcare provider interested in our biologics products in Utah or Florida." },
-  { icon: "🤝", title: "Representative Opportunity", body: "Qualified 1099 sales rep interested in representing Ridge Biologics in Utah or Florida." },
-  { icon: "🏭", title: "General Inquiry", body: "Any other question about Ridge Biologics, our products, or compliance." },
+  { icon: "stethoscope", title: "Provider Inquiry", body: "Licensed healthcare provider interested in our biologics products in Utah or Florida." },
+  { icon: "handshake",   title: "Representative Opportunity", body: "Qualified 1099 sales rep interested in representing Ridge Biologics in Utah or Florida." },
+  { icon: "building",    title: "General Inquiry", body: "Any other question about Ridge Biologics, our products, or compliance." },
 ];
 
 export default function ContactPage() {
@@ -25,7 +26,7 @@ export default function ContactPage() {
               <h1 className="text-display-xl font-bold text-white mb-6">
                 Let's Start the<br />Conversation
               </h1>
-              <p className="text-white/60 text-xl leading-relaxed">
+              <p className="text-white/75 text-xl leading-relaxed">
                 Whether you're a provider, a prospective representative, or have a general question
                 — Ridge welcomes the inquiry.
               </p>
@@ -34,10 +35,12 @@ export default function ContactPage() {
               <div className="space-y-4">
                 {CONTACT_OPTIONS.map((opt) => (
                   <div key={opt.title} className="flex gap-4 p-6 rounded-2xl bg-white/6 border border-white/10 hover:border-rb-teal/40 transition-colors">
-                    <span className="text-2xl flex-shrink-0">{opt.icon}</span>
+                    <div className="w-10 h-10 rounded-lg bg-rb-teal/20 flex items-center justify-center text-rb-teal-light flex-shrink-0">
+                      <Icon name={opt.icon} className="w-5 h-5" />
+                    </div>
                     <div>
                       <h3 className="font-semibold text-white mb-1">{opt.title}</h3>
-                      <p className="text-white/50 text-sm leading-relaxed">{opt.body}</p>
+                      <p className="text-white/65 text-sm leading-relaxed">{opt.body}</p>
                     </div>
                   </div>
                 ))}
@@ -63,7 +66,7 @@ export default function ContactPage() {
                 <div className="grid sm:grid-cols-2 gap-4">
                   {["First Name", "Last Name"].map((label) => (
                     <div key={label}>
-                      <label className="block text-xs font-semibold text-rb-text-body uppercase tracking-widest mb-2">{label}</label>
+                      <label className="block text-xs font-semibold text-rb-navy uppercase tracking-widest mb-2">{label}</label>
                       <input type="text" placeholder={label}
                         className="w-full bg-white border border-rb-slate-mid rounded-xl px-4 py-3 text-rb-navy placeholder-rb-text-muted focus:outline-none focus:border-rb-teal transition-colors text-sm" />
                     </div>
@@ -71,30 +74,30 @@ export default function ContactPage() {
                 </div>
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-semibold text-rb-text-body uppercase tracking-widest mb-2">Email</label>
+                    <label className="block text-xs font-semibold text-rb-navy uppercase tracking-widest mb-2">Email</label>
                     <input type="email" placeholder="you@practice.com"
                       className="w-full bg-white border border-rb-slate-mid rounded-xl px-4 py-3 text-rb-navy placeholder-rb-text-muted focus:outline-none focus:border-rb-teal transition-colors text-sm" />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-rb-text-body uppercase tracking-widest mb-2">Phone</label>
+                    <label className="block text-xs font-semibold text-rb-navy uppercase tracking-widest mb-2">Phone</label>
                     <input type="tel" placeholder="(801) 555-0000"
                       className="w-full bg-white border border-rb-slate-mid rounded-xl px-4 py-3 text-rb-navy placeholder-rb-text-muted focus:outline-none focus:border-rb-teal transition-colors text-sm" />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-rb-text-body uppercase tracking-widest mb-2">Name / Organization</label>
+                  <label className="block text-xs font-semibold text-rb-navy uppercase tracking-widest mb-2">Name / Organization</label>
                   <input type="text" placeholder="Your name or practice name"
                     className="w-full bg-white border border-rb-slate-mid rounded-xl px-4 py-3 text-rb-navy placeholder-rb-text-muted focus:outline-none focus:border-rb-teal transition-colors text-sm" />
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-rb-text-body uppercase tracking-widest mb-2">Message</label>
+                  <label className="block text-xs font-semibold text-rb-navy uppercase tracking-widest mb-2">Message</label>
                   <textarea rows={5} placeholder="Tell us how we can help..."
                     className="w-full bg-white border border-rb-slate-mid rounded-xl px-4 py-3 text-rb-navy placeholder-rb-text-muted focus:outline-none focus:border-rb-teal transition-colors text-sm resize-none" />
                 </div>
                 <Button variant="primary" size="lg" type="submit" fullWidth>
                   Send Message
                 </Button>
-                <p className="text-xs text-rb-text-muted leading-relaxed">
+                <p className="text-xs text-rb-text-body leading-relaxed">
                   By submitting this form you agree to be contacted by Ridge Biologics. We do not share
                   your information with third parties. Ridge does not make clinical efficacy claims.
                 </p>

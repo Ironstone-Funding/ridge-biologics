@@ -96,7 +96,7 @@ export default function WhyRidge() {
                     </h3>
                     <p
                       className="text-[#3d5a68] text-sm leading-[1.9] font-light"
-                      style={{ opacity: 0.42, maxWidth: "38rem" }}
+                      style={{ opacity: 0.65, maxWidth: "38rem" }}
                     >
                       {item.body}
                     </p>

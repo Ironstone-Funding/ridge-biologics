@@ -26,7 +26,7 @@ export default function Footer() {
                 className="h-10 w-auto object-contain brightness-0 invert"
               />
             </Link>
-            <p className="text-white/55 text-sm leading-relaxed max-w-xs mb-6">
+            <p className="text-white/70 text-sm leading-relaxed max-w-xs mb-6">
               Supply you trust, Support you need.
             </p>
             <a href={`mailto:${COMPANY.email}`}
@@ -37,14 +37,14 @@ export default function Footer() {
 
           {/* Company links */}
           <div>
-            <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-white/35 mb-4">
+            <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-white/55 mb-4">
               Company
             </h3>
             <ul className="space-y-2.5">
               {COMPANY_LINKS.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href}
-                    className="text-sm text-white/60 hover:text-white transition-colors">
+                    className="text-sm text-white/75 hover:text-white transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -54,14 +54,14 @@ export default function Footer() {
 
           {/* External resources */}
           <div className="lg:col-span-2">
-            <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-white/35 mb-4">
+            <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-white/55 mb-4">
               External Resources
             </h3>
             <ul className="space-y-2.5">
               {EXTERNAL_RESOURCES.map((r) => (
                 <li key={r.href}>
                   <a href={r.href} target="_blank" rel="noopener noreferrer"
-                    className="text-sm text-white/60 hover:text-white transition-colors">
+                    className="text-sm text-white/75 hover:text-white transition-colors">
                     {r.label}
                   </a>
                 </li>
@@ -72,14 +72,14 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="mt-12 pt-8 border-t border-white/10 space-y-4">
-          <p className="text-xs text-white/35 leading-relaxed">
+          <p className="text-xs text-white/55 leading-relaxed">
             {COMPLIANCE_DISCLAIMER}
           </p>
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
-            <p className="text-xs text-white/30">
+            <p className="text-xs text-white/50">
               © {new Date().getFullYear()} {COMPANY.name}
             </p>
-            <p className="text-xs text-white/25">
+            <p className="text-xs text-white/45">
               Licensed in Utah and Florida
             </p>
           </div>

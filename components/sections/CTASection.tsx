@@ -36,7 +36,7 @@ export default function CTASection() {
             </Button>
           </div>
 
-          <p className="mt-10 text-xs text-rb-text-muted leading-relaxed max-w-lg mx-auto">
+          <p className="mt-10 text-xs text-rb-text-body leading-relaxed max-w-lg mx-auto">
             Ridge Biologics serves licensed healthcare providers in Utah and Florida only.
             We do not make claims for the treatment, cure, or prevention of any disease.
           </p>

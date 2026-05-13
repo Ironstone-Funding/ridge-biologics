@@ -5,13 +5,7 @@ import FadeIn from "@/components/animations/FadeIn";
 import SlideIn from "@/components/animations/SlideIn";
 import SectionLabel from "@/components/ui/SectionLabel";
 import Button from "@/components/ui/Button";
-
-const DIFF_ICONS: Record<string, string> = {
-  shield: "✓",
-  snowflake: "✓",
-  badge: "✓",
-  users: "✓",
-};
+import Icon from "@/components/ui/Icon";
 
 export default function ServicesPage() {
   return (
@@ -26,7 +20,7 @@ export default function ServicesPage() {
               Compliant Biologics Distributed
               <br />Directly to Licensed Providers
             </h1>
-            <p className="text-white/60 text-xl leading-relaxed max-w-2xl">
+            <p className="text-white/75 text-xl leading-relaxed max-w-2xl">
               Ridge Biologics is a Utah-licensed Class C Virtual Wholesale Distributor of
               regenerative medicine products — supplying licensed healthcare providers in Utah
               and Florida through an ethical, fully compliant drop-ship model.
@@ -50,8 +44,8 @@ export default function ServicesPage() {
                 <div className="grid md:grid-cols-3 gap-8 p-8 lg:p-10 rounded-3xl border border-rb-slate-mid hover:border-rb-teal/40 hover:shadow-card-hover transition-all duration-300 bg-white">
                   <div className="md:col-span-2">
                     <div className="flex items-center gap-4 mb-5">
-                      <div className="w-12 h-12 rounded-xl bg-rb-teal-pale flex items-center justify-center text-2xl flex-shrink-0">
-                        {product.icon}
+                      <div className="w-12 h-12 rounded-xl bg-rb-teal-pale flex items-center justify-center text-rb-teal flex-shrink-0">
+                        <Icon name={product.icon} className="w-6 h-6" />
                       </div>
                       <h2 className="text-xl font-bold text-rb-navy">{product.title}</h2>
                     </div>
@@ -66,9 +60,12 @@ export default function ServicesPage() {
                     </div>
                     <div>
                       <p className="text-xs font-semibold tracking-widest uppercase text-rb-teal mb-1">Storage</p>
-                      <p className="text-rb-navy font-semibold text-sm">{product.storageIcon} {product.storage}</p>
+                      <div className="flex items-center gap-1.5">
+                        <Icon name={product.storageIcon} className="w-4 h-4 text-rb-navy" />
+                        <p className="text-rb-navy font-semibold text-sm">{product.storage}</p>
+                      </div>
                     </div>
-                    <p className="text-xs text-rb-text-muted leading-relaxed">
+                    <p className="text-xs text-rb-text-body leading-relaxed">
                       For licensed providers only.
                     </p>
                   </div>
@@ -92,10 +89,8 @@ export default function ServicesPage() {
             {RIDGE_DIFFERENCE.map((item, i) => (
               <FadeIn key={item.title} delay={i * 0.1}>
                 <div className="flex gap-4 p-7 rounded-2xl border border-rb-slate-mid hover:border-rb-teal/40 hover:shadow-card transition-all duration-300 bg-white">
-                  <div className="flex-shrink-0 text-rb-teal mt-1">
-                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                    </svg>
+                  <div className="w-10 h-10 rounded-lg bg-rb-teal-pale flex items-center justify-center text-rb-teal flex-shrink-0 mt-0.5">
+                    <Icon name={item.icon} className="w-5 h-5" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-rb-navy mb-2">{item.title}</h3>
@@ -121,8 +116,8 @@ export default function ServicesPage() {
             {SERVICES.map((svc, i) => (
               <FadeIn key={svc.id} delay={i * 0.07}>
                 <div className="group flex flex-col gap-4 p-7 rounded-2xl border border-rb-slate-mid hover:border-rb-teal/40 hover:shadow-card transition-all duration-300 bg-white h-full">
-                  <div className="w-12 h-12 rounded-xl bg-rb-teal-pale flex items-center justify-center text-2xl flex-shrink-0">
-                    {svc.icon}
+                  <div className="w-12 h-12 rounded-xl bg-rb-teal-pale flex items-center justify-center text-rb-teal flex-shrink-0">
+                    <Icon name={svc.icon} className="w-6 h-6" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-rb-navy mb-2 group-hover:text-rb-teal transition-colors">{svc.title}</h3>
@@ -153,39 +148,39 @@ export default function ServicesPage() {
                 <div className="grid sm:grid-cols-2 gap-4">
                   {["First Name", "Last Name"].map((label) => (
                     <div key={label}>
-                      <label className="block text-xs font-semibold text-rb-text-body uppercase tracking-widest mb-2">{label}</label>
+                      <label className="block text-xs font-semibold text-rb-navy uppercase tracking-widest mb-2">{label}</label>
                       <input type="text" placeholder={label}
                         className="w-full bg-white border border-rb-slate-mid rounded-xl px-4 py-3 text-rb-navy placeholder-rb-text-muted focus:outline-none focus:border-rb-teal transition-colors text-sm" />
                     </div>
                   ))}
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-rb-text-body uppercase tracking-widest mb-2">Practice / Clinic Name</label>
+                  <label className="block text-xs font-semibold text-rb-navy uppercase tracking-widest mb-2">Practice / Clinic Name</label>
                   <input type="text" placeholder="Practice name"
                     className="w-full bg-white border border-rb-slate-mid rounded-xl px-4 py-3 text-rb-navy placeholder-rb-text-muted focus:outline-none focus:border-rb-teal transition-colors text-sm" />
                 </div>
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-semibold text-rb-text-body uppercase tracking-widest mb-2">Email</label>
+                    <label className="block text-xs font-semibold text-rb-navy uppercase tracking-widest mb-2">Email</label>
                     <input type="email" placeholder="you@practice.com"
                       className="w-full bg-white border border-rb-slate-mid rounded-xl px-4 py-3 text-rb-navy placeholder-rb-text-muted focus:outline-none focus:border-rb-teal transition-colors text-sm" />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-rb-text-body uppercase tracking-widest mb-2">Phone</label>
+                    <label className="block text-xs font-semibold text-rb-navy uppercase tracking-widest mb-2">Phone</label>
                     <input type="tel" placeholder="(801) 555-0000"
                       className="w-full bg-white border border-rb-slate-mid rounded-xl px-4 py-3 text-rb-navy placeholder-rb-text-muted focus:outline-none focus:border-rb-teal transition-colors text-sm" />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-rb-text-body uppercase tracking-widest mb-2">State</label>
-                  <select className="w-full bg-white border border-rb-slate-mid rounded-xl px-4 py-3 text-rb-text-body focus:outline-none focus:border-rb-teal transition-colors text-sm">
+                  <label className="block text-xs font-semibold text-rb-navy uppercase tracking-widest mb-2">State</label>
+                  <select className="w-full bg-white border border-rb-slate-mid rounded-xl px-4 py-3 text-rb-navy focus:outline-none focus:border-rb-teal transition-colors text-sm">
                     <option value="">Select your state</option>
                     <option value="ut">Utah</option>
                     <option value="fl">Florida</option>
                   </select>
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-rb-text-body uppercase tracking-widest mb-3">Products of Interest</label>
+                  <label className="block text-xs font-semibold text-rb-navy uppercase tracking-widest mb-3">Products of Interest</label>
                   <div className="space-y-3">
                     {PRODUCTS.map((p) => (
                       <label key={p.id} className="flex items-center gap-3 cursor-pointer group">
@@ -199,14 +194,14 @@ export default function ServicesPage() {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-rb-text-body uppercase tracking-widest mb-2">Additional Notes or Questions</label>
+                  <label className="block text-xs font-semibold text-rb-navy uppercase tracking-widest mb-2">Additional Notes or Questions</label>
                   <textarea rows={4} placeholder="Tell us about your practice and what you're looking for..."
                     className="w-full bg-white border border-rb-slate-mid rounded-xl px-4 py-3 text-rb-navy placeholder-rb-text-muted focus:outline-none focus:border-rb-teal transition-colors text-sm resize-none" />
                 </div>
                 <Button variant="primary" size="lg" type="submit" fullWidth>
                   Submit Request
                 </Button>
-                <p className="text-xs text-rb-text-muted leading-relaxed">
+                <p className="text-xs text-rb-text-body leading-relaxed">
                   By submitting this form you agree to be contacted by Ridge Biologics.
                   We do not share your information with third parties.
                   Ridge does not make clinical efficacy claims.

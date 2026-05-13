@@ -31,12 +31,12 @@ export default function RepRecruitment() {
               <br />
               <span className="text-rb-teal-light">1099 Sales Representative</span>
             </h2>
-            <p className="text-white/60 text-lg leading-relaxed mb-4">
+            <p className="text-white/75 text-lg leading-relaxed mb-4">
               We work with qualified independent sales representatives across Utah and Florida.
               Ridge reps are more than commission earners — they're trusted liaisons who help
               clinics integrate biologics responsibly.
             </p>
-            <p className="text-white/50 text-sm leading-relaxed mb-8">
+            <p className="text-white/65 text-sm leading-relaxed mb-8">
               Contact us to learn about our commission program and certification requirements.
             </p>
             <Button variant="primary" href="/contact">
@@ -51,7 +51,7 @@ export default function RepRecruitment() {
               </p>
               <ul className="space-y-4">
                 {TRAITS.map((t) => (
-                  <li key={t} className="flex items-start gap-3 text-white/70 text-[0.925rem] leading-relaxed">
+                  <li key={t} className="flex items-start gap-3 text-white/85 text-[0.925rem] leading-relaxed">
                     <span className="flex-shrink-0 w-5 h-5 rounded-full border border-rb-teal/50 flex items-center justify-center mt-0.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-rb-teal" />
                     </span>
