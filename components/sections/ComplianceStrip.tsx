@@ -139,14 +139,16 @@ export default function ComplianceStrip() {
                   transition={{ duration: 1.4, delay: i * 0.18 + 0.25, ease }}
                   className="group py-12 lg:py-14 pl-9 flex flex-col sm:flex-row gap-8 sm:gap-12"
                 >
-                  {/* Checkmark icon */}
-                  <div
-                    className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mt-1 transition-all duration-700 group-hover:scale-110"
-                    style={{ backgroundColor: "rgba(56,116,126,0.18)", border: "1.5px solid rgba(56,116,126,0.45)" }}
-                  >
-                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="#4a8f9a" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M5 13l4 4L19 7" />
-                    </svg>
+                  {/* Logo icon */}
+                  <div className="flex-shrink-0 mt-1.5 transition-all duration-700 group-hover:opacity-100" style={{ opacity: 0.70 }}>
+                    <Image
+                      src="/images/logo.png"
+                      alt=""
+                      width={26}
+                      height={26}
+                      className="w-[26px] h-auto brightness-0 invert"
+                      style={{ objectFit: "contain" }}
+                    />
                   </div>
 
                   {/* Content */}
