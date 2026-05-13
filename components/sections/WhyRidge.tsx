@@ -77,7 +77,7 @@ export default function WhyRidge() {
                     style={{
                       fontSize: "clamp(4rem, 7vw, 6.5rem)",
                       letterSpacing: "-0.03em",
-                      color: "rgba(40,68,84,0.08)",
+                      color: "rgba(40,68,84,0.22)",
                     }}
                   >
                     {item.num}
