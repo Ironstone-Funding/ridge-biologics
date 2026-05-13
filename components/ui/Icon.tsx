@@ -1,9 +1,11 @@
+import type { ReactElement } from "react";
+
 interface IconProps {
   name: string;
   className?: string;
 }
 
-const paths: Record<string, JSX.Element> = {
+const paths: Record<string, ReactElement> = {
   microscope: (
     <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.4} strokeLinecap="round" strokeLinejoin="round">
       <path d="M9 3h6M12 3v4M9.5 7h5a1 1 0 011 1v1a5 5 0 01-5 5 5 5 0 01-5-5V8a1 1 0 011-1h.5" />
