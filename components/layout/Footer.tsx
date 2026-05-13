@@ -18,13 +18,15 @@ export default function Footer() {
           {/* Brand col */}
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-5">
-              <Image
-                src="/images/logo.png"
-                alt="Ridge Biologics"
-                width={160}
-                height={50}
-                className="h-10 w-auto object-contain brightness-0 invert"
-              />
+              <div className="inline-block bg-white rounded-lg px-3 py-1.5">
+                <Image
+                  src="/images/logo.png"
+                  alt="Ridge Biologics"
+                  width={160}
+                  height={50}
+                  className="h-8 w-auto object-contain"
+                />
+              </div>
             </Link>
             <p className="text-white/70 text-sm leading-relaxed max-w-xs mb-6">
               Supply you trust, Support you need.

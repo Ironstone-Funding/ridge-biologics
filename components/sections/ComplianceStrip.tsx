@@ -144,7 +144,7 @@ export default function ComplianceStrip() {
                     style={{
                       fontSize: "clamp(2rem, 3vw, 2.8rem)",
                       letterSpacing: "-0.025em",
-                      color: "rgba(255,255,255,0.50)",
+                      color: "rgba(255,255,255,0.75)",
                     }}
                   >
                     {layer.num}
