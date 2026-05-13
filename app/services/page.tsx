@@ -298,6 +298,18 @@ export default function ServicesPage() {
                       />
                     </div>
                   )}
+                  {/* Training classroom image */}
+                  {svc.id === "education" && (
+                    <div className="relative w-full h-40 rounded-xl overflow-hidden mt-1">
+                      <Image
+                        src="/images/services-training-classroom.png"
+                        alt="Ridge Biologics compliance orientation training"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                    </div>
+                  )}
                 </div>
               </FadeIn>
             ))}
