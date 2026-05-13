@@ -187,10 +187,10 @@ export default function Hero() {
             transition={{ duration: 1.6, delay: 0.5, ease: "easeOut" }}
             className="flex items-center gap-5 mb-12 lg:mb-16"
           >
-            <span className="block w-10 h-px" style={{ backgroundColor: "rgba(56,116,126,0.65)" }} />
+            <span className="block w-10 h-px" style={{ backgroundColor: "rgba(100,185,200,0.85)" }} />
             <span
               className="text-[9.5px] font-medium uppercase"
-              style={{ color: "rgba(56,116,126,0.55)", letterSpacing: "0.38em" }}
+              style={{ color: "rgba(130,205,220,0.90)", letterSpacing: "0.38em", textShadow: "0 1px 12px rgba(0,0,0,0.6)" }}
             >
               Utah-Licensed · Class C Virtual Wholesale Distributor
             </span>
