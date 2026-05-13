@@ -14,7 +14,7 @@ export const COMPANY = {
   name:          "Ridge Biologics",
   tagline:       "Your Trusted Biologics Partner",
   sub:           "The Compliant Way to Offer Regenerative Therapies.",
-  description:   "Ridge Biologics is a Utah-licensed Class C Virtual Wholesale Distributor of regenerative medicine products — supplying licensed healthcare providers with MSCs, PRP kits, and collagen-based biologics through an ethical, fully compliant drop-ship model.",
+  description:   "Ridge Biologics is a Utah-licensed Class C Virtual Wholesale Distributor of regenerative medicine products — supplying licensed healthcare providers with MSCs, Extracellular Vesicles (EVs), PRP kits, and collagen-based biologics through an ethical, fully compliant drop-ship model.",
   email:         "info@ridgebiologics.com",
   states:        "Utah and Florida",
   cta_primary:   "Request Products",
@@ -103,7 +103,7 @@ export const SERVICES = [
     icon: "📦",
     title: "Regenerative Biologic Products",
     description:
-      "We distribute a curated portfolio of biologics for wound care, orthopedics, pain management, and aesthetic practices — including MSCs, EVs, PRP kits, and collagen-based products. Each product line is selected based on manufacturer compliance, product pedigree, and suitability for licensed provider use.",
+      "We distribute a curated portfolio of biologics for wound care, orthopedics, pain management, and aesthetic practices — including MSCs, Extracellular Vesicles (EVs), PRP kits, and collagen-based products. Each product line is selected based on manufacturer compliance, product pedigree, and suitability for licensed provider use.",
   },
   {
     id: "partnership",
@@ -175,9 +175,9 @@ export const ONBOARDING_STEPS = [
 
 export const FAQS: FAQItem[] = [
   {
-    question: "What is our mission?",
+    question: "What is Ridge Biologics?",
     answer:
-      "Ridge Biologics is a Utah-based Class C Virtual Wholesale Distributor of regenerative medicine products. Our mission is to expand licensed healthcare provider access to high-quality biological therapies — including Mesenchymal Stem Cells (MSC), PRP kits, and collagen-based products — through an ethical, fully compliant virtual drop-ship distribution model operating in Utah and Florida.",
+      "Ridge Biologics is a Utah-licensed Class C Virtual Wholesale Distributor of regenerative medicine products. Our mission is to expand licensed healthcare provider access to high-quality biological therapies — including Mesenchymal Stem Cells (MSC), Extracellular Vesicles (EVs), PRP kits, and collagen-based products — through an ethical, fully compliant virtual drop-ship distribution model operating in Utah and Florida.",
   },
   {
     question: "How can clinics benefit from our services?",

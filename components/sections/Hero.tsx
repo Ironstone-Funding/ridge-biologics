@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { TRUST_PILLARS } from "@/lib/constants";
 
 const TrustIcon = ({ type }: { type: string }) => {
   const cls = "w-[13px] h-[13px] flex-shrink-0";
@@ -41,14 +42,6 @@ const TrustIcon = ({ type }: { type: string }) => {
   }
 };
 
-const PILLARS = [
-  { label: "Compliance-Conscious",     icon: "shield" },
-  { label: "Provider Support",         icon: "users"  },
-  { label: "Documentation-Focused",    icon: "file"   },
-  { label: "Operational Guidance",     icon: "chart"  },
-  { label: "Chain-of-Custody Mindset", icon: "link"   },
-];
-
 const ease = [0.16, 1, 0.3, 1] as const;
 
 export default function Hero() {
@@ -60,7 +53,7 @@ export default function Hero() {
         {/* 1. Fallback color */}
         <div className="absolute inset-0 bg-[#070f16]" />
 
-        {/* 2. Video — wrapped in slow camera push + lateral drift */}
+        {/* 2. Video — slow camera push + lateral drift */}
         <motion.div
           className="absolute inset-0"
           animate={{
@@ -88,10 +81,7 @@ export default function Hero() {
         </motion.div>
 
         {/* 3. Primary dark overlay */}
-        <div
-          className="absolute inset-0"
-          style={{ backgroundColor: "rgba(5,12,20,0.55)" }}
-        />
+        <div className="absolute inset-0" style={{ backgroundColor: "rgba(5,12,20,0.55)" }} />
 
         {/* 4. Vertical gradient — heavy at bottom where content lives */}
         <div
@@ -123,9 +113,7 @@ export default function Hero() {
           }}
         />
 
-        {/* ── LIVING ATMOSPHERE LAYERS ──────────────────────────────── */}
-
-        {/* 8. Valley fog drift A — foreground haze, faster */}
+        {/* 8. Valley fog drift A — foreground haze */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <motion.div
             className="absolute inset-0"
@@ -137,7 +125,7 @@ export default function Hero() {
           />
         </div>
 
-        {/* 9. Mid-ridge haze drift B — counter-direction, slower */}
+        {/* 9. Mid-ridge haze — counter-direction */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <motion.div
             className="absolute inset-0"
@@ -149,7 +137,7 @@ export default function Hero() {
           />
         </div>
 
-        {/* 10. Background haze parallax — slowest, widest, implied distance */}
+        {/* 10. Background haze — slowest, implied distance */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <motion.div
             className="absolute inset-0"
@@ -161,7 +149,7 @@ export default function Hero() {
           />
         </div>
 
-        {/* 11. Light shimmer — sun bleeding through mist */}
+        {/* 11. Light shimmer — sun through mist */}
         <motion.div
           className="absolute inset-0 pointer-events-none"
           style={{
@@ -189,7 +177,7 @@ export default function Hero() {
           }}
         />
 
-        {/* ─── Content — anchored low, atmosphere above ─── */}
+        {/* ─── Content ─── */}
         <div className="relative z-10 max-w-7xl mx-auto px-8 lg:px-16 w-full pb-20 pt-40">
 
           {/* Overline */}
@@ -222,11 +210,11 @@ export default function Hero() {
               textShadow: "0 2px 40px rgba(0,0,0,0.5)",
             }}
           >
-            The Compliance
+            Your Trusted
             <br />
-            <em style={{ fontStyle: "italic", opacity: 0.93 }}>Infrastructure</em>
+            <em style={{ fontStyle: "italic", opacity: 0.93 }}>Biologics</em>
             <br />
-            Behind Modern
+            Partner in
             <br />
             <span style={{ color: "#3d8a97" }}>Regenerative Medicine.</span>
           </motion.h1>
@@ -244,14 +232,15 @@ export default function Hero() {
                 fontSize: "0.9rem",
                 lineHeight: "1.85",
                 opacity: 0.45,
-                maxWidth: "22rem",
+                maxWidth: "24rem",
                 letterSpacing: "0.01em",
                 textShadow: "0 1px 20px rgba(0,0,0,0.8)",
               }}
             >
-              Premium biologics distribution and compliance-conscious
-              operational guidance for practices that hold themselves
-              to a higher standard.
+              Ridge Biologics supplies regenerative biologics sourced exclusively
+              from GMP-compliant, FDA-registered manufacturers — paired with full
+              361/351 regulatory guidance, state compliance support, documentation,
+              and staff training so your clinic can launch confidently and ethically.
             </p>
 
             <div className="flex items-center gap-8 flex-shrink-0 pb-0.5">
@@ -313,7 +302,7 @@ export default function Hero() {
             transition={{ duration: 1.8, delay: 2.2 }}
             className="flex flex-wrap items-center justify-center lg:justify-between gap-7 lg:gap-0"
           >
-            {PILLARS.map((p, i) => (
+            {TRUST_PILLARS.map((p, i) => (
               <React.Fragment key={p.label}>
                 <div
                   className="flex items-center gap-2.5 cursor-default transition-all duration-500 hover:opacity-60"
@@ -324,7 +313,7 @@ export default function Hero() {
                     {p.label}
                   </span>
                 </div>
-                {i < PILLARS.length - 1 && (
+                {i < TRUST_PILLARS.length - 1 && (
                   <div className="hidden lg:block w-px h-2.5" style={{ backgroundColor: "rgba(255,255,255,0.06)" }} />
                 )}
               </React.Fragment>
