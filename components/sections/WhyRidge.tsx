@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 const ease = [0.16, 1, 0.3, 1] as const;
@@ -100,6 +101,18 @@ export default function WhyRidge() {
                     >
                       {item.body}
                     </p>
+                    {/* Cold chain image — pillar 02 only */}
+                    {i === 1 && (
+                      <div className="relative mt-8 w-full max-w-lg h-52 rounded-xl overflow-hidden">
+                        <Image
+                          src="/images/services-cold-chain.png"
+                          alt="Cold chain logistics and temperature-controlled delivery"
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 1024px) 100vw, 50vw"
+                        />
+                      </div>
+                    )}
                   </div>
                 </motion.div>
               ))}

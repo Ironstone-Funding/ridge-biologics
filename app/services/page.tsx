@@ -54,6 +54,20 @@ export default function ServicesPage() {
             </h2>
           </FadeIn>
 
+          {/* Product lineup hero image */}
+          <FadeIn className="mb-14">
+            <div className="relative w-full h-64 lg:h-80 rounded-2xl overflow-hidden">
+              <Image
+                src="/images/services-product-lineup.png"
+                alt="Ridge Biologics product lineup"
+                fill
+                className="object-cover"
+                sizes="100vw"
+                priority
+              />
+            </div>
+          </FadeIn>
+
           {/* — Collagen — */}
           <div className="mb-20">
             <FadeIn>
@@ -272,6 +286,18 @@ export default function ServicesPage() {
                     </h3>
                     <p className="text-rb-text-body text-sm leading-relaxed">{svc.description}</p>
                   </div>
+                  {/* Partnership meeting image */}
+                  {svc.id === "partnership" && (
+                    <div className="relative w-full h-40 rounded-xl overflow-hidden mt-1">
+                      <Image
+                        src="/images/services-partnership.png"
+                        alt="Ridge Biologics clinic partnership meeting"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                    </div>
+                  )}
                 </div>
               </FadeIn>
             ))}
