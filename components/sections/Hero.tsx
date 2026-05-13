@@ -189,8 +189,8 @@ export default function Hero() {
           >
             <span className="block w-10 h-px" style={{ backgroundColor: "rgba(100,185,200,0.85)" }} />
             <span
-              className="text-[13px] font-semibold uppercase"
-              style={{ color: "rgba(100,210,225,0.95)", letterSpacing: "0.12em", textShadow: "0 1px 16px rgba(0,0,0,0.55)" }}
+              className="text-[18px] font-semibold uppercase"
+              style={{ color: "rgba(100,210,225,0.95)", letterSpacing: "0.10em", textShadow: "0 1px 20px rgba(0,0,0,0.65)" }}
             >
               Utah &amp; Florida Licensed · Class C Virtual Wholesale Distributor
             </span>

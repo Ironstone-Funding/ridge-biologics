@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import RidgeIcon from "@/components/ui/RidgeIcon";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -139,16 +140,9 @@ export default function ComplianceStrip() {
                   transition={{ duration: 1.4, delay: i * 0.18 + 0.25, ease }}
                   className="group py-12 lg:py-14 pl-9 flex flex-col sm:flex-row gap-8 sm:gap-12"
                 >
-                  {/* Logo icon */}
-                  <div className="flex-shrink-0 mt-1.5 transition-all duration-700 group-hover:opacity-100" style={{ opacity: 0.70 }}>
-                    <Image
-                      src="/images/logo.png"
-                      alt=""
-                      width={26}
-                      height={26}
-                      className="w-[26px] h-auto brightness-0 invert"
-                      style={{ objectFit: "contain" }}
-                    />
+                  {/* Ridge icon */}
+                  <div className="flex-shrink-0 mt-1 transition-all duration-700 group-hover:opacity-100" style={{ opacity: 0.80 }}>
+                    <RidgeIcon size={44} variant="light" />
                   </div>
 
                   {/* Content */}
