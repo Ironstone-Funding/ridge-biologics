@@ -101,9 +101,22 @@ export default function WhyRidge() {
                     >
                       {item.body}
                     </p>
+                    {/* Regulatory certificates image — pillar 01 only */}
+                    {i === 0 && (
+                      <div className="mt-8 w-full rounded-xl overflow-hidden bg-[#f0f4f6] p-3">
+                        <Image
+                          src="/images/regulatory-certificates.png"
+                          alt="FDA registration, AATB certification, and Certificate of Analysis documentation"
+                          width={800}
+                          height={533}
+                          className="w-full h-auto rounded-lg"
+                          sizes="(max-width: 1024px) 100vw, 50vw"
+                        />
+                      </div>
+                    )}
                     {/* Cold chain receiving image — pillar 02 only */}
                     {i === 1 && (
-                      <div className="mt-8 w-full max-w-lg rounded-xl overflow-hidden bg-[#f0f4f6] p-3">
+                      <div className="mt-8 w-full rounded-xl overflow-hidden bg-[#f0f4f6] p-3">
                         <Image
                           src="/images/cold-chain-receiving.png"
                           alt="Cold chain receiving — barcode scan and chain-of-custody verification"

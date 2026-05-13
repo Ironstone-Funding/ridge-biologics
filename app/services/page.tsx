@@ -288,24 +288,26 @@ export default function ServicesPage() {
                   </div>
                   {/* Partnership meeting image */}
                   {svc.id === "partnership" && (
-                    <div className="relative w-full h-40 rounded-xl overflow-hidden mt-1">
+                    <div className="mt-2 rounded-xl overflow-hidden bg-rb-slate p-2">
                       <Image
                         src="/images/services-partnership.png"
                         alt="Ridge Biologics clinic partnership meeting"
-                        fill
-                        className="object-cover"
+                        width={800}
+                        height={533}
+                        className="w-full h-auto rounded-lg"
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                     </div>
                   )}
                   {/* Training classroom image */}
                   {svc.id === "education" && (
-                    <div className="relative w-full h-40 rounded-xl overflow-hidden mt-1">
+                    <div className="mt-2 rounded-xl overflow-hidden bg-rb-slate p-2">
                       <Image
                         src="/images/services-training-classroom.png"
                         alt="Ridge Biologics compliance orientation training"
-                        fill
-                        className="object-cover"
+                        width={800}
+                        height={533}
+                        className="w-full h-auto rounded-lg"
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                     </div>
