@@ -8,7 +8,7 @@ import SectionLabel from "@/components/ui/SectionLabel";
 import Button from "@/components/ui/Button";
 import { PRODUCTS } from "@/lib/products";
 
-const CATEGORIES = ["All", "Collagen", "PRP", "Stem Cells"];
+const CATEGORIES = ["All", "Collagen", "PRP", "MSC"];
 
 export default function ProductsPage() {
   const [activeCategory, setActiveCategory] = useState("All");

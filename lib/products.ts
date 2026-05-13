@@ -182,7 +182,7 @@ export const PRODUCTS: Product[] = [
     id: "msc",
     name: "Mesenchymal Stem Cells (MSC)",
     tagline: "GMP-certified, cryogenically preserved — coming soon.",
-    category: "Stem Cells",
+    category: "MSC",
     categoryColor: "#5a4fcf",
     classification: "Section 351 Biologic",
     storage: "Cryogenic −196°C",
