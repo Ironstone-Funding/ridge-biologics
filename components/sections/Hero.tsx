@@ -57,25 +57,37 @@ export default function Hero() {
       {/* ─── HERO ────────────────────────────────────────────────────── */}
       <section className="relative min-h-screen flex flex-col justify-end overflow-hidden">
 
-        {/* ─── Background stack ─── */}
-
-        {/* 1. Fallback color — visible before video loads */}
+        {/* 1. Fallback color */}
         <div className="absolute inset-0 bg-[#070f16]" />
 
-        {/* 2. Video — full-cover seamless loop */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover object-center"
+        {/* 2. Video — wrapped in slow camera push + lateral drift */}
+        <motion.div
+          className="absolute inset-0"
+          animate={{
+            scale: [1.0, 1.055, 1.03, 1.055, 1.0],
+            x:     ["0%", "-0.5%", "0.3%", "-0.5%", "0%"],
+          }}
+          transition={{
+            duration: 22,
+            ease: "easeInOut",
+            repeat: Infinity,
+            times: [0, 0.3, 0.5, 0.7, 1],
+          }}
         >
-          <source src="/videos/hero.mp4" type="video/mp4" />
-        </video>
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover object-center"
+          >
+            <source src="/videos/hero.mp4" type="video/mp4" />
+          </video>
+        </motion.div>
 
-        {/* 3. Primary dark overlay — base contrast across entire frame */}
+        {/* 3. Primary dark overlay */}
         <div
           className="absolute inset-0"
           style={{ backgroundColor: "rgba(5,12,20,0.55)" }}
@@ -95,7 +107,7 @@ export default function Hero() {
           style={{ background: "linear-gradient(to bottom, rgba(5,12,20,0.72) 0%, transparent 100%)" }}
         />
 
-        {/* 6. Edge vignette — cinematic darkening at sides */}
+        {/* 6. Edge vignette */}
         <div
           className="absolute inset-0"
           style={{
@@ -103,7 +115,7 @@ export default function Hero() {
           }}
         />
 
-        {/* 7. Teal atmospheric tint — brand color integration with video */}
+        {/* 7. Teal atmospheric tint */}
         <div
           className="absolute inset-0"
           style={{
@@ -111,7 +123,63 @@ export default function Hero() {
           }}
         />
 
-        {/* 8. Film grain — preserves cinematic texture on top of video */}
+        {/* ── LIVING ATMOSPHERE LAYERS ──────────────────────────────── */}
+
+        {/* 8. Valley fog drift A — foreground haze, faster */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <motion.div
+            className="absolute inset-0"
+            style={{
+              background: "linear-gradient(to right, transparent 8%, rgba(56,116,126,0.055) 32%, rgba(110,175,190,0.07) 50%, rgba(56,116,126,0.05) 70%, transparent 92%)",
+            }}
+            animate={{ x: [0, 55, 0] }}
+            transition={{ duration: 11, ease: "easeInOut", repeat: Infinity }}
+          />
+        </div>
+
+        {/* 9. Mid-ridge haze drift B — counter-direction, slower */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <motion.div
+            className="absolute inset-0"
+            style={{
+              background: "radial-gradient(ellipse 70% 35% at 38% 42%, rgba(56,116,126,0.06) 0%, transparent 60%)",
+            }}
+            animate={{ x: [0, -45, 0], y: [0, 12, 0] }}
+            transition={{ duration: 17, ease: "easeInOut", repeat: Infinity }}
+          />
+        </div>
+
+        {/* 10. Background haze parallax — slowest, widest, implied distance */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <motion.div
+            className="absolute inset-0"
+            style={{
+              background: "radial-gradient(ellipse 90% 45% at 60% 28%, rgba(30,70,85,0.07) 0%, transparent 68%)",
+            }}
+            animate={{ x: [0, 22, 0], y: [0, -8, 0] }}
+            transition={{ duration: 24, ease: "easeInOut", repeat: Infinity }}
+          />
+        </div>
+
+        {/* 11. Light shimmer — sun bleeding through mist */}
+        <motion.div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: "radial-gradient(ellipse 52% 38% at 58% 26%, rgba(165,215,225,0.10) 0%, rgba(100,175,190,0.04) 45%, transparent 65%)",
+          }}
+          animate={{
+            opacity: [0.55, 1, 0.65, 0.95, 0.55],
+            x:       [0, 18, -8, 14, 0],
+          }}
+          transition={{
+            duration: 9,
+            ease: "easeInOut",
+            repeat: Infinity,
+            times: [0, 0.25, 0.5, 0.75, 1],
+          }}
+        />
+
+        {/* 12. Film grain */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
