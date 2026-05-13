@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import RidgeIcon from "@/components/ui/RidgeIcon";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -72,16 +73,9 @@ export default function WhyRidge() {
                   transition={{ duration: 1.5, delay: i * 0.15, ease }}
                   className="group border-t border-[#dde7eb] py-14 lg:py-16 flex flex-col sm:flex-row gap-8 sm:gap-12"
                 >
-                  {/* Ridge logo icon */}
+                  {/* Ridge icon */}
                   <div className="flex-shrink-0 mt-1 transition-all duration-700 group-hover:opacity-100" style={{ opacity: 0.90 }}>
-                    <Image
-                      src="/images/ridge-logo-icon.png"
-                      alt=""
-                      width={48}
-                      height={48}
-                      className="w-12 h-auto"
-                      style={{ objectFit: "contain" }}
-                    />
+                    <RidgeIcon size={46} variant="default" />
                   </div>
 
                   {/* Content */}
