@@ -31,9 +31,9 @@ export default function SolutionsGrid() {
           <div className="relative w-full rounded-2xl overflow-hidden" style={{ maxWidth: "90%", margin: "0 auto" }}>
             <Image
               src="/images/product-lineup-hero.png"
-              alt="Ridge Biologics advanced biologics solutions — MSC, collagen, and PRP product lineup"
-              width={1400}
-              height={600}
+              alt="Ridge Biologics product lineup — RivaCell MSC, Human Collagen, and EmCyte PRP products"
+              width={1672}
+              height={941}
               className="w-full h-auto"
               style={{ display: "block" }}
               sizes="(max-width: 768px) 100vw, 90vw"
