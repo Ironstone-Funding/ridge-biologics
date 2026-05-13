@@ -20,23 +20,9 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-
-      {/* Utah / Florida territory image — above WhyRidge */}
-      <div className="bg-white px-8 lg:px-16 pt-10 pb-0 max-w-7xl mx-auto">
-        <div className="rounded-2xl overflow-hidden">
-          <Image
-            src="/images/utah-florida-territory.png"
-            alt="Ridge Biologics serves Utah and Florida — Two States. One Standard of Excellence."
-            width={1400}
-            height={600}
-            className="w-full h-auto"
-            sizes="100vw"
-            priority
-          />
-        </div>
-      </div>
-
       <WhyRidge />
+      <ComplianceStrip />
+      <SolutionsGrid />
 
       {/* Licensed to Serve Utah & Florida — territory section */}
       <section className="bg-white">
@@ -93,8 +79,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <ComplianceStrip />
-      <SolutionsGrid />
       <OnboardingPreview />
       <TrainingPreview />
       <ManufacturerBar />

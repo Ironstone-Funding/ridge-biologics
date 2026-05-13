@@ -301,13 +301,14 @@ export default function ServicesPage() {
                   )}
                   {/* Training classroom image */}
                   {svc.id === "education" && (
-                    <div className="mt-2 rounded-xl overflow-hidden bg-rb-slate p-2">
+                    <div className="mt-2 rounded-xl bg-rb-slate py-4 px-3">
                       <Image
                         src="/images/services-training-classroom.png"
                         alt="Ridge Biologics compliance orientation training"
-                        width={800}
-                        height={533}
+                        width={1536}
+                        height={1024}
                         className="w-full h-auto rounded-lg"
+                        style={{ objectFit: "contain" }}
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                     </div>

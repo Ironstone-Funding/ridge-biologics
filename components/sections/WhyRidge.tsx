@@ -114,19 +114,6 @@ export default function WhyRidge() {
                         />
                       </div>
                     )}
-                    {/* Cold chain receiving image — pillar 02 only */}
-                    {i === 1 && (
-                      <div className="mt-8 w-full rounded-xl overflow-hidden bg-[#f0f4f6] p-3">
-                        <Image
-                          src="/images/cold-chain-receiving.png"
-                          alt="Cold chain receiving — barcode scan and chain-of-custody verification"
-                          width={800}
-                          height={533}
-                          className="w-full h-auto rounded-lg"
-                          sizes="(max-width: 1024px) 100vw, 50vw"
-                        />
-                      </div>
-                    )}
                   </div>
                 </motion.div>
               ))}
