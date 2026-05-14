@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import LogoVideo from "@/components/ui/LogoVideo";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -142,7 +141,9 @@ export default function ComplianceStrip() {
                 >
                   {/* Ridge icon */}
                   <div className="flex-shrink-0 mt-1 transition-all duration-700 group-hover:opacity-100" style={{ opacity: 0.85 }}>
-                    <LogoVideo size={80} />
+                    <video autoPlay loop muted playsInline style={{ width: 80, height: 80, objectFit: "contain" }}>
+                      <source src="/videos/logo-dark-bg.webm" type="video/webm" />
+                    </video>
                   </div>
 
                   {/* Content */}

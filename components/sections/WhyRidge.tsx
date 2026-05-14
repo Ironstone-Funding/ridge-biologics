@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import LogoVideo from "@/components/ui/LogoVideo";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -75,7 +74,9 @@ export default function WhyRidge() {
                 >
                   {/* Ridge icon */}
                   <div className="flex-shrink-0 mt-1 transition-all duration-700 group-hover:opacity-100" style={{ opacity: 0.90 }}>
-                    <LogoVideo size={80} />
+                    <video autoPlay loop muted playsInline style={{ width: 80, height: 80, objectFit: "contain" }}>
+                      <source src="/videos/logo-light-bg.webm" type="video/webm" />
+                    </video>
                   </div>
 
                   {/* Content */}
