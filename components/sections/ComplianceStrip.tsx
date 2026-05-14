@@ -139,11 +139,14 @@ export default function ComplianceStrip() {
                   transition={{ duration: 1.4, delay: i * 0.18 + 0.25, ease }}
                   className="group py-12 lg:py-14 pl-9 flex flex-col sm:flex-row gap-8 sm:gap-12"
                 >
-                  {/* Ridge icon */}
-                  <div className="flex-shrink-0 mt-1 transition-all duration-700 group-hover:opacity-100" style={{ opacity: 0.85 }}>
-                    <video autoPlay loop muted playsInline style={{ width: 80, height: 80, objectFit: "contain", mixBlendMode: "screen" }}>
-                      <source src="/videos/logo-dark-bg.webm" type="video/webm" />
-                    </video>
+                  {/* Number */}
+                  <div className="flex-shrink-0 mt-1" style={{ minWidth: 32 }}>
+                    <span
+                      className="font-serif font-light text-[#3d8a97]"
+                      style={{ fontSize: "clamp(1.5rem, 2.5vw, 2rem)", opacity: 0.55, letterSpacing: "-0.02em" }}
+                    >
+                      {i + 1}
+                    </span>
                   </div>
 
                   {/* Content */}
