@@ -74,7 +74,7 @@ export default function WhyRidge() {
                 >
                   {/* Ridge icon */}
                   <div className="flex-shrink-0 mt-1 transition-all duration-700 group-hover:opacity-100" style={{ opacity: 0.90 }}>
-                    <video autoPlay loop muted playsInline style={{ width: 80, height: 80, objectFit: "contain" }}>
+                    <video autoPlay loop muted playsInline style={{ width: 80, height: 80, objectFit: "contain", mixBlendMode: "multiply" }}>
                       <source src="/videos/logo-light-bg.webm" type="video/webm" />
                     </video>
                   </div>
