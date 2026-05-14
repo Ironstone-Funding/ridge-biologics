@@ -140,17 +140,14 @@ export default function ComplianceStrip() {
                   className="group py-12 lg:py-14 pl-9 flex flex-col sm:flex-row gap-8 sm:gap-12"
                 >
                   {/* Ridge icon */}
-                  <div
-                    className="flex-shrink-0 mt-1 transition-all duration-700 group-hover:opacity-100 rounded-2xl overflow-hidden"
-                    style={{ opacity: 0.85, width: 80, height: 80, background: "rgba(255,255,255,0.06)" }}
-                  >
+                  <div className="flex-shrink-0 mt-1 transition-all duration-700 group-hover:opacity-100" style={{ opacity: 0.85 }}>
                     <video
                       src="/videos/logo-animation.mp4"
                       autoPlay
                       loop
                       muted
                       playsInline
-                      style={{ width: 80, height: 80, objectFit: "contain" }}
+                      style={{ width: 80, height: 80, objectFit: "contain", mixBlendMode: "screen" }}
                     />
                   </div>
 
