@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import RidgeIcon from "@/components/ui/RidgeIcon";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -142,7 +141,14 @@ export default function ComplianceStrip() {
                 >
                   {/* Ridge icon */}
                   <div className="flex-shrink-0 mt-1 transition-all duration-700 group-hover:opacity-100" style={{ opacity: 0.85 }}>
-                    <RidgeIcon size={46} variant="light" />
+                    <video
+                      src="/videos/logo-animation.mp4"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      style={{ width: 46, height: 46, objectFit: "contain", mixBlendMode: "screen" }}
+                    />
                   </div>
 
                   {/* Content */}
