@@ -79,7 +79,7 @@ export default function WhyRidge() {
                       loop
                       muted
                       playsInline
-                      style={{ width: 80, height: 80, objectFit: "contain" }}
+                      style={{ width: 80, height: 80, objectFit: "contain", mixBlendMode: "multiply" }}
                     >
                       <source src="/videos/logo-animation.webm" type="video/webm" />
                       <source src="/videos/logo-animation.mp4" type="video/mp4" />

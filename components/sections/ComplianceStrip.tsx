@@ -146,7 +146,7 @@ export default function ComplianceStrip() {
                       loop
                       muted
                       playsInline
-                      style={{ width: 80, height: 80, objectFit: "contain" }}
+                      style={{ width: 80, height: 80, objectFit: "contain", filter: "invert(1) hue-rotate(180deg)", mixBlendMode: "screen" }}
                     >
                       <source src="/videos/logo-animation.webm" type="video/webm" />
                       <source src="/videos/logo-animation.mp4" type="video/mp4" />
