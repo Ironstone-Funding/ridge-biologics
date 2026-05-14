@@ -142,13 +142,15 @@ export default function ComplianceStrip() {
                   {/* Ridge icon */}
                   <div className="flex-shrink-0 mt-1 transition-all duration-700 group-hover:opacity-100" style={{ opacity: 0.85 }}>
                     <video
-                      src="/videos/logo-animation.mp4"
                       autoPlay
                       loop
                       muted
                       playsInline
-                      style={{ width: 80, height: 80, objectFit: "contain", mixBlendMode: "screen" }}
-                    />
+                      style={{ width: 80, height: 80, objectFit: "contain" }}
+                    >
+                      <source src="/videos/logo-animation.webm" type="video/webm" />
+                      <source src="/videos/logo-animation.mp4" type="video/mp4" />
+                    </video>
                   </div>
 
                   {/* Content */}
