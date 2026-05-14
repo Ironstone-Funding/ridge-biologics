@@ -80,7 +80,7 @@ export default function WhyRidge() {
                       loop
                       muted
                       playsInline
-                      style={{ width: 46, height: 46, objectFit: "contain", mixBlendMode: "multiply" }}
+                      style={{ width: 80, height: 80, objectFit: "contain", mixBlendMode: "multiply" }}
                     />
                   </div>
 
