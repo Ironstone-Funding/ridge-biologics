@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import CookieBanner from "@/components/ui/CookieBanner";
 
 export const metadata: Metadata = {
   title: {
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
     template: "%s | Ridge Biologics",
   },
   description:
-    "Ridge Biologics provides compliance-conscious regenerative biologics distribution, provider onboarding, clinical education, and operational infrastructure for modern healthcare practices.",
+    "Ridge Biologics provides compliance-conscious advanced biologics distribution, provider onboarding, clinical education, and operational infrastructure for licensed healthcare providers.",
   keywords: [
     "regenerative biologics distribution",
     "compliance-conscious biologics",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     siteName: "Ridge Biologics",
     title: "Ridge Biologics | Compliance-First Regenerative Biologics Distribution",
     description:
-      "Premium regenerative biologics distribution and provider infrastructure. Compliance-conscious. Documentation-focused. Provider-first.",
+      "Premium advanced biologics distribution and provider infrastructure. Compliance-conscious. Documentation-focused. Provider-first.",
   },
   robots: { index: true, follow: true },
 };
@@ -43,6 +44,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <CookieBanner />
       </body>
     </html>
   );

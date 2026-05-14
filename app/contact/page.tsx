@@ -98,8 +98,12 @@ export default function ContactPage() {
                   Send Message
                 </Button>
                 <p className="text-xs text-rb-text-body leading-relaxed">
-                  By submitting this form you agree to be contacted by Ridge Biologics. We do not share
-                  your information with third parties. Ridge does not make clinical efficacy claims.
+                  By submitting this form, you agree to be contacted by Ridge Biologics regarding your inquiry and consent to our{" "}
+                  <a href="/terms" className="text-rb-teal hover:underline">Terms of Service</a> and{" "}
+                  <a href="/privacy" className="text-rb-teal hover:underline">Privacy Policy</a>. Your information will be stored securely and used only for responding to your request. We do not sell or share your information with unaffiliated third parties.{" "}
+                  <strong>Do not include patient information or protected health information (PHI) in this form.</strong>{" "}
+                  You may opt out of future communications at any time by contacting us at{" "}
+                  <a href="mailto:info@ridgebiologics.com" className="text-rb-teal hover:underline">info@ridgebiologics.com</a>.
                 </p>
               </form>
             </SlideIn>

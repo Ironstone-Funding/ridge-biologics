@@ -199,9 +199,9 @@ export const FAQS: FAQItem[] = [
       "Each product is accompanied by a full chain-of-custody record and donor eligibility documentation. We partner only with manufacturers who meet or exceed AATB, FDA, and cGMP standards, and all shipments are monitored to maintain verified cold-chain integrity from lab to clinic.",
   },
   {
-    question: "Are your products covered by insurance?",
+    question: "How do I determine if products are reimbursable?",
     answer:
-      "Coverage varies depending on the product, patient diagnosis, and insurance carrier. We assist clinics in navigating the current LCD landscape and provide documentation templates to streamline prior authorization and claims processes.",
+      "Coverage and reimbursement are payer-specific and depend on the patient's individual insurance plan, clinical indication, medical necessity determination, and applicable coverage policies. Ridge Biologics is a distributor and does not make representations regarding insurance coverage or reimbursement. Healthcare providers are responsible for verifying coverage with the patient's payer, obtaining any required prior authorizations, and complying with all applicable billing and coding requirements. Providers should consult with their billing specialists and review payer-specific Local Coverage Determinations (LCDs) and coverage policies.",
   },
   {
     question: "Do you provide training or support?",

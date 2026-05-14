@@ -42,7 +42,7 @@ export const PRODUCTS: Product[] = [
     ],
     indications: "Partial and full-thickness wounds, arterial ulcers, venous leg ulcers, diabetic foot ulcers, pressure injuries (Stage 2–4), second-degree burns, donor sites, and surgical wound dehiscence.",
     mechanismOfAction:
-      "Collagen acts as a chemotactic agent, attracting fibroblasts and promoting the deposition of new collagen at the wound site. The native triple-helical structure of SkinTemp® II is preserved through the non-hydrolyzation process, maintaining the collagen's natural biological activity. Upon application, the dressing interacts with wound exudate to create a matrix that supports cellular migration, proliferation, and ultimately wound closure.",
+      "SkinTemp® II is a collagen-based wound dressing classified as a Section 361 HCT/P. The product provides a structural matrix for wound management. Product characteristics and performance data are described in manufacturer documentation. Ridge Biologics does not make claims regarding healing rates, wound closure outcomes, or therapeutic effects. Clinical use should be based on healthcare provider judgment and in accordance with manufacturer labeling.",
     comingSoon: false,
   },
   {
@@ -175,7 +175,7 @@ export const PRODUCTS: Product[] = [
     ],
     indications: "In-office autologous PRP preparation for orthopedic, wound care, aesthetic, and pain management applications. BMC and adipose concentrate preparation for regenerative procedures.",
     mechanismOfAction:
-      "The PurePRP® SupraPhysiologic system uses a double-spin centrifugation technique with proprietary Dynamic Chamber technology (AspiraDome™ and BasePlane™) to achieve selective concentration of platelets and target cell populations. The closed-system design minimizes contamination risk while the programmable Sapphire Centrifuge ensures reproducible centrifugation parameters. Precision isolation allows clinicians to control neutrophil content — retaining for antimicrobial benefit or removing for anti-inflammatory protocols — depending on the clinical indication.",
+      "The PurePRP® SupraPhysiologic system uses a double-spin centrifugation technique with proprietary chamber technology to achieve selective concentration of platelets and target cell populations. The closed-system design minimizes contamination risk while the programmable Sapphire Centrifuge ensures reproducible processing parameters. The system allows precision control over cell population isolation during PRP preparation. Clinical applications and protocols are determined by the treating physician based on their clinical judgment, training, and within the scope of their practice. The EmCyte PurePRP® system is FDA-cleared for autologous platelet concentration. Specific FDA-cleared indications and device labeling should be referenced for all clinical use. Ridge Biologics does not make claims regarding clinical outcomes, therapeutic mechanisms, or comparative effectiveness.",
     comingSoon: false,
   },
   {
@@ -191,7 +191,7 @@ export const PRODUCTS: Product[] = [
     image: null,
     description: "FDA-registered mesenchymal stem cells shipped cryogenically with full chain-of-custody documentation. For licensed providers only.",
     overview:
-      "Ridge Biologics is actively onboarding a GMP-certified, FDA-registered source for human mesenchymal stem cells (MSCs). These Section 351 biologics will be cryogenically stored and shipped to licensed providers with complete chain-of-custody documentation, donor eligibility screening records, and certificates of analysis. Contact us to be notified when MSCs become available.",
+      "Ridge Biologics is evaluating distribution options for Section 351 biologics from GMP-certified, FDA-registered manufacturers. Any Section 351 biologic products will be available only to licensed healthcare providers in strict compliance with FDA requirements, including manufacturer labeling and applicable regulatory guidance. Contact us to discuss regulatory requirements and provider eligibility.",
     features: [
       "FDA-registered, GMP-certified manufacturer",
       "Full chain-of-custody documentation",
@@ -201,7 +201,7 @@ export const PRODUCTS: Product[] = [
     ],
     indications: "For licensed healthcare providers only. Contact Ridge Biologics for availability and provider eligibility requirements.",
     mechanismOfAction:
-      "Mesenchymal stem cells exert their therapeutic effects primarily through paracrine signaling — secreting cytokines, growth factors, and extracellular vesicles that modulate local immune responses, promote angiogenesis, and support tissue repair. As Section 351 biologics under FDA jurisdiction, their clinical use requires strict adherence to manufacturer labeling and applicable regulatory guidance.",
+      "Section 351 biologics are regulated as drugs under FDA authority and require strict adherence to manufacturer labeling and applicable regulatory guidance. Ridge Biologics does not make claims regarding mechanisms of action, therapeutic effects, or clinical outcomes. All use must be under the direction of a licensed healthcare provider and in compliance with applicable FDA requirements.",
     comingSoon: true,
   },
 ];

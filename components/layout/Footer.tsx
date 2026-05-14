@@ -9,11 +9,18 @@ const COMPANY_LINKS = [
   { label: "FAQ",      href: "/faq" },
 ];
 
+const LEGAL_LINKS = [
+  { label: "Privacy Policy",      href: "/privacy" },
+  { label: "Terms of Service",    href: "/terms" },
+  { label: "Cookie Policy",       href: "/cookies" },
+  { label: "Accessibility",       href: "/accessibility" },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-rb-navy text-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16 lg:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-6 gap-12 lg:gap-16">
 
           {/* Brand col */}
           <div className="lg:col-span-2">
@@ -54,6 +61,23 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Legal links */}
+          <div>
+            <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-white/55 mb-4">
+              Legal
+            </h3>
+            <ul className="space-y-2.5">
+              {LEGAL_LINKS.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href}
+                    className="text-sm text-white/75 hover:text-white transition-colors">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* External resources */}
           <div className="lg:col-span-2">
             <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-white/55 mb-4">
@@ -79,7 +103,10 @@ export default function Footer() {
           </p>
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
             <p className="text-xs text-white/50">
-              © {new Date().getFullYear()} {COMPANY.name}
+              © {new Date().getFullYear()} {COMPANY.name} · By using this site, you agree to our{" "}
+              <Link href="/terms" className="underline underline-offset-2 hover:text-white/80 transition-colors">Terms of Service</Link>{" "}
+              and{" "}
+              <Link href="/privacy" className="underline underline-offset-2 hover:text-white/80 transition-colors">Privacy Policy</Link>.
             </p>
             <p className="text-xs text-white/45">
               Licensed in Utah and Florida

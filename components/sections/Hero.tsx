@@ -212,11 +212,11 @@ export default function Hero() {
           >
             Your Trusted
             <br />
-            <em style={{ fontStyle: "italic", opacity: 0.93 }}>Biologics</em>
+            <em style={{ fontStyle: "italic", opacity: 0.93 }}>Partner in</em>
             <br />
-            Partner in
+            Compliant
             <br />
-            <span style={{ color: "#3d8a97" }}>Regenerative Medicine.</span>
+            <span style={{ color: "#3d8a97" }}>Biologics Distribution.</span>
           </motion.h1>
 
           {/* Subtext + CTAs */}
