@@ -32,7 +32,7 @@ export const PRODUCTS: Product[] = [
     image: "/images/products/skintemp-ii.png",
     description: "A breathable collagen sheet dressing that supports all stages of wound healing with superior stability and fluid control.",
     overview:
-      "SkinTemp® II is a collagen wound dressing in sheet format manufactured from 100% non-hydrolyzed Type I bovine native collagen. Using proprietary Kollagen™ technology, it preserves the native triple-helical protein structure for enhanced stability throughout the healing process. The breathable sheet format provides superior fluid control while maintaining a moist wound environment optimal for tissue regeneration.",
+      "SkinTemp® II is a collagen wound dressing in sheet format manufactured from 100% non-hydrolyzed Type I bovine native collagen. Using proprietary Kollagen™ technology, it preserves the native triple-helical protein structure for enhanced stability. The breathable sheet format provides superior fluid control while maintaining a moist wound environment. Product characteristics and clinical performance data are described in manufacturer documentation.",
     features: [
       "Breathable sheet format for superior fluid management",
       "100% non-hydrolyzed Type I bovine native collagen",
@@ -68,7 +68,7 @@ export const PRODUCTS: Product[] = [
     ],
     indications: "Burns, sores, blisters, scrapes, ulcers, and other partial to full-thickness wounds. Not indicated for third-degree (full-thickness) burns.",
     mechanismOfAction:
-      "The high surface area of Medifil® II particles ensures maximum contact between the collagen and the wound bed. Native collagen acts as a scaffold for cellular ingrowth and stimulates fibroblast activity, promoting endogenous collagen synthesis. The particle format allows the dressing to conform to irregular wound geometries, delivering consistent collagen concentration across the entire wound surface.",
+      "Medifil® II is a collagen-based wound dressing classified as a Section 361 HCT/P. The particle format provides direct contact between the collagen matrix and the wound bed surface. Product characteristics and performance data are described in manufacturer documentation. Ridge Biologics does not make claims regarding cellular activity, collagen synthesis, healing rates, or therapeutic effects. Clinical use should be based on healthcare provider judgment and in accordance with manufacturer labeling.",
     comingSoon: false,
   },
   {
@@ -94,7 +94,7 @@ export const PRODUCTS: Product[] = [
     ],
     indications: "Partial-thickness wounds: arterial ulcers, venous leg ulcers, diabetic foot ulcers, Stage 2 pressure injuries, blisters, second-degree burns. Full-thickness wounds: Stage 3–4 pressure injuries, arterial/venous ulcers, diabetic foot ulcers, donor sites, surgical wound dehiscence, traumatic wounds healing secondarily.",
     mechanismOfAction:
-      "The gel formulation delivers native collagen directly to the wound bed while maintaining a continuously moist environment. Moisture promotes autolytic debridement and prevents wound desiccation, which can impair cellular migration. The collagen matrix supports fibroblast attachment and proliferation, while the gel vehicle provides a medium that distributes the biological signals of native collagen throughout the wound.",
+      "Collatek® Gel is a collagen-based wound dressing classified as a Section 361 HCT/P. The viscous gel format delivers collagen directly to the wound surface and maintains a moist wound environment as described in manufacturer labeling. Product characteristics and performance data are described in manufacturer documentation. Ridge Biologics does not make claims regarding fibroblast activity, cellular signaling, healing rates, or therapeutic effects. Clinical use should be based on healthcare provider judgment and in accordance with manufacturer labeling.",
     comingSoon: false,
   },
   {
@@ -110,17 +110,17 @@ export const PRODUCTS: Product[] = [
     image: "/images/products/collecule-powder.png",
     description: "Sterile non-hydrolyzed Type I bovine collagen powder with low pH (5.0–5.5) formulation for advanced wound healing.",
     overview:
-      "ColleCule LpH® Surgical Collagen Powder is a sterile, non-hydrolyzed Type I bovine collagen powder engineered with a proprietary low-pH (5.0–5.5) formulation. Upon contact with wound exudate, the acidic environment encourages fibroblast growth, reduces protease activity, and improves oxygen delivery to damaged tissue through the Bohr effect. The powder absorbs up to 30 times its weight in exudate, forming a conforming collagen matrix that adapts to wound contours.",
+      "ColleCule LpH® Surgical Collagen Powder is a sterile, non-hydrolyzed Type I bovine collagen powder with a proprietary low-pH (5.0–5.5) formulation. The powder absorbs up to 30 times its weight in exudate, forming a conforming collagen matrix that adapts to wound contours. Product characteristics and performance data are described in manufacturer documentation. Clinical use is at the discretion of the treating provider and should follow manufacturer labeling.",
     features: [
-      "Low pH 5.0–5.5 creates healing microenvironment",
+      "Low pH 5.0–5.5 formulation",
       "Absorbs up to 30× its weight in wound exudate",
-      "Reduces matrix metalloproteinase (protease) activity",
-      "Promotes fibroblast growth and tissue regeneration",
-      "Improves oxygen delivery via Bohr effect",
+      "High-absorbency matrix for exudate management",
+      "Non-hydrolyzed Type I bovine collagen in powder form",
+      "Ambient / room temperature storage",
     ],
     indications: "Partial and full-thickness wounds, pressure ulcers, venous ulcers, diabetic ulcers, burns, and surgical wounds requiring advanced exudate management.",
     mechanismOfAction:
-      "The low-pH environment created by ColleCule LpH® works through multiple mechanisms: the acidic pH inhibits proteolytic enzymes (MMPs) that degrade the extracellular matrix and growth factors in chronic wounds; the Bohr effect improves hemoglobin oxygen release to hypoxic wound tissue; and the high-absorbency matrix manages excessive exudate while maintaining intimate contact with the wound bed to deliver collagen's regenerative signals.",
+      "ColleCule LpH® Surgical Collagen Powder is a collagen-based wound dressing classified as a Section 361 HCT/P. The product is formulated with a low-pH (5.0–5.5) collagen matrix with high exudate-absorbing capacity. Product characteristics and performance data are described in manufacturer documentation. Ridge Biologics does not make claims regarding protease inhibition, oxygenation effects, fibroblast activity, healing rates, or therapeutic effects. Clinical use should be based on healthcare provider judgment and in accordance with manufacturer labeling.",
     sizes: "0.5G · 1G",
     comingSoon: false,
   },
@@ -135,19 +135,19 @@ export const PRODUCTS: Product[] = [
     company: "Human BioSciences",
     companyUrl: "https://www.humanbiosciences.com",
     image: "/images/products/collecule-pad.png",
-    description: "Low pH collagen pad dressing designed to manage exudate, support autolytic debridement, and accelerate tissue regeneration.",
+    description: "Low pH collagen pad dressing in a conformable format for exudate management and broad wound coverage.",
     overview:
-      "ColleCule LpH® Pad brings the advanced low-pH collagen technology of the powder series into a convenient, conformable pad format. The dressing is designed to manage wound exudate, support autolytic debridement, and accelerate tissue regeneration. Its pad format simplifies application and is particularly suited for broad wound beds requiring consistent coverage.",
+      "ColleCule LpH® Pad brings the low-pH collagen formulation of the powder series into a convenient, conformable pad format. The dressing is designed to manage wound exudate and maintain the wound environment as described in manufacturer documentation. Its pad format simplifies application and is particularly suited for broad wound beds requiring consistent coverage. Product characteristics are described in manufacturer labeling; clinical use is at the discretion of the treating provider.",
     features: [
       "Low-pH collagen matrix in conformable pad format",
       "Manages wound exudate effectively",
-      "Supports autolytic debridement",
-      "Accelerates tissue regeneration",
+      "Moist wound environment as described in manufacturer labeling",
       "Consistent coverage across broad wound beds",
+      "Ambient / room temperature storage",
     ],
     indications: "Partial and full-thickness wounds, moderately to heavily exudating wounds, pressure injuries, venous and diabetic ulcers.",
     mechanismOfAction:
-      "The ColleCule LpH® Pad maintains the same low-pH collagen mechanism as the powder: reducing protease activity, promoting fibroblast proliferation, and improving oxygenation through the Bohr effect. The pad format uses the collagen matrix as a primary dressing that absorbs and retains exudate while delivering the regenerative environment directly to the wound surface. The conformable structure ensures uniform contact across irregular wound geometries.",
+      "ColleCule LpH® Pad is a collagen-based wound dressing classified as a Section 361 HCT/P. The pad format delivers the same low-pH collagen formulation as the powder in a conformable sheet, providing exudate management across broad wound surfaces as described in manufacturer documentation. Ridge Biologics does not make claims regarding protease activity, fibroblast proliferation, oxygenation effects, healing rates, or therapeutic effects. Clinical use should be based on healthcare provider judgment and in accordance with manufacturer labeling.",
     comingSoon: false,
   },
   {
