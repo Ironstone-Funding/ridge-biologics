@@ -42,7 +42,7 @@ export const PRODUCTS = [
     title: "Mesenchymal Stem Cells (MSC)",
     description:
       "Human-derived MSCs from a GMP-certified, FDA-registered manufacturer. Cryogenically stored and shipped with full chain-of-custody documentation. For licensed providers only.",
-    classification: "Section 351 Biologic",
+    classification: "cGMP-Manufactured",
     storage: "Cryogenic −196°C",
     storageIcon: "snowflake",
     icon: "microscope",

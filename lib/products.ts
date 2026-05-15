@@ -184,7 +184,7 @@ export const PRODUCTS: Product[] = [
     tagline: "GMP-certified, cryogenically preserved — coming soon.",
     category: "MSC",
     categoryColor: "#5a4fcf",
-    classification: "Section 351 Biologic",
+    classification: "cGMP-Manufactured",
     storage: "Cryogenic −196°C",
     company: "GMP-Certified Manufacturer",
     companyUrl: "",
