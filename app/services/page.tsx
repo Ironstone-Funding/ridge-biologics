@@ -13,7 +13,7 @@ import Icon from "@/components/ui/Icon";
 export default function ServicesPage() {
   const collagen  = PRODUCTS.filter((p) => p.category === "Collagen");
   const prp       = PRODUCTS.filter((p) => p.category === "PRP");
-  const stemCells = PRODUCTS.filter((p) => p.category === "Stromal Cells");
+  const stemCells = PRODUCTS.filter((p) => p.category === "MSC");
 
   return (
     <div className="pt-20">
