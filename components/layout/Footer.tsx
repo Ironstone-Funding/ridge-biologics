@@ -109,6 +109,14 @@ export default function Footer() {
           <p className="text-xs text-white/55 leading-relaxed">
             {COMPLIANCE_DISCLAIMER}
           </p>
+          <p className="text-xs text-white/50 leading-relaxed">
+            Healthcare providers should report adverse events or product quality concerns to Ridge Biologics at{" "}
+            <a href={`mailto:${COMPANY.email}`} className="underline underline-offset-2 hover:text-white/80 transition-colors">{COMPANY.email}</a>{" "}
+            and to FDA MedWatch at{" "}
+            <a href="tel:+18003321088" className="underline underline-offset-2 hover:text-white/80 transition-colors">1-800-FDA-1088</a>{" "}
+            or{" "}
+            <a href="https://www.fda.gov/medwatch" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-white/80 transition-colors">fda.gov/medwatch</a>.
+          </p>
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
             <p className="text-xs text-white/50">
               © {new Date().getFullYear()} {COMPANY.name} · By using this site, you agree to our{" "}
