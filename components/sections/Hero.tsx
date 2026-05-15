@@ -178,7 +178,7 @@ export default function Hero() {
         />
 
         {/* ─── Content ─── */}
-        <div className="relative z-10 max-w-7xl mx-auto px-8 lg:px-16 w-full pb-20 pt-40">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 w-full pb-20 pt-40">
 
           {/* Overline */}
           <motion.div
@@ -295,7 +295,7 @@ export default function Hero() {
 
       {/* ─── TRUST BAR ───────────────────────────────────────────────── */}
       <div style={{ backgroundColor: "#070f16", borderTop: "1px solid rgba(255,255,255,0.04)" }}>
-        <div className="max-w-7xl mx-auto px-8 lg:px-16 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 py-8">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

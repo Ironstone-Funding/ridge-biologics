@@ -52,7 +52,7 @@ export default function ComplianceStrip() {
         style={{ background: "radial-gradient(ellipse at 100% 100%, rgba(20,52,68,0.18) 0%, transparent 60%)" }}
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-8 lg:px-16 py-40 lg:py-56">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 py-24 sm:py-40 lg:py-56">
         <div className="grid lg:grid-cols-12 gap-20 lg:gap-24">
 
           {/* Left — dominant headline, sticky */}

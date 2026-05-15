@@ -17,7 +17,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
     <div className="pt-20">
       {/* Breadcrumb */}
       <div className="bg-white border-b border-rb-slate">
-        <div className="max-w-7xl mx-auto px-8 lg:px-16 py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 py-4">
           <nav className="flex items-center gap-2 text-xs text-rb-text-muted">
             <Link href="/products" className="hover:text-rb-teal transition-colors">Products</Link>
             <span>/</span>
@@ -30,7 +30,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
       {/* Hero — name left, overview right */}
       <section className="bg-white">
-        <div className="max-w-7xl mx-auto px-8 lg:px-16 py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 py-20 lg:py-28">
           <div className="grid lg:grid-cols-12 gap-16 lg:gap-24">
 
             {/* Left — sticky product identity */}
@@ -208,7 +208,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
       {/* Back to catalog */}
       <div className="bg-rb-slate border-t border-rb-slate-mid py-8">
-        <div className="max-w-7xl mx-auto px-8 lg:px-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-16">
           <Link
             href="/products"
             className="inline-flex items-center gap-2 text-sm font-medium text-rb-text-body hover:text-rb-teal transition-colors"
@@ -223,7 +223,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
       {/* Disclaimer */}
       <section className="py-8 bg-white border-t border-rb-slate">
-        <div className="max-w-7xl mx-auto px-8 lg:px-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-16">
           <p className="text-xs text-rb-text-muted leading-relaxed max-w-4xl">
             Ridge Biologics does not make claims for the treatment, cure, or prevention of any disease.
             All products are intended for use by qualified healthcare professionals in accordance with

@@ -26,7 +26,7 @@ const PILLARS = [
 export default function WhyRidge() {
   return (
     <section className="bg-white">
-      <div className="max-w-7xl mx-auto px-8 lg:px-16 py-40 lg:py-56">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 py-24 sm:py-40 lg:py-56">
         <div className="grid lg:grid-cols-12 gap-20 lg:gap-24">
 
           {/* Left — oversized editorial statement, sticky */}
