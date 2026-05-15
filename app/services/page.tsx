@@ -372,12 +372,12 @@ export default function ServicesPage() {
                 <div>
                   <label className="block text-xs font-semibold text-rb-navy uppercase tracking-widest mb-3">Products of Interest</label>
                   <div className="space-y-2.5 p-5 rounded-xl bg-rb-slate border border-rb-slate-mid">
-                    {PRODUCTS.filter((p) => !p.comingSoon).map((p) => (
+                    {PRODUCTS.map((p) => (
                       <label key={p.id} className="flex items-center gap-3 cursor-pointer group">
                         <input type="checkbox"
                           className="w-4 h-4 rounded border-rb-slate-mid text-rb-teal focus:ring-rb-teal" />
                         <span className="text-sm text-rb-text-body group-hover:text-rb-navy transition-colors">
-                          {p.name}
+                          {p.name}{p.comingSoon && <span className="ml-2 text-xs text-rb-teal/70 font-medium">— Coming Soon</span>}
                         </span>
                       </label>
                     ))}
