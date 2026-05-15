@@ -56,12 +56,13 @@ export default function ServicesPage() {
 
           {/* Product lineup hero image */}
           <FadeIn className="mb-14">
-            <div className="relative w-full h-64 lg:h-80 rounded-2xl overflow-hidden">
+            <div className="w-full rounded-2xl overflow-hidden">
               <Image
                 src="/images/services-product-lineup.png"
                 alt="Ridge Biologics product lineup"
-                fill
-                className="object-cover"
+                width={1400}
+                height={560}
+                className="w-full h-auto object-contain"
                 sizes="100vw"
                 priority
               />
