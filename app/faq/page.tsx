@@ -130,10 +130,9 @@ export default function FAQPage() {
       <section className="py-8 bg-white border-t border-rb-slate">
         <div className="container-xl">
           <p className="text-xs text-rb-text-muted leading-relaxed max-w-4xl">
-            Ridge Biologics provides FDA-registered human cellular and tissue-based products (HCT/Ps),
+            Ridge Biologics distributes FDA-registered human cellular and tissue-based products (HCT/Ps),
             including Section 361 minimally manipulated, homologous-use allografts regulated under
-            21 CFR Part 1271, as well as Section 351 advanced biologic products manufactured in
-            FDA-licensed facilities under current Good Manufacturing Practice (cGMP) standards.
+            21 CFR Part 1271, as well as advanced biologic products manufactured in GMP-compliant facilities.
             We do not make claims for the treatment, cure, or prevention of any disease. All products
             are intended for use by qualified healthcare professionals in accordance with applicable
             regulations and labeling.
