@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "Ridge Biologics Terms of Service — governing conditions for use of our website and services. For licensed healthcare providers only.",
 };
 
-const EFFECTIVE_DATE = "May 14, 2026";
+const EFFECTIVE_DATE = "May 15, 2026";
 
 export default function TermsPage() {
   return (
@@ -91,7 +91,7 @@ export default function TermsPage() {
               <li>Reliance on any information provided on the Site</li>
               <li>Unauthorized access to or alteration of your information</li>
             </ul>
-            <p>IN NO EVENT SHALL RIDGE BIOLOGICS'S TOTAL AGGREGATE LIABILITY EXCEED THE GREATER OF ONE HUNDRED DOLLARS ($100) OR THE AMOUNT YOU PAID RIDGE BIOLOGICS IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM.</p>
+            <p>IN NO EVENT SHALL RIDGE BIOLOGICS'S TOTAL AGGREGATE LIABILITY EXCEED THE GREATER OF (A) TEN THOUSAND DOLLARS ($10,000) OR (B) THE TOTAL AMOUNT PAID BY YOU TO RIDGE BIOLOGICS FOR THE SPECIFIC PRODUCT(S) OR SERVICE(S) GIVING RISE TO THE CLAIM. SOME JURISDICTIONS DO NOT ALLOW THE LIMITATION OR EXCLUSION OF LIABILITY FOR CERTAIN DAMAGES, SO THE ABOVE LIMITATIONS MAY NOT APPLY TO THE EXTENT PROHIBITED BY APPLICABLE LAW.</p>
 
             <h2>9. Indemnification</h2>
             <p>You agree to indemnify, defend, and hold harmless Ridge Biologics, its officers, directors, employees, contractors, and agents from and against any claims, liabilities, damages, judgments, awards, losses, costs, and expenses (including reasonable attorneys' fees) arising out of or relating to: (a) your use of the Site or products; (b) your violation of these Terms; (c) your violation of any applicable law or third-party rights; or (d) clinical decisions made in connection with any product.</p>
