@@ -140,10 +140,10 @@ export default function ComplianceStrip() {
                   className="group py-12 lg:py-14 pl-9 flex flex-col sm:flex-row gap-8 sm:gap-12"
                 >
                   {/* Number */}
-                  <div className="flex-shrink-0 mt-1" style={{ minWidth: 32 }}>
+                  <div className="flex-shrink-0 mt-1" style={{ minWidth: 48 }}>
                     <span
-                      className="font-serif font-light text-[#3d8a97]"
-                      style={{ fontSize: "clamp(1.5rem, 2.5vw, 2rem)", opacity: 0.55, letterSpacing: "-0.02em" }}
+                      className="font-serif font-bold text-[#3d8a97]"
+                      style={{ fontSize: "clamp(2.5rem, 4vw, 3.5rem)", opacity: 0.70, letterSpacing: "-0.03em", lineHeight: 1 }}
                     >
                       {i + 1}
                     </span>
