@@ -39,7 +39,7 @@ export const TRUST_PILLARS: TrustPillar[] = [
 export const PRODUCTS = [
   {
     id: "msc",
-    title: "Mesenchymal Stem Cells (MSC)",
+    title: "Mesenchymal Stromal Cells (MSC)",
     description:
       "Human-derived MSCs from a GMP-certified, FDA-registered manufacturer. Cryogenically stored and shipped with full chain-of-custody documentation. For licensed providers only.",
     classification: "cGMP-Manufactured",
@@ -180,7 +180,7 @@ export const FAQS: FAQItem[] = [
   {
     question: "What is Ridge Biologics?",
     answer:
-      "Ridge Biologics is a Utah-licensed Class C Virtual Wholesale Distributor of regenerative medicine products. Our mission is to expand licensed healthcare provider access to high-quality biological therapies — including Mesenchymal Stem Cells (MSC), Extracellular Vesicles (EVs), PRP kits, and collagen-based products — through an ethical, fully compliant virtual drop-ship distribution model operating in Utah and Florida.",
+      "Ridge Biologics is a Utah-licensed Class C Virtual Wholesale Distributor of regenerative medicine products. Our mission is to expand licensed healthcare provider access to high-quality biological therapies — including Mesenchymal Stromal Cells (MSC), Extracellular Vesicles (EVs), PRP kits, and collagen-based products — through an ethical, fully compliant virtual drop-ship distribution model operating in Utah and Florida.",
   },
   {
     question: "How can clinics benefit from our services?",

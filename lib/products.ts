@@ -180,7 +180,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: "msc",
-    name: "Mesenchymal Stem Cells (MSC)",
+    name: "Mesenchymal Stromal Cells (MSC)",
     tagline: "GMP-certified, cryogenically preserved — coming soon.",
     category: "MSC",
     categoryColor: "#5a4fcf",
@@ -189,7 +189,7 @@ export const PRODUCTS: Product[] = [
     company: "GMP-Certified Manufacturer",
     companyUrl: "",
     image: null,
-    description: "FDA-registered mesenchymal stem cells shipped cryogenically with full chain-of-custody documentation. For licensed providers only.",
+    description: "FDA-registered mesenchymal stromal cells shipped cryogenically with full chain-of-custody documentation. For licensed providers only.",
     overview:
       "Ridge Biologics is evaluating distribution options for Section 351 biologics from GMP-certified, FDA-registered manufacturers. Any Section 351 biologic products will be available only to licensed healthcare providers in strict compliance with FDA requirements, including manufacturer labeling and applicable regulatory guidance. Contact us to discuss regulatory requirements and provider eligibility.",
     features: [

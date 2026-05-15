@@ -13,7 +13,7 @@ import Icon from "@/components/ui/Icon";
 export default function ServicesPage() {
   const collagen  = PRODUCTS.filter((p) => p.category === "Collagen");
   const prp       = PRODUCTS.filter((p) => p.category === "PRP");
-  const stemCells = PRODUCTS.filter((p) => p.category === "Stem Cells");
+  const stemCells = PRODUCTS.filter((p) => p.category === "Stromal Cells");
 
   return (
     <div className="pt-20">
@@ -185,13 +185,13 @@ export default function ServicesPage() {
             ))}
           </div>
 
-          {/* — Stem Cells — */}
+          {/* — Stromal Cells — */}
           <div>
             <FadeIn>
               <div className="flex items-center gap-4 mb-10">
                 <span className="h-5 w-px" style={{ backgroundColor: "#5a4fcf" }} />
                 <span className="text-[11px] font-semibold tracking-[0.18em] uppercase" style={{ color: "#5a4fcf" }}>
-                  Stem Cells
+                  Stromal Cells
                 </span>
                 <div className="flex-1 h-px bg-rb-slate" />
               </div>
