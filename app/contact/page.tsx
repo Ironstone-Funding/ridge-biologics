@@ -119,9 +119,18 @@ export default function ContactPage() {
                     regenerative medicine products. We supply licensed healthcare providers in Utah
                     and Florida with compliant biologics through an ethical, fully documented drop-ship model.
                   </p>
-                  <a href={`mailto:${COMPANY.email}`} className="text-rb-teal hover:text-rb-teal-dark transition-colors text-sm font-medium">
-                    {COMPANY.email}
-                  </a>
+                  <div className="space-y-2">
+                    <a href={`mailto:${COMPANY.email}`} className="text-rb-teal hover:text-rb-teal-dark transition-colors text-sm font-medium block">
+                      {COMPANY.email}
+                    </a>
+                    <a href={`tel:+${COMPANY.phoneTel}`} className="text-rb-teal hover:text-rb-teal-dark transition-colors text-sm font-medium block">
+                      {COMPANY.phone}
+                    </a>
+                    <address className="not-italic text-rb-text-body text-sm leading-relaxed pt-1">
+                      {COMPANY.address}<br />
+                      {COMPANY.city}
+                    </address>
+                  </div>
                 </div>
 
                 <div className="bg-white rounded-3xl border border-rb-slate-mid p-8">

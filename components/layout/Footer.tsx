@@ -39,9 +39,17 @@ export default function Footer() {
               Supply you trust, Support you need.
             </p>
             <a href={`mailto:${COMPANY.email}`}
-              className="text-sm text-rb-teal-light hover:text-white transition-colors">
+              className="text-sm text-rb-teal-light hover:text-white transition-colors block mb-2">
               {COMPANY.email}
             </a>
+            <a href={`tel:+${COMPANY.phoneTel}`}
+              className="text-sm text-rb-teal-light hover:text-white transition-colors block mb-3">
+              {COMPANY.phone}
+            </a>
+            <address className="not-italic text-sm text-white/50 leading-relaxed">
+              {COMPANY.address}<br />
+              {COMPANY.city}
+            </address>
           </div>
 
           {/* Company links */}
