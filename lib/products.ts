@@ -180,7 +180,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: "msc",
-    name: "Mesenchymal Stromal Cells (MSC)",
+    name: "MSC",
     tagline: "GMP-certified, cryogenically preserved — coming soon.",
     category: "MSC",
     categoryColor: "#5a4fcf",

@@ -186,13 +186,13 @@ export default function ServicesPage() {
             ))}
           </div>
 
-          {/* — Stromal Cells — */}
+          {/* — MSC — */}
           <div>
             <FadeIn>
               <div className="flex items-center gap-4 mb-10">
                 <span className="h-5 w-px" style={{ backgroundColor: "#5a4fcf" }} />
                 <span className="text-[11px] font-semibold tracking-[0.18em] uppercase" style={{ color: "#5a4fcf" }}>
-                  Stromal Cells
+                  MSC
                 </span>
                 <div className="flex-1 h-px bg-rb-slate" />
               </div>
