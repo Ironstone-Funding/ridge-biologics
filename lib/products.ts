@@ -160,7 +160,7 @@ export const PRODUCTS: Product[] = [
     category: "PRP",
     categoryColor: "#1a6b8a",
     classification: "FDA-Cleared Device System",
-    storage: "15–30°C / 59–86°F",
+    storage: "Ambient / Room Temp",
     company: "EmCyte Corporation",
     companyUrl: "https://www.emcyte.com",
     image: "/images/products/emcyte-prp.webp",
