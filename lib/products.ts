@@ -160,7 +160,7 @@ export const PRODUCTS: Product[] = [
     category: "PRP",
     categoryColor: "#1a6b8a",
     classification: "FDA-Cleared Device System",
-    storage: "Ambient / Room Temp",
+    storage: "15–30°C / 59–86°F",
     company: "EmCyte Corporation",
     companyUrl: "https://www.emcyte.com",
     image: "/images/products/emcyte-prp.webp",
@@ -176,7 +176,7 @@ export const PRODUCTS: Product[] = [
       "31-lb portable unit with touchscreen pre-set programs",
       "Customizable open settings for specialized clinical needs",
     ],
-    indications: "In-office autologous PRP preparation for orthopedic, wound care, aesthetic, and pain management applications. BMC and adipose concentrate preparation for regenerative procedures.",
+    indications: "FDA-cleared for preparation of autologous platelet-rich plasma (PRP) and platelet-rich fibrin matrix (PRFM) from an autologous blood specimen, for application to soft-tissue wounds and injured bone. Single-use kit. Not made with natural rubber latex.",
     mechanismOfAction:
       "The PurePRP® SupraPhysiologic system uses a double-spin centrifugation technique with proprietary chamber technology to achieve selective concentration of platelets and target cell populations. The closed-system design minimizes contamination risk while the programmable Sapphire Centrifuge ensures reproducible processing parameters. The system allows precision control over cell population isolation during PRP preparation. Clinical applications and protocols are determined by the treating physician based on their clinical judgment, training, and within the scope of their practice. The EmCyte PurePRP® system is FDA-cleared for autologous platelet concentration. Specific FDA-cleared indications and device labeling should be referenced for all clinical use. Ridge Biologics does not make claims regarding clinical outcomes, therapeutic mechanisms, or comparative effectiveness.",
     comingSoon: false,
