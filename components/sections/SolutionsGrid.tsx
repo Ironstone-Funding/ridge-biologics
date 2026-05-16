@@ -50,10 +50,6 @@ export default function SolutionsGrid() {
                   <div className="w-12 h-12 rounded-xl bg-rb-teal-pale flex items-center justify-center text-rb-teal">
                     <Icon name={product.icon} className="w-6 h-6" />
                   </div>
-                  <div className="flex items-center gap-1.5 text-right">
-                    <Icon name={product.storageIcon} className="w-3.5 h-3.5 text-rb-teal" />
-                    <p className="text-xs text-rb-teal font-semibold">{product.storage}</p>
-                  </div>
                 </div>
                 <h3 className="font-semibold text-rb-navy text-[1.05rem] mb-2 group-hover:text-rb-teal transition-colors leading-snug">
                   {product.title}
