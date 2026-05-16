@@ -327,6 +327,19 @@ export default function ServicesPage() {
                       />
                     </div>
                   )}
+                  {/* Compliance guidance image */}
+                  {svc.id === "compliance" && (
+                    <div className="mt-2 rounded-xl overflow-hidden bg-rb-slate p-2">
+                      <Image
+                        src="/images/services-compliance-guidance.png"
+                        alt="Ridge Biologics regulatory compliance checklist with FDA 21 CFR and DOPL reference materials"
+                        width={1330}
+                        height={887}
+                        className="w-full h-auto rounded-lg"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                    </div>
+                  )}
                 </div>
               </FadeIn>
             ))}
