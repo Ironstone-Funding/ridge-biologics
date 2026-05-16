@@ -10,10 +10,11 @@ import RepRecruitment from "@/components/sections/RepRecruitment";
 import CTASection from "@/components/sections/CTASection";
 
 const TERRITORY_BULLETS = [
-  "Utah DOPL Class C Virtual Wholesale Distributor License",
-  "Florida Department of Health tissue banking compliance",
-  "State-specific regulatory guidance and support",
-  "Territory-focused account management",
+  "Utah DOPL Class C Virtual Wholesale Distributor License (active)",
+  "Florida Department of Health tissue banking compliance (active)",
+  "Additional state licensing in process — contact us for expansion timeline",
+  "State-specific regulatory guidance and support in all territories",
+  "Dedicated territory account management",
 ];
 
 export default function HomePage() {
@@ -41,13 +42,14 @@ export default function HomePage() {
                 className="font-serif font-light text-[#284454] leading-[0.96] mb-6"
                 style={{ fontSize: "clamp(2.5rem, 4vw, 3.5rem)", letterSpacing: "-0.02em" }}
               >
-                Licensed to Serve<br />Utah &amp; Florida
+                Currently Serving<br />Utah &amp; Florida —<br />Expanding Nationwide
               </h2>
               <p className="text-[#3d5a68] text-base leading-relaxed mb-8 font-light" style={{ opacity: 0.8 }}>
-                Ridge Biologics operates as a Utah DOPL Class C licensed distributor serving
-                healthcare providers exclusively in Utah and Florida. Our focused regional
-                approach enables deep relationships with local providers and ensures we maintain
-                full compliance with state-specific regulations in both territories.
+                Ridge Biologics operates as a Utah DOPL Class C licensed distributor currently
+                serving healthcare providers in Utah and Florida, with active expansion into
+                additional states nationwide. Our territory-focused approach enables deep
+                relationships with local providers while maintaining full compliance with
+                state-specific regulations in each jurisdiction.
               </p>
               <ul className="space-y-3">
                 {TERRITORY_BULLETS.map((b) => (
@@ -66,7 +68,7 @@ export default function HomePage() {
               <div className="rounded-2xl overflow-hidden">
                 <Image
                   src="/images/utah-florida-territory.png"
-                  alt="Utah and Florida — Ridge Biologics service territory"
+                  alt="Utah and Florida — Ridge Biologics service territory, expanding nationwide"
                   width={1200}
                   height={800}
                   className="w-full h-auto"

@@ -37,7 +37,7 @@ export default function CTASection() {
           </div>
 
           <p className="mt-10 text-xs text-rb-text-body leading-relaxed max-w-lg mx-auto">
-            Ridge Biologics serves licensed healthcare providers in Utah and Florida only.
+            Ridge Biologics currently serves licensed healthcare providers in Utah and Florida, with expansion to additional states in progress. Contact us to inquire about your state.
             We do not make claims for the treatment, cure, or prevention of any disease.
           </p>
         </FadeIn>

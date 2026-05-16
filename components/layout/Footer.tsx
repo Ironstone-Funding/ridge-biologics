@@ -125,7 +125,7 @@ export default function Footer() {
               <Link href="/privacy" className="underline underline-offset-2 hover:text-white/80 transition-colors">Privacy Policy</Link>.
             </p>
             <p className="text-xs text-white/45">
-              Licensed in Utah and Florida
+              Licensed in Utah &amp; Florida | Expanding Nationwide
             </p>
           </div>
         </div>

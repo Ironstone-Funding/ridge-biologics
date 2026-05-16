@@ -332,7 +332,7 @@ export default function ServicesPage() {
               </h2>
               <p className="text-rb-text-body mb-8">
                 Complete the form and a Ridge representative will follow up within one business day.
-                Ridge Biologics serves licensed healthcare providers in Utah and Florida only.
+                Ridge Biologics currently serves licensed healthcare providers in Utah and Florida, with expansion to additional states in progress. Contact us to inquire about your state.
               </p>
 
               <form className="space-y-5">
@@ -408,7 +408,7 @@ export default function ServicesPage() {
                   <ul className="space-y-3">
                     {[
                       "Ridge works with licensed healthcare providers only.",
-                      "We currently serve providers in Utah and Florida.",
+                      "We currently serve providers in Utah and Florida, with nationwide expansion in progress.",
                       "All providers complete a compliance orientation before onboarding.",
                       "Ridge does not guarantee clinical outcomes or product efficacy.",
                     ].map((item) => (

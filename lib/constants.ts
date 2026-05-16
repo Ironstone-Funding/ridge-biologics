@@ -21,7 +21,7 @@ export const COMPANY = {
   phoneTel:      "18012159175",
   address:       "7533 S Center View Ct, Ste N",
   city:          "West Jordan, UT 84084",
-  states:        "Utah and Florida",
+  states:        "Utah and Florida (expanding nationwide)",
   cta_primary:   "Request Products",
   cta_secondary: "Learn More",
 };
@@ -29,7 +29,7 @@ export const COMPANY = {
 // ─── Trust Pillars ────────────────────────────────────────────────────────────
 
 export const TRUST_PILLARS: TrustPillar[] = [
-  { label: "Utah & Florida Licensed",         icon: "shield" },
+  { label: "Utah & Florida Licensed — Expanding Nationwide", icon: "shield" },
   { label: "FDA-Registered Manufacturers",    icon: "file" },
   { label: "Verified Cold-Chain Logistics",   icon: "link" },
 ];
@@ -180,7 +180,7 @@ export const FAQS: FAQItem[] = [
   {
     question: "What is Ridge Biologics?",
     answer:
-      "Ridge Biologics is a Utah-licensed Class C Virtual Wholesale Distributor of regenerative medicine products. Our mission is to expand licensed healthcare provider access to high-quality biological therapies — including MSC, Extracellular Vesicles (EVs), PRP kits, and collagen-based products — through an ethical, fully compliant virtual drop-ship distribution model operating in Utah and Florida.",
+      "Ridge Biologics is a Utah-licensed Class C Virtual Wholesale Distributor of regenerative medicine products. Our mission is to expand licensed healthcare provider access to high-quality biological therapies — including MSC, Extracellular Vesicles (EVs), PRP kits, and collagen-based products — through an ethical, fully compliant virtual drop-ship distribution model. Currently serving Utah and Florida, with active expansion into additional states nationwide.",
   },
   {
     question: "How can clinics benefit from our services?",

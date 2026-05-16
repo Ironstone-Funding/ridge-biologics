@@ -73,7 +73,7 @@ export default function SolutionsGrid() {
 
         <FadeIn delay={0.3} className="mt-8 text-center">
           <p className="text-rb-text-body text-sm">
-            Ridge Biologics serves licensed healthcare providers in Utah and Florida only.
+            Ridge Biologics currently serves licensed healthcare providers in Utah and Florida, with expansion to additional states in progress. Contact us to inquire about your state.
           </p>
         </FadeIn>
       </div>

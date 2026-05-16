@@ -167,7 +167,7 @@ export default function ProductsPage() {
               Ready to Add These to Your Practice?
             </h2>
             <p className="text-rb-text-body text-lg mb-8 max-w-xl mx-auto">
-              Ridge serves licensed healthcare providers in Utah and Florida.
+              Ridge currently serves licensed healthcare providers in Utah and Florida, with expansion to additional states in progress.
               Submit a product request and we'll follow up within one business day.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -9,7 +9,7 @@ const TRAITS = [
   "Licensed healthcare or medical distribution background preferred",
   "Commitment to compliant, ethical biologics representation",
   "Ability to support provider onboarding and documentation processes",
-  "Territory focus in Utah and Florida",
+  "Territory focus in Utah and Florida, with expansion into additional states",
   "Interest in ongoing education and professional development",
 ];
 
@@ -32,7 +32,7 @@ export default function RepRecruitment() {
               <span className="text-rb-teal-light">1099 Sales Representative</span>
             </h2>
             <p className="text-white/75 text-lg leading-relaxed mb-4">
-              We work with qualified independent sales representatives across Utah and Florida.
+              We work with qualified independent sales representatives across Utah and Florida, and are actively expanding our rep network nationwide.
               Ridge reps are more than commission earners — they're trusted liaisons who help
               clinics integrate biologics responsibly.
             </p>
