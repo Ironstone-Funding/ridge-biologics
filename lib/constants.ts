@@ -59,11 +59,11 @@ export const PRODUCTS = [
   },
   {
     id: "prp",
-    title: "PRP Kits",
+    title: "EmCyte PRP, BMC & Sapphire Centrifuge",
     description:
-      "Point-of-care platelet-rich plasma kits for in-office use. FDA-cleared devices enabling providers to prepare autologous PRP quickly and consistently for a range of applications.",
-    classification: "Point-of-Care Device Kit",
-    storage: "Refrigerated 2–8°C",
+      "FDA-cleared point-of-care systems for autologous PRP and bone marrow concentrate preparation. Includes PurePRP® SP and PureBMC® SP single-use kits, powered by the EmCyte Sapphire Series Centrifuge.",
+    classification: "FDA-Cleared Device System",
+    storage: "Ambient / Room Temp",
     storageIcon: "thermometer",
     icon: "droplet",
   },
