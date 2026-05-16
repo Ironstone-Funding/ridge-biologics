@@ -46,8 +46,8 @@ export default function HomePage() {
               </p>
               <ul className="space-y-3">
                 {[
-                  "Utah DOPL Class C Virtual Wholesale Distributor License (active)",
-                  "Florida Department of Health tissue banking compliance (active)",
+                  "Utah DOPL Class C Virtual Wholesale Distributor License",
+                  "Florida Department of Health tissue banking compliance",
                   "Additional state licensing in process — contact us for expansion timeline",
                   "State-specific regulatory guidance and support in all territories",
                   "Dedicated territory account management",
