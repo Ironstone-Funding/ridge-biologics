@@ -53,7 +53,7 @@ export const PRODUCTS = [
     description:
       "Human-derived collagen in multiple forms including injectable vials, sheets, and pads. Section 361 HCT/P classified, ethically sourced, and manufactured under GMP conditions.",
     classification: "Section 361 HCT/P",
-    storage: "Refrigerated 2–8°C",
+    storage: "Ambient / Room Temp",
     storageIcon: "thermometer",
     icon: "vial",
   },
