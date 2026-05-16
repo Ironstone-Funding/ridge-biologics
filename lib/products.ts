@@ -191,7 +191,7 @@ export const PRODUCTS: Product[] = [
     storage: "Ambient / Room Temp",
     company: "EmCyte Corporation",
     companyUrl: "https://www.emcyte.com",
-    image: "/images/products/emcyte-prp.webp",
+    image: "/images/products/emcyte-bmc.png",
     description: "EmCyte's closed-system PureBMC® SupraPhysiologic kit for rapid in-office preparation of autologous bone marrow aspirate concentrate (BMAC).",
     overview:
       "The EmCyte PureBMC® SupraPhysiologic system is an advanced bone marrow concentrating device designed for point-of-care preparation of autologous BMAC. Using a double-spin closed-system process, the kit enables rapid preparation in under 10 minutes while minimizing red blood cell contamination and free hemoglobin levels. Side-port fenestrated needles reduce RBC contamination during aspiration, and proprietary macro-filtration removes clots, bone fragments, and fibrous tissue prior to concentration.",
