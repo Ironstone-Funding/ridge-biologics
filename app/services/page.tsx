@@ -340,6 +340,19 @@ export default function ServicesPage() {
                       />
                     </div>
                   )}
+                  {/* White-glove client service image */}
+                  {svc.id === "service" && (
+                    <div className="mt-2 rounded-xl overflow-hidden bg-rb-slate p-2">
+                      <Image
+                        src="/images/services-white-glove.png"
+                        alt="Ridge Biologics account representative on phone call managing a client order — personalized white-glove support"
+                        width={1330}
+                        height={887}
+                        className="w-full h-auto rounded-lg"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                    </div>
+                  )}
                   {/* Compliance guidance image */}
                   {svc.id === "compliance" && (
                     <div className="mt-2 rounded-xl overflow-hidden bg-rb-slate p-2">
