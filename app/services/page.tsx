@@ -300,6 +300,19 @@ export default function ServicesPage() {
                       />
                     </div>
                   )}
+                  {/* Biologic products image */}
+                  {svc.id === "distribution" && (
+                    <div className="mt-2 rounded-xl overflow-hidden bg-rb-slate p-2">
+                      <Image
+                        src="/images/services-biologic-products.png"
+                        alt="Ridge Biologics mesenchymal stromal cell vial — cryopreserved biologic product"
+                        width={1330}
+                        height={887}
+                        className="w-full h-auto rounded-lg"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                    </div>
+                  )}
                   {/* Training classroom image */}
                   {svc.id === "education" && (
                     <div className="mt-2 rounded-xl bg-rb-slate py-4 px-3">
