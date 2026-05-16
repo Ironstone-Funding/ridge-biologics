@@ -327,6 +327,19 @@ export default function ServicesPage() {
                       />
                     </div>
                   )}
+                  {/* Cold-chain storage image */}
+                  {svc.id === "coldchain" && (
+                    <div className="mt-2 rounded-xl overflow-hidden bg-rb-slate p-2">
+                      <Image
+                        src="/images/services-cold-chain.png"
+                        alt="Medical-grade cold storage freezer at -80°C with gloved hands handling labeled Ridge Biologics biologic vials"
+                        width={1330}
+                        height={887}
+                        className="w-full h-auto rounded-lg"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                    </div>
+                  )}
                   {/* Compliance guidance image */}
                   {svc.id === "compliance" && (
                     <div className="mt-2 rounded-xl overflow-hidden bg-rb-slate p-2">
