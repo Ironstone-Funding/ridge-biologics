@@ -40,9 +40,10 @@ export const PRODUCTS: Product[] = [
       "Supports all four phases of wound healing",
       "Superior molecular stability throughout the healing process",
     ],
-    indications: "Partial and full-thickness wounds, arterial ulcers, venous leg ulcers, diabetic foot ulcers, pressure injuries (Stage 2–4), second-degree burns, donor sites, and surgical wound dehiscence.",
+    indications: "Burns, blisters, ulcers, scrapes, and other wounds. Contraindicated in patients with known bovine sensitivities, third-degree burns, or active vasculitis. Single-patient use only.",
     mechanismOfAction:
       "SkinTemp® II is a collagen-based wound dressing classified as a Section 361 HCT/P. The product provides a structural matrix for wound management. Product characteristics and performance data are described in manufacturer documentation. Ridge Biologics does not make claims regarding healing rates, wound closure outcomes, or therapeutic effects. Clinical use should be based on healthcare provider judgment and in accordance with manufacturer labeling.",
+    sizes: "2\"×2\" · 3\"×4\" · 7\"×7\" · 8\"×12\"",
     comingSoon: false,
   },
   {
@@ -66,9 +67,10 @@ export const PRODUCTS: Product[] = [
       "Supports all four phases of wound healing",
       "Line wound bed up to 1/4 inch depth for optimal coverage",
     ],
-    indications: "Burns, sores, blisters, scrapes, ulcers, and other partial to full-thickness wounds. Not indicated for third-degree (full-thickness) burns.",
+    indications: "Burns, sores, blisters, ulcers, scrapes, and other wounds. Contraindicated in patients with known bovine sensitivities, third-degree burns, or active vasculitis. Single-patient use only.",
     mechanismOfAction:
       "Medifil® II is a collagen-based wound dressing classified as a Section 361 HCT/P. The particle format provides direct contact between the collagen matrix and the wound bed surface. Product characteristics and performance data are described in manufacturer documentation. Ridge Biologics does not make claims regarding cellular activity, collagen synthesis, healing rates, or therapeutic effects. Clinical use should be based on healthcare provider judgment and in accordance with manufacturer labeling.",
+    sizes: "1g vial · 1g pouch",
     comingSoon: false,
   },
   {
@@ -92,9 +94,10 @@ export const PRODUCTS: Product[] = [
       "100% native, non-hydrolyzed Type I bovine hide collagen",
       "Indicated for both partial and full-thickness wounds",
     ],
-    indications: "Partial-thickness wounds: arterial ulcers, venous leg ulcers, diabetic foot ulcers, Stage 2 pressure injuries, blisters, second-degree burns. Full-thickness wounds: Stage 3–4 pressure injuries, arterial/venous ulcers, diabetic foot ulcers, donor sites, surgical wound dehiscence, traumatic wounds healing secondarily.",
+    indications: "Dry, light, and moderately exudating partial and full-thickness wounds, including first and second-degree burns, severe sunburns, superficial injuries, cuts, abrasions, and surgical wounds. Contraindicated in patients with known bovine sensitivities, third-degree burns, or active vasculitis. Single-patient use only.",
     mechanismOfAction:
       "Collatek® Gel is a collagen-based wound dressing classified as a Section 361 HCT/P. The viscous gel format delivers collagen directly to the wound surface and maintains a moist wound environment as described in manufacturer labeling. Product characteristics and performance data are described in manufacturer documentation. Ridge Biologics does not make claims regarding fibroblast activity, cellular signaling, healing rates, or therapeutic effects. Clinical use should be based on healthcare provider judgment and in accordance with manufacturer labeling.",
+    sizes: "1 oz tube",
     comingSoon: false,
   },
   {
