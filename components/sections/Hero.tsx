@@ -217,7 +217,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.7, delay: 0.8, ease }}
-            className="font-serif font-light text-white"
+            className="font-serif font-bold text-white"
             style={{
               fontSize: "clamp(3.8rem, 6.5vw, 6.5rem)",
               letterSpacing: "-0.02em",
@@ -226,13 +226,9 @@ export default function Hero() {
               textShadow: "0 2px 40px rgba(0,0,0,0.5)",
             }}
           >
-            Your Trusted
+            Supply you trust,
             <br />
-            <em style={{ fontStyle: "italic", opacity: 0.93 }}>Partner in</em>
-            <br />
-            Compliant
-            <br />
-            <span style={{ color: "#3d8a97" }}>Biologics Distribution.</span>
+            <span style={{ color: "#3d8a97" }}>Support you need.</span>
           </motion.h1>
 
           {/* Cycling slogan */}
