@@ -1,9 +1,16 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { TRUST_PILLARS } from "@/lib/constants";
+
+const PHRASES = [
+  "Supply you trust. Support you need.",
+  "The Compliant Way to Offer Regenerative Therapies.",
+  "GMP-Manufactured. FDA-Registered. Fully Documented.",
+  "Ethical Distribution. Exceptional Support.",
+];
 
 const TrustIcon = ({ type }: { type: string }) => {
   const cls = "w-[16px] h-[16px] flex-shrink-0";
@@ -45,6 +52,15 @@ const TrustIcon = ({ type }: { type: string }) => {
 const ease = [0.16, 1, 0.3, 1] as const;
 
 export default function Hero() {
+  const [phraseIndex, setPhraseIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setPhraseIndex((i) => (i + 1) % PHRASES.length);
+    }, 3800);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <>
       {/* ─── HERO ────────────────────────────────────────────────────── */}
@@ -218,6 +234,34 @@ export default function Hero() {
             <br />
             <span style={{ color: "#3d8a97" }}>Biologics Distribution.</span>
           </motion.h1>
+
+          {/* Cycling slogan */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.4, delay: 1.1, ease }}
+            className="overflow-hidden mb-10"
+            style={{ height: "1.6em" }}
+          >
+            <AnimatePresence mode="wait">
+              <motion.p
+                key={phraseIndex}
+                initial={{ y: "110%", opacity: 0 }}
+                animate={{ y: "0%", opacity: 1 }}
+                exit={{ y: "-110%", opacity: 0 }}
+                transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+                className="text-white font-light"
+                style={{
+                  fontSize: "clamp(0.85rem, 1.5vw, 1.05rem)",
+                  letterSpacing: "0.06em",
+                  opacity: 0.72,
+                  textShadow: "0 1px 20px rgba(0,0,0,0.7)",
+                }}
+              >
+                {PHRASES[phraseIndex]}
+              </motion.p>
+            </AnimatePresence>
+          </motion.div>
 
           {/* Subtext + CTAs */}
           <motion.div
