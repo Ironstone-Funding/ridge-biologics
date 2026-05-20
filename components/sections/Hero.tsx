@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { TRUST_PILLARS } from "@/lib/constants";
 
 const PHRASES = [
-  "Supply you trust. Support you need.",
+  "Your Trusted Partner in Compliant Biologics Distribution.",
   "The Compliant Way to Offer Regenerative Therapies.",
   "GMP-Manufactured. FDA-Registered. Fully Documented.",
   "Ethical Distribution. Exceptional Support.",
@@ -226,9 +226,9 @@ export default function Hero() {
               textShadow: "0 2px 40px rgba(0,0,0,0.5)",
             }}
           >
-            Supply you trust,
+            Supply You Trust.
             <br />
-            <span style={{ color: "#3d8a97" }}>Support you need.</span>
+            <span style={{ color: "#3d8a97" }}>Support You Need.</span>
           </motion.h1>
 
           {/* Cycling slogan */}
