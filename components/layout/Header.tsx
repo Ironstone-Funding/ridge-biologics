@@ -31,6 +31,35 @@ export default function Header() {
           : "bg-transparent"
       )}
     >
+      {/* Utility bar */}
+      <div className={cn(
+        "hidden sm:flex items-center justify-end border-b transition-all duration-300",
+        scrolled
+          ? "border-rb-slate-mid bg-rb-slate/60"
+          : "border-white/10 bg-black/20"
+      )}>
+        <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-10 flex justify-end gap-6 py-1.5">
+          {[
+            { label: "Schedule Assessment", href: "/assessment" },
+            { label: "Client Portal",       href: "/portal" },
+            { label: "Insights",            href: "/insights" },
+          ].map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={cn(
+                "text-[10px] font-medium uppercase tracking-widest transition-colors duration-200",
+                scrolled
+                  ? "text-rb-text-muted hover:text-rb-navy"
+                  : "text-white/50 hover:text-white/80"
+              )}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="flex items-center justify-between h-18 lg:h-20">
 
