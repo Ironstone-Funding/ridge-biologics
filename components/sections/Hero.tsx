@@ -201,12 +201,12 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.6, delay: 0.5, ease: "easeOut" }}
-            className="flex items-center gap-5 mb-12 lg:mb-16"
+            className="flex items-center gap-4 mb-10 lg:mb-14"
           >
-            <span className="block w-10 h-px" style={{ backgroundColor: "rgba(100,185,200,0.85)" }} />
+            <span className="block w-8 h-px" style={{ backgroundColor: "rgba(255,255,255,0.25)" }} />
             <span
-              className="text-[18px] font-semibold uppercase"
-              style={{ color: "rgba(100,210,225,0.95)", letterSpacing: "0.10em", textShadow: "0 1px 20px rgba(0,0,0,0.65)" }}
+              className="text-[11px] font-medium uppercase"
+              style={{ color: "rgba(255,255,255,0.45)", letterSpacing: "0.18em" }}
             >
               Utah &amp; Florida Licensed · Class C Virtual Wholesale Distributor
             </span>
@@ -217,7 +217,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.7, delay: 0.8, ease }}
-            className="font-serif font-bold text-white"
+            className="font-serif font-light text-white"
             style={{
               fontSize: "clamp(3.8rem, 6.5vw, 6.5rem)",
               letterSpacing: "-0.02em",
@@ -228,16 +228,16 @@ export default function Hero() {
           >
             Strategic Biologics Partnership
             <br />
-            <span style={{ color: "#3d8a97" }}>for Leading Regenerative Practices.</span>
+            <span style={{ opacity: 0.72 }}>for Leading Regenerative Practices.</span>
           </motion.h1>
 
-          {/* Cycling slogan */}
+          {/* Cycling phrases — understated, below headline */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1.4, delay: 1.1, ease }}
+            transition={{ duration: 1.4, delay: 1.2, ease }}
             className="overflow-hidden mb-10"
-            style={{ height: "1.6em" }}
+            style={{ height: "1.4em" }}
           >
             <AnimatePresence mode="wait">
               <motion.p
@@ -246,12 +246,12 @@ export default function Hero() {
                 animate={{ y: "0%", opacity: 1 }}
                 exit={{ y: "-110%", opacity: 0 }}
                 transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-                className="text-white font-light"
+                className="font-light"
                 style={{
-                  fontSize: "clamp(0.85rem, 1.5vw, 1.05rem)",
-                  letterSpacing: "0.06em",
-                  opacity: 0.72,
-                  textShadow: "0 1px 20px rgba(0,0,0,0.7)",
+                  fontSize: "clamp(0.75rem, 1.2vw, 0.9rem)",
+                  letterSpacing: "0.12em",
+                  color: "rgba(255,255,255,0.38)",
+                  textTransform: "uppercase",
                 }}
               >
                 {PHRASES[phraseIndex]}
