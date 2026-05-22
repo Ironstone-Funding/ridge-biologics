@@ -23,6 +23,8 @@ const config: Config = {
           "slate-dark":"#b8cdd4",
           "text-body": "#3d5a68",
           "text-muted":"#7a9aaa",
+          "brass":     "#a0826d",
+          "charcoal":  "#1a1a1a",
         },
       },
       fontFamily: {
