@@ -3,10 +3,10 @@ import Image from "next/image";
 import { COMPANY, EXTERNAL_RESOURCES, COMPLIANCE_DISCLAIMER } from "@/lib/constants";
 
 const COMPANY_LINKS = [
-  { label: "Home",     href: "/" },
-  { label: "Services", href: "/services" },
-  { label: "Contact",  href: "/contact" },
-  { label: "FAQ",      href: "/faq" },
+  { label: "Home",                  href: "/" },
+  { label: "Our Approach",          href: "/services" },
+  { label: "Connect",               href: "/contact" },
+  { label: "Resources",             href: "/faq" },
 ];
 
 const LEGAL_LINKS = [
@@ -36,7 +36,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-white/70 text-sm leading-relaxed max-w-xs mb-6">
-              Supply you trust, Support you need.
+              Compliance architecture for regenerative medicine&apos;s leading practices.
             </p>
             <a href={`mailto:${COMPANY.email}`}
               className="text-sm text-rb-teal-light hover:text-white transition-colors block mb-2">
