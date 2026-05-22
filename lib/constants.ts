@@ -5,10 +5,10 @@ import type {
 // ─── Navigation ───────────────────────────────────────────────────────────────
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: "Services", href: "/services" },
-  { label: "Products", href: "/products" },
-  { label: "Contact",  href: "/contact" },
-  { label: "FAQ",      href: "/faq" },
+  { label: "Our Approach",          href: "/services" },
+  { label: "Products & Manufacturers", href: "/products" },
+  { label: "Connect",               href: "/contact" },
+  { label: "Resources",             href: "/faq" },
 ];
 
 export const COMPANY = {
@@ -22,8 +22,8 @@ export const COMPANY = {
   address:       "7533 S Center View Ct, Ste N",
   city:          "West Jordan, UT 84084",
   states:        "Utah and Florida (expanding nationwide)",
-  cta_primary:   "Request Products",
-  cta_secondary: "Learn More",
+  cta_primary:   "Schedule Assessment",
+  cta_secondary: "Explore Approach",
 };
 
 // ─── Trust Pillars ────────────────────────────────────────────────────────────
@@ -75,25 +75,25 @@ export const RIDGE_DIFFERENCE = [
   {
     title: "Regulatory Compliance",
     description:
-      "Utah DOPL Class C licensed distributor. Every product and process is aligned with 21 CFR Part 1271, FDA guidance, and state distribution requirements.",
+      "cGMP-manufactured biologics from FDA-registered facilities. Complete provenance documentation and donor eligibility records — standard.",
     icon: "shield",
   },
   {
     title: "Verified Cold Chain",
     description:
-      "Temperature-controlled shipping from manufacturer to your door. MSCs shipped cryogenically; collagen and PRP kits shipped refrigerated with monitoring throughout transit.",
+      "Ridge architects turnkey cold-chain implementation: verified storage protocols, carrier partnerships, and temperature-monitored delivery from manufacturer to point of care.",
     icon: "snowflake",
   },
   {
     title: "GMP-Manufactured Products",
     description:
-      "We source exclusively from FDA-registered, GMP-certified manufacturers. Every lot comes with full traceability documentation — donor screening, CoA, and chain of custody.",
+      "Exclusive manufacturer partnerships meeting AATB standards and FDA registration requirements. Open documentation and audit readiness are prerequisites, not aspirations.",
     icon: "file",
   },
   {
     title: "Provider Training & Support",
     description:
-      "Onboarding, storage guidance, product protocols, and ongoing support from your dedicated account rep. We're a partner in your practice — not just a supplier.",
+      "Provider compliance orientation precedes product access. Non-negotiable.",
     icon: "users",
   },
 ];
@@ -106,21 +106,21 @@ export const SERVICES = [
     icon: "package",
     title: "Regenerative Biologic Products",
     description:
-      "We distribute a curated portfolio of biologics for wound care, orthopedics, pain management, and aesthetic practices — including MSCs, Extracellular Vesicles (EVs), PRP kits, and collagen-based products. Each product line is selected based on manufacturer compliance, product pedigree, and suitability for licensed provider use.",
+      "Ridge curates manufacturer relationships across MSCs, extracellular vesicles, PRP systems, and collagen-based products for wound care, orthopedics, pain management, and aesthetics. Selection criteria: manufacturer compliance, product pedigree, clinical suitability.",
   },
   {
     id: "partnership",
     icon: "handshake",
     title: "Clinic Partnership & Support",
     description:
-      "We become an extension of your team — providing dedicated account support, practice-specific program planning, and ongoing guidance as your biologics offering grows. Our goal is a long-term partnership, not a one-time transaction.",
+      "Ridge embeds as operational extension: dedicated territory management, practice-specific program architecture, and ongoing strategic guidance. Long-term partnership model.",
   },
   {
     id: "education",
     icon: "book-open",
     title: "Provider Education & Training",
     description:
-      "Our education resources serve both practices new to biologics and those expanding existing programs. We cover state-specific compliance for Utah and Florida, proper patient communication protocols, and step-by-step product handling procedures.",
+      "Clinical education for new implementations and program expansion. Covers territory-specific compliance, patient communication protocols, and product handling standards.",
   },
   {
     id: "compliance",
@@ -141,7 +141,7 @@ export const SERVICES = [
     icon: "star",
     title: "White-Glove Client Service",
     description:
-      "Dedicated, personalized support for ordering, inventory, clinical questions, and ongoing program development.",
+      "Dedicated territory representation, responsive account management, and clinical support infrastructure. Ridge partners don't call a call center — they call their rep.",
   },
 ];
 
@@ -150,27 +150,27 @@ export const SERVICES = [
 export const ONBOARDING_STEPS = [
   {
     step: 1,
-    title: "Register Online",
+    title: "Credential Verification",
     description:
-      "Visit our provider portal and create an account using your practice information. Account access is available to licensed healthcare providers only.",
+      "Submit practice documentation through our secure provider portal.",
   },
   {
     step: 2,
-    title: "Verify Your Credentials",
+    title: "Compliance Assessment",
     description:
-      "Submit necessary documentation to verify your medical practice and eligibility for our products.",
+      "Ridge evaluates practice infrastructure and regulatory readiness.",
   },
   {
     step: 3,
-    title: "Browse Our Catalog",
+    title: "Solution Architecture",
     description:
-      "Browse our catalog of FDA-regulated regenerative products including MSC biologics, PRP kits, and collagen-based products.",
+      "Collaborative design of product portfolio and integration protocols.",
   },
   {
     step: 4,
-    title: "Place Your Order",
+    title: "Implementation",
     description:
-      "Select the products you need and submit your order. Products ship directly to your clinic via our licensed fulfillment partner with full cold-chain documentation.",
+      "Product delivery, clinical training, and compliance documentation — coordinated.",
   },
 ];
 
