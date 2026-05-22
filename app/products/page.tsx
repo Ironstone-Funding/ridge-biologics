@@ -31,7 +31,7 @@ export default function ProductsPage() {
           <SlideIn direction="left">
             <SectionLabel light>Our Product Catalog</SectionLabel>
             <h1 className="text-display-xl font-bold text-white mb-6 max-w-3xl">
-              FDA-Regulated Biologics for Licensed Providers
+              Institutional-Grade Biologics for Elite Practices
             </h1>
             <p className="text-white/75 text-xl leading-relaxed max-w-2xl">
               Every product Ridge distributes is sourced from GMP-compliant, FDA-registered
