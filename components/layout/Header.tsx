@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { NAV_ITEMS, COMPANY } from "@/lib/constants";
 import Button from "@/components/ui/Button";
@@ -12,12 +13,17 @@ export default function Header() {
   const [scrolled,       setScrolled]       = useState(false);
   const [mobileOpen,     setMobileOpen]     = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Transparent only on homepage hero; solid white everywhere else
+  const isTransparent = isHome && !scrolled;
 
   return (
     <motion.header
@@ -26,13 +32,13 @@ export default function Header() {
       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
       className={cn(
         "fixed top-0 inset-x-0 z-50 transition-all duration-300",
-        scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-nav border-b border-rb-slate-mid"
-          : "bg-transparent"
+        isTransparent
+          ? "bg-transparent"
+          : "bg-white/95 backdrop-blur-md shadow-nav border-b border-rb-slate-mid"
       )}
     >
-      {/* Utility bar — hidden once scrolled */}
-      {!scrolled && (
+      {/* Utility bar — only on homepage hero, hidden once scrolled */}
+      {isTransparent && (
         <div className="hidden sm:flex items-center justify-end border-b border-white/10 bg-black/20">
           <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-10 flex justify-end gap-6 py-1.5">
             <a
@@ -78,9 +84,9 @@ export default function Header() {
                 <Link href={item.href}
                   className={cn(
                     "flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg transition-all duration-150",
-                    scrolled
-                      ? "text-rb-navy hover:text-rb-teal hover:bg-rb-slate"
-                      : "text-white/90 hover:text-white hover:bg-white/10"
+                    isTransparent
+                      ? "text-white/90 hover:text-white hover:bg-white/10"
+                      : "text-rb-navy hover:text-rb-teal hover:bg-rb-slate"
                   )}
                 >
                   {item.label}
@@ -116,7 +122,7 @@ export default function Header() {
 
           {/* CTA */}
           <div className="hidden lg:block">
-            <Button variant={scrolled ? "primary" : "white"} size="sm" href="/contact">
+            <Button variant={isTransparent ? "white" : "primary"} size="sm" href="/contact">
               {COMPANY.cta_primary}
             </Button>
           </div>
@@ -124,7 +130,7 @@ export default function Header() {
           {/* Mobile hamburger */}
           <button
             className={cn("lg:hidden p-2 rounded-lg transition-colors",
-              scrolled ? "text-rb-navy hover:bg-rb-slate" : "text-white hover:bg-white/10")}
+              isTransparent ? "text-white hover:bg-white/10" : "text-rb-navy hover:bg-rb-slate")}
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
