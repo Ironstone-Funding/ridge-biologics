@@ -35,14 +35,13 @@ export default function HomePage() {
                 className="font-serif font-light text-[#284454] leading-[0.96] mb-6"
                 style={{ fontSize: "clamp(2.5rem, 4vw, 3.5rem)", letterSpacing: "-0.02em" }}
               >
-                Currently Serving<br />Utah &amp; Florida —<br />Expanding Nationwide
+                Select Market Focus:<br />Utah and Florida
               </h2>
               <p className="text-[#3d5a68] text-base leading-relaxed mb-8 font-light" style={{ opacity: 0.8 }}>
-                Ridge Biologics operates as a Utah DOPL Class C licensed distributor currently
-                serving healthcare providers in Utah and Florida, with active expansion into
-                additional states nationwide. Our territory-focused approach enables deep
-                relationships with local providers while maintaining full compliance with
-                state-specific regulations in each jurisdiction.
+                Ridge's concentrated geographic model enables unmatched regulatory fluency
+                and territory-specific compliance expertise. Utah DOPL Class C licensure
+                and Florida Department of Health compliance anchor our operations. National
+                expansion follows only where Ridge-standard infrastructure can be maintained.
               </p>
               <ul className="space-y-3">
                 {[

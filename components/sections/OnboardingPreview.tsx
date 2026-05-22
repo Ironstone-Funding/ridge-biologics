@@ -12,7 +12,7 @@ export default function OnboardingPreview() {
         <FadeIn className="max-w-2xl mb-14">
           <SectionLabel>How to Acquire Our Products</SectionLabel>
           <h2 className="text-display-lg font-bold text-rb-navy mb-5">
-            Getting Started Is Simple
+            Partnership Framework
           </h2>
           <p className="text-rb-text-body text-lg leading-relaxed">
             We've designed our onboarding to be straightforward for licensed providers.
@@ -42,7 +42,7 @@ export default function OnboardingPreview() {
 
         <FadeIn delay={0.3} className="mt-10 flex gap-4">
           <Button variant="primary" href="/services">
-            Request Products
+            Schedule Assessment
           </Button>
           <Button variant="outline" href="/contact">
             Contact Our Team

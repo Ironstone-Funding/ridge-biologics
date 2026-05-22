@@ -53,9 +53,9 @@ export default function WhyRidge() {
               >
                 The Standard
                 <br />
-                That Practices
+                Elite Practices
                 <br />
-                <em style={{ fontStyle: "italic", color: "#38747e", opacity: 0.85 }}>Expect.</em>
+                <em style={{ fontStyle: "italic", color: "#38747e", opacity: 0.85 }}>Demand.</em>
               </h2>
             </motion.div>
           </div>
