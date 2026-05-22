@@ -31,50 +31,27 @@ export default function Header() {
           : "bg-transparent"
       )}
     >
-      {/* Utility bar — only visible when not scrolled */}
-      <div className={cn(
-        "hidden sm:flex items-center justify-end border-b transition-all duration-300",
-        scrolled
-          ? "opacity-0 pointer-events-none h-0 overflow-hidden border-transparent"
-          : "opacity-100 border-white/10 bg-black/20"
-      )}>
-        <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-10 flex justify-end gap-6 py-1.5">
-          {[
-            { label: "Provider Login", href: "https://ridge-command.netlify.app", external: true },
-            { label: "Insights",       href: "/insights",                         external: false },
-          ].map((item) => (
-            item.external ? (
-              <a
-                key={item.href}
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={cn(
-                  "text-[10px] font-medium uppercase tracking-widest transition-colors duration-200",
-                  scrolled
-                    ? "text-rb-text-muted hover:text-rb-navy"
-                    : "text-white/50 hover:text-white/80"
-                )}
-              >
-                {item.label}
-              </a>
-            ) : (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={cn(
-                  "text-[10px] font-medium uppercase tracking-widest transition-colors duration-200",
-                  scrolled
-                    ? "text-rb-text-muted hover:text-rb-navy"
-                    : "text-white/50 hover:text-white/80"
-                )}
-              >
-                {item.label}
-              </Link>
-            )
-          ))}
+      {/* Utility bar — hidden once scrolled */}
+      {!scrolled && (
+        <div className="hidden sm:flex items-center justify-end border-b border-white/10 bg-black/20">
+          <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-10 flex justify-end gap-6 py-1.5">
+            <a
+              href="https://ridge-command.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[10px] font-medium uppercase tracking-widest text-white/50 hover:text-white/80 transition-colors duration-200"
+            >
+              Provider Login
+            </a>
+            <Link
+              href="/insights"
+              className="text-[10px] font-medium uppercase tracking-widest text-white/50 hover:text-white/80 transition-colors duration-200"
+            >
+              Insights
+            </Link>
+          </div>
         </div>
-      </div>
+      )}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="flex items-center justify-between h-18 lg:h-20">
