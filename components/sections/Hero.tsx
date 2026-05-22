@@ -226,9 +226,9 @@ export default function Hero() {
               textShadow: "0 2px 40px rgba(0,0,0,0.5)",
             }}
           >
-            Supply You Trust.
+            Strategic Biologics Partnership
             <br />
-            <span style={{ color: "#3d8a97" }}>Support You Need.</span>
+            <span style={{ color: "#3d8a97" }}>for Leading Regenerative Practices.</span>
           </motion.h1>
 
           {/* Cycling slogan */}
@@ -277,10 +277,9 @@ export default function Hero() {
                 textShadow: "0 1px 20px rgba(0,0,0,0.8)",
               }}
             >
-              Ridge Biologics supplies regenerative biologics sourced exclusively
-              from GMP-compliant, FDA-registered manufacturers — paired with full
-              361/351 regulatory guidance, state compliance support, documentation,
-              and staff training so your clinic can launch confidently and ethically.
+              Institutional-grade compliance infrastructure, manufacturer relationships,
+              and clinical integration protocols — architected for practices committed
+              to defensible, durable regenerative programs.
             </p>
 
             <div className="flex items-center gap-8 flex-shrink-0 pb-0.5">
@@ -300,7 +299,7 @@ export default function Hero() {
                 onMouseEnter={(e) => (e.currentTarget.style.borderColor = "rgba(56,116,126,0.55)")}
                 onMouseLeave={(e) => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.18)")}
               >
-                Schedule Consultation
+                Schedule Strategic Assessment
               </Link>
               <Link
                 href="/services"
@@ -314,7 +313,7 @@ export default function Hero() {
                 onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.7")}
                 onMouseLeave={(e) => (e.currentTarget.style.opacity = "0.32")}
               >
-                Explore Solutions
+                Explore Our Approach
                 <svg className="w-3 h-3 group-hover:translate-x-0.5 transition-transform duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
