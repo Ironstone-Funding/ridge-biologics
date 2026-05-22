@@ -299,7 +299,7 @@ export default function Hero() {
                 onMouseEnter={(e) => (e.currentTarget.style.borderColor = "rgba(56,116,126,0.55)")}
                 onMouseLeave={(e) => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.18)")}
               >
-                Schedule Strategic Assessment
+                Request Consultation
               </Link>
               <Link
                 href="/services"

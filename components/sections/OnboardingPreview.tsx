@@ -42,7 +42,7 @@ export default function OnboardingPreview() {
 
         <FadeIn delay={0.3} className="mt-10 flex gap-4">
           <Button variant="primary" href="/services">
-            Schedule Assessment
+            Explore Our Approach
           </Button>
           <Button variant="outline" href="/contact">
             Contact Our Team

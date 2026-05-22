@@ -7,7 +7,7 @@ import type {
 export const NAV_ITEMS: NavItem[] = [
   { label: "Our Approach",          href: "/services" },
   { label: "Products & Manufacturers", href: "/products" },
-  { label: "Connect",               href: "/contact" },
+  { label: "Contact",                href: "/contact" },
   { label: "Resources",             href: "/faq" },
 ];
 
