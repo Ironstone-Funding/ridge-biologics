@@ -22,7 +22,7 @@ export const COMPANY = {
   address:       "7533 S Center View Ct, Ste N",
   city:          "West Jordan, UT 84084",
   states:        "Utah and Florida (expanding nationwide)",
-  cta_primary:   "Schedule Assessment",
+  cta_primary:   "Request Products",
   cta_secondary: "Explore Approach",
 };
 

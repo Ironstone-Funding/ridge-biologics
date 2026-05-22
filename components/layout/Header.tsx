@@ -31,12 +31,12 @@ export default function Header() {
           : "bg-transparent"
       )}
     >
-      {/* Utility bar */}
+      {/* Utility bar — only visible when not scrolled */}
       <div className={cn(
         "hidden sm:flex items-center justify-end border-b transition-all duration-300",
         scrolled
-          ? "border-rb-slate-mid bg-rb-slate/60"
-          : "border-white/10 bg-black/20"
+          ? "opacity-0 pointer-events-none h-0 overflow-hidden border-transparent"
+          : "opacity-100 border-white/10 bg-black/20"
       )}>
         <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-10 flex justify-end gap-6 py-1.5">
           {[

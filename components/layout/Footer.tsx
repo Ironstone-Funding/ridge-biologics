@@ -5,7 +5,7 @@ import { COMPANY, EXTERNAL_RESOURCES, COMPLIANCE_DISCLAIMER } from "@/lib/consta
 const COMPANY_LINKS = [
   { label: "Home",                  href: "/" },
   { label: "Our Approach",          href: "/services" },
-  { label: "Connect",               href: "/contact" },
+  { label: "Contact",                href: "/contact" },
   { label: "Resources",             href: "/faq" },
 ];
 
