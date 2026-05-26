@@ -25,7 +25,7 @@ export const PRODUCTS: Product[] = [
     tagline: "Breathable collagen sheet dressing for superior wound management.",
     category: "Collagen",
     categoryColor: "#38747e",
-    classification: "Section 361 HCT/P",
+    classification: "FDA-Cleared Class II Device",
     storage: "Ambient / Room Temp",
     company: "Human BioSciences",
     companyUrl: "https://www.humanbiosciences.com",
@@ -42,7 +42,7 @@ export const PRODUCTS: Product[] = [
     ],
     indications: "Burns, blisters, ulcers, scrapes, and other wounds. Contraindicated in patients with known bovine sensitivities, third-degree burns, or active vasculitis. Single-patient use only.",
     mechanismOfAction:
-      "SkinTemp® II is a collagen-based wound dressing classified as a Section 361 HCT/P. The product provides a structural matrix for wound management. Product characteristics and performance data are described in manufacturer documentation. Ridge Biologics does not make claims regarding healing rates, wound closure outcomes, or therapeutic effects. Clinical use should be based on healthcare provider judgment and in accordance with manufacturer labeling.",
+      "SkinTemp® II is an FDA-cleared Class II bovine collagen wound dressing. The product provides a structural matrix for wound management. Product characteristics and performance data are described in manufacturer documentation. Ridge Biologics does not make claims regarding healing rates, wound closure outcomes, or therapeutic effects. Clinical use should be based on healthcare provider judgment and in accordance with manufacturer labeling.",
     sizes: "2\"×2\" · 3\"×4\" · 7\"×7\" · 8\"×12\"",
     comingSoon: false,
   },
@@ -52,7 +52,7 @@ export const PRODUCTS: Product[] = [
     tagline: "High-surface-area collagen particles for deep wound penetration.",
     category: "Collagen",
     categoryColor: "#38747e",
-    classification: "Section 361 HCT/P",
+    classification: "FDA-Cleared Class II Device",
     storage: "Ambient / Room Temp",
     company: "Human BioSciences",
     companyUrl: "https://www.humanbiosciences.com",
@@ -69,7 +69,7 @@ export const PRODUCTS: Product[] = [
     ],
     indications: "Burns, sores, blisters, ulcers, scrapes, and other wounds. Contraindicated in patients with known bovine sensitivities, third-degree burns, or active vasculitis. Single-patient use only.",
     mechanismOfAction:
-      "Medifil® II is a collagen-based wound dressing classified as a Section 361 HCT/P. The particle format provides direct contact between the collagen matrix and the wound bed surface. Product characteristics and performance data are described in manufacturer documentation. Ridge Biologics does not make claims regarding cellular activity, collagen synthesis, healing rates, or therapeutic effects. Clinical use should be based on healthcare provider judgment and in accordance with manufacturer labeling.",
+      "Medifil® II is an FDA-cleared Class II bovine collagen wound dressing. The particle format provides direct contact between the collagen matrix and the wound bed surface. Product characteristics and performance data are described in manufacturer documentation. Ridge Biologics does not make claims regarding cellular activity, collagen synthesis, healing rates, or therapeutic effects. Clinical use should be based on healthcare provider judgment and in accordance with manufacturer labeling.",
     sizes: "1g vial · 1g pouch",
     comingSoon: false,
   },
@@ -79,7 +79,7 @@ export const PRODUCTS: Product[] = [
     tagline: "Sterile collagen gel maintaining optimal moist wound environment.",
     category: "Collagen",
     categoryColor: "#38747e",
-    classification: "Section 361 HCT/P",
+    classification: "FDA-Cleared Class II Device",
     storage: "Ambient / Room Temp",
     company: "Human BioSciences",
     companyUrl: "https://www.humanbiosciences.com",
@@ -96,7 +96,7 @@ export const PRODUCTS: Product[] = [
     ],
     indications: "Dry, light, and moderately exudating partial and full-thickness wounds, including first and second-degree burns, severe sunburns, superficial injuries, cuts, abrasions, and surgical wounds. Contraindicated in patients with known bovine sensitivities, third-degree burns, or active vasculitis. Single-patient use only.",
     mechanismOfAction:
-      "Collatek® Gel is a collagen-based wound dressing classified as a Section 361 HCT/P. The viscous gel format delivers collagen directly to the wound surface and maintains a moist wound environment as described in manufacturer labeling. Product characteristics and performance data are described in manufacturer documentation. Ridge Biologics does not make claims regarding fibroblast activity, cellular signaling, healing rates, or therapeutic effects. Clinical use should be based on healthcare provider judgment and in accordance with manufacturer labeling.",
+      "Collatek® Gel is an FDA-cleared Class II bovine collagen wound dressing. The viscous gel format delivers collagen directly to the wound surface and maintains a moist wound environment as described in manufacturer labeling. Product characteristics and performance data are described in manufacturer documentation. Ridge Biologics does not make claims regarding fibroblast activity, cellular signaling, healing rates, or therapeutic effects. Clinical use should be based on healthcare provider judgment and in accordance with manufacturer labeling.",
     sizes: "1 oz tube",
     comingSoon: false,
   },
@@ -106,7 +106,7 @@ export const PRODUCTS: Product[] = [
     tagline: "Low-pH collagen powder absorbing up to 30× its weight.",
     category: "Collagen",
     categoryColor: "#38747e",
-    classification: "Section 361 HCT/P",
+    classification: "FDA-Cleared Class II Device",
     storage: "Below 32°C / 90°F",
     company: "Human BioSciences",
     companyUrl: "https://www.humanbiosciences.com",
@@ -123,7 +123,7 @@ export const PRODUCTS: Product[] = [
     ],
     indications: "Partial and full-thickness wounds, pressure ulcers (Stage I–IV), venous ulcers, ulcers caused by mixed vascular etiologies, venous stasis and diabetic ulcers, 1st and 2nd degree burns, cuts, abrasions, and surgical wounds. Do not use in patients with bovine sensitivities or previous skin reactions to hydrocolloid products. Single use only.",
     mechanismOfAction:
-      "ColleCule LpH® Surgical Collagen Powder is a collagen-based wound dressing classified as a Section 361 HCT/P. The product is formulated with a low-pH (5.0–5.5) collagen matrix with high exudate-absorbing capacity. Product characteristics and performance data are described in manufacturer documentation. Ridge Biologics does not make claims regarding protease inhibition, oxygenation effects, fibroblast activity, healing rates, or therapeutic effects. Clinical use should be based on healthcare provider judgment and in accordance with manufacturer labeling.",
+      "ColleCule LpH® Surgical Collagen Powder is an FDA-cleared Class II bovine collagen wound dressing. The product is formulated with a low-pH (5.0–5.5) collagen matrix with high exudate-absorbing capacity. Product characteristics and performance data are described in manufacturer documentation. Ridge Biologics does not make claims regarding protease inhibition, oxygenation effects, fibroblast activity, healing rates, or therapeutic effects. Clinical use should be based on healthcare provider judgment and in accordance with manufacturer labeling.",
     sizes: "0.5G · 1G",
     comingSoon: false,
   },
@@ -133,7 +133,7 @@ export const PRODUCTS: Product[] = [
     tagline: "Conformable low-pH collagen pad for exudate management and debridement.",
     category: "Collagen",
     categoryColor: "#38747e",
-    classification: "Section 361 HCT/P",
+    classification: "FDA-Cleared Class II Device",
     storage: "Cool, dry place 10–27°C / 50–80°F",
     company: "Human BioSciences",
     companyUrl: "https://www.humanbiosciences.com",
@@ -150,7 +150,7 @@ export const PRODUCTS: Product[] = [
     ],
     indications: "Burns, sores, blisters, scrapes, ulcers, and other wounds. Do not use in patients with bovine sensitivities. Single use only. Discard all open or unused pouches.",
     mechanismOfAction:
-      "ColleCule LpH® Pad is a collagen-based wound dressing classified as a Section 361 HCT/P. The pad format delivers the same low-pH collagen formulation as the powder in a conformable sheet, providing exudate management across broad wound surfaces as described in manufacturer documentation. Ridge Biologics does not make claims regarding protease activity, fibroblast proliferation, oxygenation effects, healing rates, or therapeutic effects. Clinical use should be based on healthcare provider judgment and in accordance with manufacturer labeling.",
+      "ColleCule LpH® Pad is an FDA-cleared Class II bovine collagen wound dressing. The pad format delivers the same low-pH collagen formulation as the powder in a conformable sheet, providing exudate management across broad wound surfaces as described in manufacturer documentation. Ridge Biologics does not make claims regarding protease activity, fibroblast proliferation, oxygenation effects, healing rates, or therapeutic effects. Clinical use should be based on healthcare provider judgment and in accordance with manufacturer labeling.",
     comingSoon: false,
   },
   {
@@ -235,32 +235,6 @@ export const PRODUCTS: Product[] = [
     mechanismOfAction:
       "The PureBMC® SP system processes bone marrow aspirate through a proprietary double-spin centrifugation protocol to concentrate target cell populations. The closed-system design minimizes contamination risk throughout processing. Clinical applications and protocols are determined by the treating physician based on their clinical judgment, training, and within the scope of their practice. Specific FDA-cleared indications and device labeling should be referenced for all clinical use. Ridge Biologics does not make claims regarding clinical outcomes, therapeutic mechanisms, or comparative effectiveness.",
     comingSoon: false,
-  },
-  {
-    id: "msc",
-    name: "MSC",
-    tagline: "GMP-certified, cryogenically preserved — coming soon.",
-    category: "MSC",
-    categoryColor: "#5a4fcf",
-    classification: "cGMP-Manufactured",
-    storage: "Cryogenic −196°C",
-    company: "GMP-Certified Manufacturer",
-    companyUrl: "",
-    image: null,
-    description: "FDA-registered mesenchymal stromal cells shipped cryogenically with full chain-of-custody documentation. For licensed providers only.",
-    overview:
-      "Ridge Biologics is evaluating distribution options for Section 351 biologics from GMP-certified, FDA-registered manufacturers. Any Section 351 biologic products will be available only to licensed healthcare providers in strict compliance with FDA requirements, including manufacturer labeling and applicable regulatory guidance. Contact us to discuss regulatory requirements and provider eligibility.",
-    features: [
-      "FDA-registered, GMP-certified manufacturer",
-      "Full chain-of-custody documentation",
-      "Donor eligibility screening included",
-      "Certificate of Analysis with every shipment",
-      "Cryogenic −196°C storage and shipping",
-    ],
-    indications: "For licensed healthcare providers only. Contact Ridge Biologics for availability and provider eligibility requirements.",
-    mechanismOfAction:
-      "Section 351 biologics are regulated as drugs under FDA authority and require strict adherence to manufacturer labeling and applicable regulatory guidance. Ridge Biologics does not make claims regarding mechanisms of action, therapeutic effects, or clinical outcomes. All use must be under the direction of a licensed healthcare provider and in compliance with applicable FDA requirements.",
-    comingSoon: true,
   },
 ];
 
