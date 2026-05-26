@@ -15,11 +15,11 @@ export const COMPANY = {
   name:          "Ridge Biologics",
   tagline:       "Your Trusted Biologics Partner",
   sub:           "The Compliant Way to Offer Regenerative Therapies.",
-  description:   "Ridge Biologics is a Utah-licensed Class C Virtual Wholesale Distributor of regenerative medicine products — supplying licensed healthcare providers with MSCs, Extracellular Vesicles (EVs), PRP kits, and collagen-based biologics through an ethical, fully compliant drop-ship model.",
+  description:   "Ridge Biologics is a Utah-licensed Class C Virtual Wholesale Distributor — supplying licensed healthcare providers with FDA-cleared wound care products and point-of-care device systems through a fully compliant distribution model.",
   email:         "info@ridgebiologics.com",
   phone:         "(801) 215-9175",
   phoneTel:      "18012159175",
-  address:       "7533 S Center View Ct, Ste N",
+  address:       "7533 S Center View Ct, Ste R",
   city:          "West Jordan, UT 84084",
   states:        "Utah and Florida (expanding nationwide)",
   cta_primary:   "Request Products",
@@ -30,29 +30,19 @@ export const COMPANY = {
 
 export const TRUST_PILLARS: TrustPillar[] = [
   { label: "Utah & Florida Licensed — Expanding Nationwide", icon: "shield" },
-  { label: "FDA-Registered Manufacturers",    icon: "file" },
-  { label: "Verified Cold-Chain Logistics",   icon: "link" },
+  { label: "FDA-Cleared 510(k) Products",                    icon: "file" },
+  { label: "Audit-Ready Documentation",                      icon: "link" },
 ];
 
 // ─── Products ─────────────────────────────────────────────────────────────────
 
 export const PRODUCTS = [
   {
-    id: "msc",
-    title: "MSC",
-    description:
-      "Human-derived MSCs from a GMP-certified, FDA-registered manufacturer. Cryogenically stored and shipped with full chain-of-custody documentation. For licensed providers only.",
-    classification: "cGMP-Manufactured",
-    storage: "Cryogenic −196°C",
-    storageIcon: "snowflake",
-    icon: "microscope",
-  },
-  {
     id: "collagen",
     title: "Collagen Products",
     description:
-      "Human-derived collagen in multiple forms including injectable vials, sheets, and pads. Section 361 HCT/P classified, ethically sourced, and manufactured under GMP conditions.",
-    classification: "Section 361 HCT/P",
+      "Bovine-derived collagen wound dressings in sheet, particle, gel, and powder formats. FDA-cleared Class II medical devices. Ambient/room temperature storage.",
+    classification: "FDA-Cleared Class II Device",
     storage: "Ambient / Room Temp",
     storageIcon: "thermometer",
     icon: "vial",
@@ -75,19 +65,19 @@ export const RIDGE_DIFFERENCE = [
   {
     title: "Regulatory Compliance",
     description:
-      "cGMP-manufactured biologics from FDA-registered facilities. Complete provenance documentation and donor eligibility records — standard.",
+      "Utah DOPL Class C licensed distributor. Every product and process is aligned with 21 CFR Part 820 (Quality System Regulation), FDA device distribution requirements, and state-specific regulations.",
     icon: "shield",
   },
   {
-    title: "Verified Cold Chain",
+    title: "Documentation & Traceability",
     description:
-      "Ridge architects turnkey cold-chain implementation: verified storage protocols, carrier partnerships, and temperature-monitored delivery from manufacturer to point of care.",
+      "Complete product documentation from manufacturer to provider — 510(k) clearance records, lot traceability, and device history records included with every order.",
     icon: "snowflake",
   },
   {
     title: "GMP-Manufactured Products",
     description:
-      "Exclusive manufacturer partnerships meeting AATB standards and FDA registration requirements. Open documentation and audit readiness are prerequisites, not aspirations.",
+      "We source exclusively from FDA-registered manufacturers of 510(k)-cleared Class II devices. Every lot comes with full manufacturing documentation and certificate of conformance.",
     icon: "file",
   },
   {
@@ -104,9 +94,9 @@ export const SERVICES = [
   {
     id: "distribution",
     icon: "package",
-    title: "Regenerative Biologic Products",
+    title: "FDA-Cleared Device Products",
     description:
-      "Ridge curates manufacturer relationships across MSCs, extracellular vesicles, PRP systems, and collagen-based products for wound care, orthopedics, pain management, and aesthetics. Selection criteria: manufacturer compliance, product pedigree, clinical suitability.",
+      "Ridge curates manufacturer relationships across wound care devices and point-of-care systems, including bovine collagen wound dressings and EmCyte PRP/BMC kits for wound care, orthopedics, pain management, and aesthetics. Selection criteria: manufacturer compliance, product pedigree, clinical suitability.",
   },
   {
     id: "partnership",
@@ -127,14 +117,14 @@ export const SERVICES = [
     icon: "shield",
     title: "Compliance & Regulatory Guidance",
     description:
-      "We help your practice understand and maintain compliance with DOPL requirements, FDA 21 CFR Part 1271, and state-specific regulations in Utah and Florida — including proper product labeling, pedigree documentation, and audit-ready recordkeeping.",
+      "We help your practice understand and maintain compliance with DOPL requirements, FDA 21 CFR Part 820, and state-specific regulations in Utah and Florida — including proper device labeling, lot documentation, and audit-ready recordkeeping.",
   },
   {
     id: "coldchain",
     icon: "snowflake",
-    title: "Cold-Chain Storage & Handling",
+    title: "Storage & Handling Guidance",
     description:
-      "Proper temperature control is critical to product viability. We advise on the right storage equipment for your product mix — whether standard refrigeration, ultra-low −80°C, or cryogenic systems — and provide verified handling protocols from manufacturer to point of care.",
+      "Proper storage is critical to product integrity. We advise on the right storage conditions for your product mix — from ambient room-temperature wound dressings to point-of-care device kits — and provide verified handling protocols from manufacturer to point of care.",
   },
   {
     id: "service",
@@ -180,7 +170,7 @@ export const FAQS: FAQItem[] = [
   {
     question: "What is Ridge Biologics?",
     answer:
-      "Ridge Biologics is a Utah-licensed Class C Virtual Wholesale Distributor of regenerative medicine products. Our mission is to expand licensed healthcare provider access to high-quality biological therapies — including MSC, Extracellular Vesicles (EVs), PRP kits, and collagen-based products — through an ethical, fully compliant virtual drop-ship distribution model. Currently serving Utah and Florida, with active expansion into additional states nationwide.",
+      "Ridge Biologics is a Utah-licensed Class C Virtual Wholesale Distributor of FDA-cleared medical devices — supplying licensed healthcare providers with bovine collagen wound care products and point-of-care platelet concentration systems through a fully compliant distribution model. Currently serving Utah and Florida, with active expansion into additional states nationwide.",
   },
   {
     question: "How can clinics benefit from our services?",
@@ -190,17 +180,17 @@ export const FAQS: FAQItem[] = [
   {
     question: "How long is the shelf life of your products?",
     answer:
-      "Most of our allografts maintain viability for up to five years when stored at recommended temperatures. Detailed storage guidelines are provided with each shipment.",
+      "Shelf life varies by product and is specified in each manufacturer's device labeling. Our team provides storage and handling guidance for every product we distribute.",
   },
   {
     question: "What products do you offer?",
     answer:
-      "We provide both 361 HCT/P allografts and 351 advanced biologic products, each designed to support tissue repair, reduce inflammation, and enhance recovery outcomes. Every product is FDA-regulated, U.S.-sourced, and backed by the compliance, documentation, and training your clinic needs to implement regenerative therapy confidently.",
+      "We distribute FDA-cleared Class II medical devices including bovine collagen wound dressings (sheets, particles, gel, and powder formats) and point-of-care platelet concentration systems (PRP and bone marrow concentrate). All products are 510(k) cleared and sourced from FDA-registered manufacturers.",
   },
   {
     question: "How do you ensure product quality?",
     answer:
-      "Each product is accompanied by a full chain-of-custody record and donor eligibility documentation. We partner only with manufacturers who meet or exceed AATB, FDA, and cGMP standards, and all shipments are monitored to maintain verified cold-chain integrity from lab to clinic.",
+      "Each product is accompanied by its 510(k) clearance documentation, certificate of conformance, and manufacturer lot records. We partner exclusively with FDA-registered manufacturers of cleared Class II devices, and maintain audit-ready records for every order.",
   },
   {
     question: "How do I determine if products are reimbursable?",
@@ -227,11 +217,11 @@ export const FAQS: FAQItem[] = [
 // ─── External Resources ───────────────────────────────────────────────────────
 
 export const EXTERNAL_RESOURCES = [
-  { label: "FDA HCT/P Overview",                    href: "https://www.fda.gov/vaccines-blood-biologics/tissue-tissue-products" },
-  { label: "FDA 21 CFR Part 1271",                  href: "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-L/part-1271" },
-  { label: "AATB — American Association of Tissue Banks", href: "https://www.aatb.org" },
-  { label: "FDA Cell & Gene Therapy Guidances",     href: "https://www.fda.gov/vaccines-blood-biologics/biologics-guidances/cellular-gene-therapy-guidances" },
+  { label: "FDA 510(k) Premarket Notification",        href: "https://www.fda.gov/medical-devices/premarket-submissions-selecting-and-preparing-correct-submission/premarket-notification-510k" },
+  { label: "FDA Medical Device Quality System (21 CFR 820)", href: "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-H/part-820" },
+  { label: "FDA Medical Device Classification Database", href: "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfPMN/pmn.cfm" },
+  { label: "Utah DOPL Wholesale Distributor Licensing", href: "https://dopl.utah.gov/pharm/" },
 ];
 
 export const COMPLIANCE_DISCLAIMER =
-  "Ridge Biologics distributes FDA-registered human cellular and tissue-based products (HCT/Ps), including Section 361 minimally manipulated, homologous-use allografts regulated under 21 CFR Part 1271, as well as advanced biologic products manufactured in GMP-compliant facilities. We do not make claims for the treatment, cure, or prevention of any disease. All products are intended for use by qualified healthcare professionals in accordance with applicable regulations and labeling.";
+  "Ridge Biologics distributes FDA-cleared Class II medical devices, including bovine collagen-based wound care dressings and point-of-care platelet concentration systems, cleared through FDA's 510(k) premarket notification process and regulated under 21 CFR Part 820. We do not make claims for the treatment, cure, or prevention of any disease. All products are intended for use by qualified healthcare professionals in accordance with applicable device labeling and cleared indications only.";
