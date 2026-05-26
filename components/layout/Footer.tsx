@@ -36,7 +36,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-white/70 text-sm leading-relaxed max-w-xs mb-6">
-              Compliance architecture for regenerative medicine&apos;s leading practices.
+              FDA-cleared wound care and point-of-care device systems — delivered compliantly.
             </p>
             <a href={`mailto:${COMPANY.email}`}
               className="text-sm text-rb-teal-light hover:text-white transition-colors block mb-2">
@@ -86,10 +86,10 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* External resources */}
+          {/* Regulatory resources */}
           <div className="lg:col-span-2">
             <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-white/55 mb-4">
-              External Resources
+              Regulatory Resources
             </h3>
             <ul className="space-y-2.5">
               {EXTERNAL_RESOURCES.map((r) => (
