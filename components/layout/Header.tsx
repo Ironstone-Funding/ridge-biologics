@@ -41,14 +41,6 @@ export default function Header() {
       {isTransparent && (
         <div className="hidden sm:flex items-center justify-end border-b border-white/10 bg-black/20">
           <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-10 flex justify-end gap-6 py-1.5">
-            <a
-              href="https://ridge-command.netlify.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[10px] font-medium uppercase tracking-widest text-white/50 hover:text-white/80 transition-colors duration-200"
-            >
-              Provider Login
-            </a>
             <Link
               href="/insights"
               className="text-[10px] font-medium uppercase tracking-widest text-white/50 hover:text-white/80 transition-colors duration-200"
