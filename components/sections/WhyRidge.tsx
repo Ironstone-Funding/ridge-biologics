@@ -8,18 +8,18 @@ const ease = [0.16, 1, 0.3, 1] as const;
 const PILLARS = [
   {
     num: "01",
-    title: "GMP-Manufactured, Fully Traceable Biologics",
-    body: "Every product we distribute comes from FDA-registered, cGMP-compliant manufacturers — with full chain-of-custody documentation and donor eligibility records included with every shipment.",
+    title: "510(k)-Cleared, Fully Traceable Devices",
+    body: "Every product we distribute is FDA-cleared under the 510(k) premarket notification process and sourced from FDA-registered, cGMP-compliant manufacturers — with complete lot documentation and certificates of conformance included with every shipment.",
   },
   {
     num: "02",
     title: "Training, Logistics & Implementation",
-    body: "We guide your clinic through every step — product onboarding, staff training, cold-chain setup, and compliance-ready patient materials — so you can launch regenerative therapies confidently.",
+    body: "We guide your clinic through every step — product onboarding, staff training, storage guidance, and compliance-ready patient materials — so you can expand your device-based offerings confidently.",
   },
   {
     num: "03",
     title: "Ethical Sourcing & Regulatory Integrity",
-    body: "We partner exclusively with manufacturers who meet AATB standards and FDA registration requirements. Open documentation, audit readiness, and honest regulatory engagement are non-negotiable.",
+    body: "We partner exclusively with FDA-registered manufacturers of cleared Class II devices. Open documentation, audit readiness, and honest regulatory engagement are non-negotiable.",
   },
 ];
 
@@ -104,7 +104,7 @@ export default function WhyRidge() {
                       <div className="mt-8 w-full rounded-xl overflow-hidden bg-[#f0f4f6] p-3">
                         <Image
                           src="/images/regulatory-certificates.png"
-                          alt="FDA registration, AATB certification, and Certificate of Analysis documentation"
+                          alt="FDA 510(k) clearance records and Certificate of Conformance documentation"
                           width={800}
                           height={533}
                           className="w-full h-auto rounded-lg"

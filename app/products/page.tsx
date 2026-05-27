@@ -8,7 +8,7 @@ import SectionLabel from "@/components/ui/SectionLabel";
 import Button from "@/components/ui/Button";
 import { PRODUCTS } from "@/lib/products";
 
-const CATEGORIES = ["All", "Collagen", "PRP", "MSC"];
+const CATEGORIES = ["All", "Collagen", "PRP"];
 
 export default function ProductsPage() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -31,11 +31,11 @@ export default function ProductsPage() {
           <SlideIn direction="left">
             <SectionLabel light>Our Product Catalog</SectionLabel>
             <h1 className="text-display-xl font-bold text-white mb-6 max-w-3xl">
-              Institutional-Grade Biologics for Elite Practices
+              FDA-Cleared Devices for Licensed Practices
             </h1>
             <p className="text-white/75 text-xl leading-relaxed max-w-2xl">
-              Every product Ridge distributes is sourced from GMP-compliant, FDA-registered
-              manufacturers — shipped direct to your practice with full compliance documentation.
+              Every product Ridge distributes is sourced from FDA-registered manufacturers of
+              510(k)-cleared Class II devices — shipped direct to your practice with full compliance documentation.
             </p>
           </SlideIn>
         </div>
@@ -186,9 +186,9 @@ export default function ProductsPage() {
       <section className="py-8 bg-white border-t border-rb-slate">
         <div className="container-xl">
           <p className="text-xs text-rb-text-muted leading-relaxed max-w-4xl">
-            Ridge Biologics provides FDA-registered human cellular and tissue-based products (HCT/Ps) and FDA-cleared device kits.
+            Ridge Biologics distributes FDA-cleared Class II medical devices, including bovine collagen wound dressings and point-of-care platelet concentration systems.
             Ridge does not make claims for the treatment, cure, or prevention of any disease. All products are intended for use by
-            qualified healthcare professionals in accordance with applicable regulations and labeling.
+            qualified healthcare professionals in accordance with applicable device labeling and cleared indications only.
           </p>
         </div>
       </section>

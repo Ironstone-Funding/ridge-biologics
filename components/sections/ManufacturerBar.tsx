@@ -7,11 +7,11 @@ import Button from "@/components/ui/Button";
 
 const STANDARDS = [
   "FDA-registered, GMP-certified manufacturers only",
-  "AATB standards compliance verified",
-  "Full donor screening and eligibility documentation",
-  "Certificate of Analysis (CoA) with every lot",
-  "Chain-of-custody verified from lab to clinic",
-  "21 CFR Part 1271 and state regulation alignment",
+  "510(k) premarket clearance on all distributed devices",
+  "Certificate of Conformance with every lot",
+  "Complete lot traceability from manufacturer to provider",
+  "21 CFR Part 820 Quality System Regulation compliance",
+  "Utah DOPL Class C licensed distribution",
 ];
 
 export default function ManufacturerBar() {

@@ -13,7 +13,6 @@ import Icon from "@/components/ui/Icon";
 export default function ServicesPage() {
   const collagen  = PRODUCTS.filter((p) => p.category === "Collagen");
   const prp       = PRODUCTS.filter((p) => p.category === "PRP");
-  const stemCells = PRODUCTS.filter((p) => p.category === "MSC");
 
   return (
     <div className="pt-20">
@@ -33,8 +32,8 @@ export default function ServicesPage() {
             </h1>
             <p className="text-white/65 text-lg leading-relaxed max-w-2xl mb-10">
               Ridge Biologics is a Utah-licensed Class C Virtual Wholesale Distributor —
-              supplying licensed healthcare providers in Utah and Florida with FDA-regulated
-              regenerative products through a fully compliant drop-ship model.
+              supplying licensed healthcare providers in Utah and Florida with FDA-cleared wound care
+              devices and point-of-care systems through a fully compliant distribution model.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button variant="primary" size="lg" href="#request">Submit a Product Request</Button>
@@ -50,7 +49,7 @@ export default function ServicesPage() {
           <FadeIn className="mb-16">
             <SectionLabel>What We Distribute</SectionLabel>
             <h2 className="text-display-md font-bold text-rb-navy max-w-2xl">
-              FDA-Regulated Products for Every Stage of Care
+              FDA-Cleared Devices for Every Stage of Care
             </h2>
           </FadeIn>
 
@@ -186,51 +185,6 @@ export default function ServicesPage() {
             ))}
           </div>
 
-          {/* — MSC — */}
-          <div>
-            <FadeIn>
-              <div className="flex items-center gap-4 mb-10">
-                <span className="h-5 w-px" style={{ backgroundColor: "#5a4fcf" }} />
-                <span className="text-[11px] font-semibold tracking-[0.18em] uppercase" style={{ color: "#5a4fcf" }}>
-                  MSC
-                </span>
-                <div className="flex-1 h-px bg-rb-slate" />
-              </div>
-            </FadeIn>
-            {stemCells.map((product) => (
-              <FadeIn key={product.id}>
-                <div
-                  className="relative flex flex-col sm:flex-row items-start gap-8 p-8 lg:p-10 rounded-2xl border border-[#5a4fcf]/20 overflow-hidden"
-                  style={{ background: "linear-gradient(135deg, #ffffff 60%, rgba(90,79,207,0.04) 100%)" }}
-                >
-                  <div className="absolute top-6 right-6">
-                    <span className="px-3 py-1.5 rounded-full text-[10px] font-semibold tracking-widest uppercase bg-rb-navy text-white">
-                      Coming Soon
-                    </span>
-                  </div>
-                  <div
-                    className="w-20 h-20 rounded-2xl flex items-center justify-center flex-shrink-0"
-                    style={{ backgroundColor: "rgba(90,79,207,0.08)" }}
-                  >
-                    <svg className="w-10 h-10" style={{ color: "rgba(90,79,207,0.4)" }} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-                        d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
-                    </svg>
-                  </div>
-                  <div className="pr-24">
-                    <p className="text-[11px] font-semibold tracking-widest uppercase mb-2" style={{ color: "#5a4fcf" }}>
-                      {product.category}
-                    </p>
-                    <h3 className="font-bold text-rb-navy text-xl mb-3">{product.name}</h3>
-                    <p className="text-rb-text-body text-sm leading-relaxed max-w-2xl mb-6">
-                      {product.description}
-                    </p>
-                    <Button variant="ghost" href="/contact" size="sm">Contact Us for Availability</Button>
-                  </div>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -305,7 +259,7 @@ export default function ServicesPage() {
                     <div className="mt-2 rounded-xl overflow-hidden bg-rb-slate p-2">
                       <Image
                         src="/images/services-biologic-products.png"
-                        alt="Ridge Biologics mesenchymal stromal cell vial — cryopreserved biologic product"
+                        alt="Ridge Biologics biologic products — wound care devices and point-of-care systems"
                         width={1330}
                         height={887}
                         className="w-full h-auto rounded-lg"
@@ -358,7 +312,7 @@ export default function ServicesPage() {
                     <div className="mt-2 rounded-xl overflow-hidden bg-rb-slate p-2">
                       <Image
                         src="/images/services-compliance-guidance.png"
-                        alt="Ridge Biologics regulatory compliance checklist with FDA 21 CFR and DOPL reference materials"
+                        alt="Ridge Biologics regulatory compliance checklist with FDA 510(k) and DOPL reference materials"
                         width={1330}
                         height={887}
                         className="w-full h-auto rounded-lg"
