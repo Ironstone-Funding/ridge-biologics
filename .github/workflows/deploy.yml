@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 jobs:
-  deploy:
+  deploy-ridge:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -26,14 +26,49 @@ jobs:
 
       - name: Deploy to Netlify (Preview)
         if: github.event_name == 'pull_request'
-        run: npx netlify-cli deploy --dir=out --message="PR #${{ github.event.number }}"
+        run: |
+          npx netlify-cli deploy --dir=out --message="PR #${{ github.event.number }}"
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
 
       - name: Deploy to Netlify (Production)
         if: github.ref == 'refs/heads/main'
-        run: npx netlify-cli deploy --dir=out --prod --message="Deploy from ${{ github.sha }}"
+        run: |
+          npx netlify-cli deploy --dir=out --prod --message="Deploy from ${{ github.sha }}"
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+
+  deploy-kalama:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: cd kalama-pharmacy && npm install --legacy-peer-deps
+
+      - name: Build
+        run: cd kalama-pharmacy && npm run build
+
+      - name: Deploy to Netlify (Preview)
+        if: github.event_name == 'pull_request'
+        run: |
+          npx netlify-cli deploy --dir=kalama-pharmacy/out --message="PR #${{ github.event.number }}"
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: 0b117d82-46fe-4a4c-afdc-0cf1522fc63f
+
+      - name: Deploy to Netlify (Production)
+        if: github.ref == 'refs/heads/main'
+        run: |
+          npx netlify-cli deploy --dir=kalama-pharmacy/out --prod --message="Deploy from ${{ github.sha }}"
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: 0b117d82-46fe-4a4c-afdc-0cf1522fc63f

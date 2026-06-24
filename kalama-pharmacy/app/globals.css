@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-kp-text bg-white antialiased;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+}
+
+@layer components {
+  /* ── Navigation ── */
+  .nav-link {
+    @apply px-3 py-2 text-sm font-medium text-kp-text-body hover:text-kp-green transition-colors duration-150 rounded-lg hover:bg-kp-green-pale;
+  }
+
+  .mobile-nav-link {
+    @apply w-full text-left px-4 py-3.5 text-base font-medium text-kp-text hover:bg-kp-green-pale hover:text-kp-green rounded-xl transition-colors duration-150;
+  }
+
+  .mobile-sub-link {
+    @apply block px-4 py-2.5 text-sm text-kp-text-muted hover:text-kp-green transition-colors duration-150;
+  }
+
+  /* ── Buttons ── */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-kp-green text-white font-semibold rounded-lg hover:bg-kp-green-dark transition-colors duration-200 shadow-button focus:outline-none focus:ring-2 focus:ring-kp-green focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-kp-green transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white;
+  }
+
+  .btn-green {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-kp-green text-white font-semibold rounded-lg hover:bg-kp-green-dark transition-colors duration-200 shadow-button focus:outline-none focus:ring-2 focus:ring-kp-green focus:ring-offset-2;
+  }
+
+  .btn-outline-green {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-kp-green text-kp-green font-semibold rounded-lg hover:bg-kp-green hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-kp-green focus:ring-offset-2;
+  }
+
+  .btn-blue {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-kp-blue text-white font-semibold rounded-lg hover:bg-kp-blue-dark transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-kp-blue focus:ring-offset-2;
+  }
+
+  .btn-outline-white {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-white/60 text-white font-semibold rounded-lg hover:border-white hover:bg-white/10 transition-colors duration-200;
+  }
+
+  /* Legacy alias so interior pages don't break */
+  .btn-outline-gold {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-kp-gold text-kp-gold font-semibold rounded-lg hover:bg-kp-gold hover:text-white transition-colors duration-200;
+  }
+
+  /* ── Section helpers ── */
+  .section-label {
+    @apply text-xs font-bold tracking-[0.18em] uppercase text-kp-green;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold font-serif text-kp-text mt-2 leading-tight;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-kp-text-muted mt-4 leading-relaxed;
+  }
+
+  .container-xl {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-pad {
+    @apply py-14 md:py-20;
+  }
+
+  /* ── Cards ── */
+  .card-base {
+    @apply bg-white rounded-xl shadow-card border border-kp-border-light;
+  }
+
+  /* ── Dividers ── */
+  .gold-divider {
+    @apply w-10 h-1 bg-kp-green rounded-full mt-4 mb-6;
+  }
+
+  .green-divider {
+    @apply w-10 h-1 bg-kp-green rounded-full mt-4 mb-6;
+  }
+}
