@@ -13,7 +13,7 @@ const actions = [
     ),
   },
   {
-    label: "Transfer Prescription",
+    label: "Transfer Rx",
     desc:  "Switch to Kalama Pharmacy",
     href:  "/transfer",
     color: "green" as const,
@@ -24,7 +24,7 @@ const actions = [
     ),
   },
   {
-    label: "Medication Sync",
+    label: "Med Sync",
     desc:  "One monthly pickup date",
     href:  "/services#med-sync",
     color: "blue" as const,
@@ -49,39 +49,42 @@ const actions = [
 
 export default function QuickActions() {
   return (
-    <section className="bg-kp-cream border-b border-kp-border-light py-6">
+    <section className="bg-kp-cream border-b border-kp-border-light py-5">
       <div className="container-xl">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3">
           {actions.map((action) => {
             const isGreen = action.color === "green";
             return (
               <Link
                 key={action.label}
                 href={action.href}
-                className={`flex items-center gap-3 p-4 rounded-xl border transition-all duration-200 group ${
+                className={`flex flex-col sm:flex-row items-center sm:items-center gap-2 sm:gap-3 p-3 sm:p-4 rounded-xl border text-center sm:text-left transition-all duration-200 group ${
                   isGreen
                     ? "bg-white border-kp-border-light hover:border-kp-green hover:bg-kp-green-ultra"
                     : "bg-white border-kp-border-light hover:border-kp-blue hover:bg-kp-blue-pale"
                 }`}
               >
                 <div
-                  className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors ${
-                    isGreen ? "bg-kp-green-pale text-kp-green group-hover:bg-kp-green group-hover:text-white"
-                             : "bg-kp-blue-light text-kp-blue group-hover:bg-kp-blue group-hover:text-white"
+                  className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors mx-auto sm:mx-0 ${
+                    isGreen
+                      ? "bg-kp-green-pale text-kp-green group-hover:bg-kp-green group-hover:text-white"
+                      : "bg-kp-blue-light text-kp-blue group-hover:bg-kp-blue group-hover:text-white"
                   }`}
                 >
                   <span className="w-5 h-5">{action.icon}</span>
                 </div>
-                <div className="min-w-0">
-                  <p className={`text-sm font-semibold leading-snug transition-colors ${
+
+                <div className="min-w-0 flex-1">
+                  <p className={`text-xs sm:text-sm font-semibold leading-snug transition-colors ${
                     isGreen ? "text-kp-text group-hover:text-kp-green"
                              : "text-kp-text group-hover:text-kp-blue"
                   }`}>
                     {action.label}
                   </p>
-                  <p className="text-xs text-kp-text-muted hidden sm:block mt-0.5">{action.desc}</p>
+                  <p className="hidden sm:block text-xs text-kp-text-muted mt-0.5">{action.desc}</p>
                 </div>
-                <svg className="w-4 h-4 text-kp-text-light group-hover:text-kp-green ml-auto flex-shrink-0 hidden sm:block transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+
+                <svg className="w-4 h-4 text-kp-text-light group-hover:text-kp-green hidden sm:block flex-shrink-0 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
               </Link>

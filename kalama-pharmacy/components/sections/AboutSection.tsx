@@ -38,8 +38,8 @@ export default function AboutSection() {
               <p className="text-kp-text-light text-xs mt-1">Replace with real team photo</p>
             </div>
 
-            {/* Our Promise card */}
-            <div className="absolute -top-4 -right-4 bg-kp-green text-white rounded-xl shadow-card p-5 max-w-[210px]">
+            {/* Our Promise card — desktop only; same content shown in list on mobile */}
+            <div className="hidden lg:block absolute -top-4 -right-4 bg-kp-green text-white rounded-xl shadow-card p-5 max-w-[210px]">
               <p className="font-bold text-sm mb-3">Our Promise to You</p>
               <ul className="space-y-1.5 text-xs text-white/90">
                 {promises.slice(0, 4).map((p) => (

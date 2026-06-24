@@ -34,41 +34,42 @@ function CrossIcon({ className }: { className?: string }) {
 
 export default function Hero() {
   return (
-    <section className="bg-white border-b border-kp-border-light py-12 md:py-20">
+    <section className="bg-white border-b border-kp-border-light py-10 md:py-20">
       <div className="container-xl">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-5 lg:gap-16 items-center">
 
           {/* ── Left: Copy ── */}
           <div className="lg:col-span-3">
-            <div className="inline-flex items-center gap-2 bg-kp-green-pale text-kp-green text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
+            <div className="inline-flex items-center gap-2 bg-kp-green-pale text-kp-green text-sm font-semibold px-4 py-1.5 rounded-full mb-5">
               <CrossIcon className="w-4 h-4" />
               Kalama, WA Community Pharmacy
             </div>
 
-            <h1 className="text-4xl sm:text-5xl font-bold font-serif text-kp-text leading-[1.1] mb-5">
+            <h1 className="text-4xl sm:text-5xl font-bold font-serif text-kp-text leading-[1.1] mb-4">
               Your Local<br />Pharmacy in<br />Kalama
             </h1>
 
-            <p className="text-lg text-kp-text-body leading-relaxed mb-8 max-w-lg">
+            <p className="text-lg text-kp-text-body leading-relaxed mb-7 max-w-lg">
               Friendly prescription care, medication support, and personalized
               service from a pharmacy team that knows your name.
             </p>
 
-            <div className="flex flex-col sm:flex-row flex-wrap gap-3 mb-8">
-              <Link href="/refill" className="btn-primary px-7 py-3.5 text-base">
+            {/* Buttons — full-width stacked on mobile, inline on sm+ */}
+            <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 mb-7">
+              <Link href="/refill" className="btn-primary px-7 py-3.5 text-base w-full sm:w-auto justify-center">
                 <RxIcon className="w-5 h-5" />
                 Refill Prescription
               </Link>
-              <Link href="/transfer" className="btn-outline-green px-7 py-3.5 text-base">
+              <Link href="/transfer" className="btn-outline-green px-7 py-3.5 text-base w-full sm:w-auto justify-center">
                 Transfer Prescription
               </Link>
-              <a href="tel:#" className="btn-blue px-7 py-3.5 text-base">
+              <a href="tel:#" className="btn-blue px-7 py-3.5 text-base w-full sm:w-auto justify-center">
                 <PhoneIcon className="w-5 h-5" />
                 Call Pharmacy
               </a>
             </div>
 
-            <div className="flex flex-wrap gap-5 text-sm text-kp-text-muted">
+            <div className="flex flex-wrap gap-4 text-sm text-kp-text-muted">
               {["Independent & Local", "Same-Day Service", "Free Consultations"].map((t) => (
                 <span key={t} className="flex items-center gap-1.5">
                   <CheckIcon className="w-4 h-4 text-kp-green flex-shrink-0" />
@@ -78,10 +79,9 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* ── Right: Image placeholder ── */}
-          <div className="lg:col-span-2">
+          {/* ── Right: Image placeholder — desktop only ── */}
+          <div className="hidden lg:block lg:col-span-2">
             <div className="relative">
-              {/* Main image frame */}
               <div className="bg-kp-green-pale rounded-2xl border border-kp-border-light overflow-hidden aspect-[3/4] flex flex-col items-center justify-center p-8 text-center">
                 <svg className="w-24 h-24 text-kp-green/20 mb-4" fill="none" viewBox="0 0 80 80" stroke="currentColor" strokeWidth={1.2} aria-hidden="true">
                   <rect x="8"  y="20" width="64" height="50" rx="4" />
@@ -93,7 +93,7 @@ export default function Hero() {
                 <p className="text-kp-text-light text-xs mt-1">Replace with real pharmacy photo</p>
               </div>
 
-              {/* Floating badge — locally owned */}
+              {/* Floating badge — only safe on desktop where it has room */}
               <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-card border border-kp-border-light p-4">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-kp-green-pale rounded-full flex items-center justify-center flex-shrink-0">
