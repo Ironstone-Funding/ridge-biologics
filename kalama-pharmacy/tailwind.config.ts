@@ -10,22 +10,34 @@ const config: Config = {
     extend: {
       colors: {
         kp: {
-          green:          "#2B5F38",
-          "green-dark":   "#1E4528",
-          "green-mid":    "#367248",
-          "green-light":  "#4A8C5C",
-          "green-pale":   "#EEF4EF",
+          // Pharmacy greens
+          green:          "#2E7D52",
+          "green-dark":   "#1C5738",
+          "green-mid":    "#39875E",
+          "green-light":  "#4FA472",
+          "green-pale":   "#EAF3EE",
+          "green-ultra":  "#F4FAF6",
+          // Healthcare blue accent
+          blue:           "#1B6FA8",
+          "blue-dark":    "#145482",
+          "blue-light":   "#E8F3FB",
+          "blue-pale":    "#F0F7FD",
+          // Legacy gold (kept so interior pages don't break)
           gold:           "#C8923A",
           "gold-light":   "#D4A84B",
           "gold-dark":    "#A87328",
           "gold-pale":    "#FDF4E7",
-          cream:          "#F7F5EF",
-          "cream-dark":   "#EDE9DF",
-          text:           "#2C3E2D",
-          "text-muted":   "#6B7B6C",
-          "text-light":   "#9CAB9E",
-          border:         "#D1D9D3",
-          "border-light": "#E5EBE6",
+          // Warm neutrals
+          cream:          "#FBF8F2",
+          "cream-dark":   "#F2EDE3",
+          // Text
+          text:           "#1D2B23",
+          "text-body":    "#3C4840",
+          "text-muted":   "#677068",
+          "text-light":   "#9BAB9E",
+          // Borders
+          border:         "#D2DAD4",
+          "border-light": "#E6EDE8",
         },
       },
       fontFamily: {
@@ -33,42 +45,39 @@ const config: Config = {
         serif: ["var(--font-playfair)", "Georgia", "serif"],
       },
       fontSize: {
-        "display-xl": ["clamp(2.5rem, 5vw, 4rem)",   { lineHeight: "1.1",  letterSpacing: "-0.02em" }],
-        "display-lg": ["clamp(2rem, 3.5vw, 3rem)",   { lineHeight: "1.15", letterSpacing: "-0.02em" }],
-        "display-md": ["clamp(1.5rem, 2.5vw, 2.25rem)", { lineHeight: "1.2", letterSpacing: "-0.01em" }],
-      },
-      spacing: {
-        section:    "6rem",
-        "section-sm": "4rem",
+        "display-xl": ["clamp(2.5rem, 5vw, 4rem)",      { lineHeight: "1.1",  letterSpacing: "-0.02em" }],
+        "display-lg": ["clamp(2rem, 3.5vw, 3rem)",      { lineHeight: "1.15", letterSpacing: "-0.02em" }],
+        "display-md": ["clamp(1.5rem, 2.5vw, 2.25rem)", { lineHeight: "1.2",  letterSpacing: "-0.01em" }],
       },
       borderRadius: {
         "2xl": "1rem",
         "3xl": "1.5rem",
       },
       boxShadow: {
-        card:         "0 2px 20px rgba(43, 95, 56, 0.06)",
-        "card-hover": "0 8px 40px rgba(43, 95, 56, 0.14)",
-        button:       "0 4px 16px rgba(200, 146, 58, 0.32)",
-        nav:          "0 1px 24px rgba(43, 95, 56, 0.10)",
+        card:         "0 1px 4px rgba(0,0,0,0.06), 0 2px 12px rgba(0,0,0,0.04)",
+        "card-hover": "0 4px 20px rgba(0,0,0,0.10)",
+        nav:          "0 2px 12px rgba(0,0,0,0.08)",
+        button:       "0 2px 8px rgba(46,125,82,0.25)",
       },
       backgroundImage: {
-        "hero-green":    "linear-gradient(135deg, #1E4528 0%, #2B5F38 55%, #367248 100%)",
-        "cta-green":     "linear-gradient(135deg, #2B5F38 0%, #1E4528 100%)",
+        // Softer gradient — used by interior page heroes
+        "hero-green":    "linear-gradient(135deg, #1C5738 0%, #2E7D52 60%, #39875E 100%)",
+        "cta-green":     "linear-gradient(135deg, #2E7D52 0%, #1C5738 100%)",
         "cta-gold":      "linear-gradient(135deg, #C8923A 0%, #A87328 100%)",
-        "cta-dark":      "linear-gradient(135deg, #1E4528 0%, #162F1C 100%)",
-        "section-cream": "linear-gradient(180deg, #ffffff 0%, #F7F5EF 100%)",
+        "cta-dark":      "linear-gradient(135deg, #1C5738 0%, #132E22 100%)",
+        "section-cream": "linear-gradient(180deg, #ffffff 0%, #FBF8F2 100%)",
       },
       animation: {
-        "fade-up":    "fadeUp 0.55s ease forwards",
         "slide-down": "slideDown 0.2s ease forwards",
+        "fade-up":    "fadeUp 0.4s ease forwards",
       },
       keyframes: {
-        fadeUp: {
-          "0%":   { opacity: "0", transform: "translateY(14px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
-        },
         slideDown: {
           "0%":   { opacity: "0", transform: "translateY(-6px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        fadeUp: {
+          "0%":   { opacity: "0", transform: "translateY(10px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
       },
