@@ -219,16 +219,20 @@ export default function Hero() {
             transition={{ duration: 1.7, delay: 0.8, ease }}
             className="font-serif font-light text-white"
             style={{
-              fontSize: "clamp(3.8rem, 6.5vw, 6.5rem)",
+              fontSize: "clamp(3.2rem, 5.5vw, 5.8rem)",
               letterSpacing: "-0.02em",
               lineHeight: "0.96",
               marginBottom: "clamp(2.5rem, 4vw, 3.5rem)",
               textShadow: "0 2px 40px rgba(0,0,0,0.5)",
             }}
           >
-            Strategic Biologics Partnership
+            EmCyte PRP &amp; BMC Systems
             <br />
-            <span style={{ opacity: 0.72 }}>for Leading Regenerative Practices.</span>
+            <span style={{ opacity: 0.72 }}>and Collagen Wound Care</span>
+            <br />
+            <span style={{ opacity: 0.50, fontSize: "0.52em", letterSpacing: "0.01em" }}>
+              &mdash; distributed compliantly.
+            </span>
           </motion.h1>
 
           {/* Cycling phrases — understated, below headline */}
@@ -287,17 +291,17 @@ export default function Hero() {
                 href="/contact"
                 className="group inline-flex items-center text-white hover:text-[#4a8f9a] transition-all duration-600"
                 style={{
-                  border: "1px solid rgba(255,255,255,0.18)",
-                  padding: "0.875rem 1.75rem",
+                  border: "1px solid rgba(255,255,255,0.35)",
+                  padding: "0.95rem 2rem",
                   fontSize: "10.5px",
                   letterSpacing: "0.25em",
                   textTransform: "uppercase",
-                  fontWeight: 500,
+                  fontWeight: 600,
                   backdropFilter: "blur(8px)",
-                  backgroundColor: "rgba(5,12,20,0.25)",
+                  backgroundColor: "rgba(255,255,255,0.08)",
                 }}
                 onMouseEnter={(e) => (e.currentTarget.style.borderColor = "rgba(56,116,126,0.55)")}
-                onMouseLeave={(e) => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.18)")}
+                onMouseLeave={(e) => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.35)")}
               >
                 Request Consultation
               </Link>
@@ -308,10 +312,10 @@ export default function Hero() {
                   fontSize: "10.5px",
                   letterSpacing: "0.25em",
                   textTransform: "uppercase",
-                  opacity: 0.32,
+                  opacity: 0.40,
                 }}
                 onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.7")}
-                onMouseLeave={(e) => (e.currentTarget.style.opacity = "0.32")}
+                onMouseLeave={(e) => (e.currentTarget.style.opacity = "0.40")}
               >
                 Explore Our Approach
                 <svg className="w-3 h-3 group-hover:translate-x-0.5 transition-transform duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">

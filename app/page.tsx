@@ -1,12 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 import Hero from "@/components/sections/Hero";
-import WhyRidge from "@/components/sections/WhyRidge";
-import ComplianceStrip from "@/components/sections/ComplianceStrip";
 import SolutionsGrid from "@/components/sections/SolutionsGrid";
+import ProofCompliance from "@/components/sections/ProofCompliance";
 import OnboardingPreview from "@/components/sections/OnboardingPreview";
-import TrainingPreview from "@/components/sections/TrainingPreview";
-import ManufacturerBar from "@/components/sections/ManufacturerBar";
-import RepRecruitment from "@/components/sections/RepRecruitment";
 import CTASection from "@/components/sections/CTASection";
 
 
@@ -14,16 +11,16 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <WhyRidge />
-      <ComplianceStrip />
       <SolutionsGrid />
+      <ProofCompliance />
+      <OnboardingPreview />
 
-      {/* Service Territory */}
+      {/* Eligibility Gate — Service Territory */}
       <section className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 py-20 lg:py-28">
           <div className="grid lg:grid-cols-12 gap-16 lg:gap-20 items-start">
 
-            {/* Left — text */}
+            {/* Left — qualifying question */}
             <div className="lg:col-span-4 lg:sticky lg:top-28 lg:self-start">
               <div className="flex items-center gap-4 mb-8">
                 <span className="block w-8 h-px" style={{ backgroundColor: "rgba(56,116,126,0.6)" }} />
@@ -32,23 +29,22 @@ export default function HomePage() {
                 </span>
               </div>
               <h2
-                className="font-serif font-light text-[#284454] leading-[0.96] mb-6"
-                style={{ fontSize: "clamp(2.5rem, 4vw, 3.5rem)", letterSpacing: "-0.02em" }}
+                className="font-serif font-light text-[#284454] leading-[1.05] mb-6"
+                style={{ fontSize: "clamp(2.2rem, 3.5vw, 3rem)", letterSpacing: "-0.02em" }}
               >
-                Select Market Focus:<br />Utah and Florida
+                Are you licensed in Utah or Florida?
               </h2>
               <p className="text-[#3d5a68] text-base leading-relaxed mb-8 font-light" style={{ opacity: 0.8 }}>
-                Ridge's concentrated geographic model enables unmatched regulatory fluency
+                Ridge&apos;s concentrated geographic model enables unmatched regulatory fluency
                 and territory-specific compliance expertise. Utah DOPL Class C licensure
-                and Florida Department of Health compliance anchor our operations. National
-                expansion follows only where Ridge-standard infrastructure can be maintained.
+                and Florida Department of Health compliance anchor our operations.
               </p>
-              <ul className="space-y-3">
+              <ul className="space-y-3 mb-10">
                 {[
                   "Utah DOPL Class C Virtual Wholesale Distributor License",
                   "Florida Department of Health tissue banking compliance",
-                  "Additional state licensing in process — contact us for expansion timeline",
-                  "State-specific regulatory guidance and support in all territories",
+                  "Additional state licensing in process",
+                  "State-specific regulatory guidance and support",
                   "Dedicated territory account management",
                 ].map((b) => (
                   <li key={b} className="flex items-start gap-3 text-[#284454] text-sm leading-relaxed">
@@ -59,6 +55,15 @@ export default function HomePage() {
                   </li>
                 ))}
               </ul>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#284454] text-white text-xs font-semibold tracking-[0.18em] uppercase rounded-lg hover:bg-[#38747e] transition-colors duration-300"
+              >
+                Check Eligibility
+                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
             </div>
 
             {/* Right — map image */}
@@ -79,10 +84,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <OnboardingPreview />
-      <TrainingPreview />
-      <ManufacturerBar />
-      <RepRecruitment />
       <CTASection />
     </>
   );

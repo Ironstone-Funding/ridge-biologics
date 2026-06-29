@@ -3,10 +3,11 @@ import Image from "next/image";
 import { COMPANY, EXTERNAL_RESOURCES, COMPLIANCE_DISCLAIMER } from "@/lib/constants";
 
 const COMPANY_LINKS = [
-  { label: "Home",                  href: "/" },
-  { label: "Our Approach",          href: "/services" },
-  { label: "Contact",                href: "/contact" },
-  { label: "Resources",             href: "/faq" },
+  { label: "Home",                         href: "/" },
+  { label: "Our Approach",                 href: "/services" },
+  { label: "Contact",                      href: "/contact" },
+  { label: "Resources",                    href: "/faq" },
+  { label: "Become a Distribution Partner", href: "/careers" },
 ];
 
 const LEGAL_LINKS = [

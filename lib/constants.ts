@@ -5,10 +5,11 @@ import type {
 // ─── Navigation ───────────────────────────────────────────────────────────────
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: "Our Approach",          href: "/services" },
+  { label: "Our Approach",             href: "/services" },
   { label: "Products & Manufacturers", href: "/products" },
-  { label: "Contact",                href: "/contact" },
-  { label: "Resources",             href: "/faq" },
+  { label: "Contact",                  href: "/contact" },
+  { label: "Resources",               href: "/faq" },
+  { label: "Careers",                  href: "/careers" },
 ];
 
 export const COMPANY = {
